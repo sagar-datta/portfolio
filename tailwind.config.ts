@@ -28,14 +28,8 @@ export default {
       borderColor: {
         primary: {
           DEFAULT: "#FFFFFF",
-          dark: "#3B3B39",
+          dark: "#161615",
         },
-      },
-      dropShadow: {
-        primary: "0 10px 15px rgba(20, 20, 19, 0.2)",
-        "primary-dark": "0 10px 15px rgba(0, 0, 0, 0.5)",
-        "primary-lg": "0 15px 30px rgba(20, 20, 19, 0.25)",
-        "primary-lg-dark": "0 15px 30px rgba(0, 0, 0, 0.6)",
       },
     },
   },

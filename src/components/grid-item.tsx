@@ -5,16 +5,24 @@ interface IGridItemProps {
 
 export function GridItem({ color, title }: IGridItemProps) {
   return (
-    <div
-      className={`${color} rounded-xl aspect-[16/9] drop-shadow-primary dark:drop-shadow-primary-dark transition-all duration-300 
-        hover:scale-[1.02] hover:drop-shadow-primary-lg dark:hover:drop-shadow-primary-lg-dark cursor-pointer
-        flex items-center justify-center max-w-md w-full mx-auto`}
-    >
-      {title && (
-        <span className="text-white font-medium text-lg dark:text-white/90">
-          {title}
-        </span>
-      )}
+    <div className="relative group cursor-pointer">
+      {/* Static orange background */}
+      <div className="absolute -z-10 inset-0 bg-orange-500 rounded-xl" />
+
+      {/* Main card content */}
+      <div
+        className={`${color} rounded-xl aspect-[16/9] transition-all duration-300 
+          flex items-center justify-center w-full
+          border border-primary-dark/20 dark:border-primary/20
+          group-hover:bg-primary-dark/95 dark:group-hover:bg-primary/95
+          group-hover:-translate-x-2 group-hover:-translate-y-2`}
+      >
+        {title && (
+          <span className="text-primary-dark dark:text-primary font-medium text-lg">
+            {title}
+          </span>
+        )}
+      </div>
     </div>
   );
 }
