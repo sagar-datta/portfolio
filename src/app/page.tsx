@@ -9,6 +9,7 @@ const GRID_ITEMS = [
     url: "https://sagar-datta.github.io/gastronaut-ai/",
     description: "AI-powered recipe generator",
     color: "bg-primary-dark dark:bg-primary",
+    imagePath: "/images/projects/gastronaut.png",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const GRID_ITEMS = [
     url: "https://sagar-datta.github.io/galerie/",
     description: "Photography portfolio",
     color: "bg-primary-dark dark:bg-primary",
+    imagePath: "/images/projects/galerie.png",
   },
   // Add more portfolio items as needed
 ];
@@ -38,6 +40,7 @@ export default function Home() {
                   title={item.title}
                   description={item.description}
                   url={item.url}
+                  imagePath={item.imagePath}
                 />
               </div>
             ))}
