@@ -15,7 +15,11 @@ export function Dock() {
   }, []);
 
   const DOCK_ITEMS: IDockItem[] = [
-    { icon: "🐙", label: "GitHub" },
+    {
+      icon: "🐙",
+      label: "GitHub",
+      onClick: () => window.open("https://github.com/sagar-datta", "_blank"),
+    },
     { icon: "📧", label: "Contact" },
     {
       icon: "🌚",
@@ -34,7 +38,11 @@ export function Dock() {
   }
 
   const mountedDockItems: IDockItem[] = [
-    { icon: "🐙", label: "GitHub" },
+    {
+      icon: "🐙",
+      label: "GitHub",
+      onClick: () => window.open("https://github.com/sagar-datta", "_blank"),
+    },
     { icon: "📧", label: "Contact" },
     {
       icon: resolvedTheme === "dark" ? "🌝" : "🌚",
