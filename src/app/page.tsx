@@ -4,7 +4,7 @@ import { GridItem } from "@/components/grid-item";
 
 const GRID_ITEMS = Array.from({ length: 6 }, (_, i) => ({
   id: i + 1,
-  color: "bg-primary-dark/90 dark:bg-primary/90",
+  color: "bg-primary-dark dark:bg-primary",
   title: `Project ${i + 1}`,
 }));
 

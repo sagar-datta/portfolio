@@ -9,7 +9,11 @@ interface IDesktopDockProps {
 export function DesktopDock({ items }: IDesktopDockProps) {
   return (
     <div className="hidden lg:flex justify-center p-6 pb-7">
-      <div className="flex items-center gap-5 px-5 py-2.5 rounded-2xl bg-primary/60 dark:bg-primary-dark/60 backdrop-blur-2xl border border-primary/20 dark:border-primary-dark">
+      <div
+        className="flex items-center gap-5 px-5 py-2.5 rounded-2xl 
+        bg-primary/60 dark:bg-primary-dark/60 backdrop-blur-2xl 
+        border-2 border-[#222221]/20 dark:border-[#F0EEE6]/20"
+      >
         {items.map((item) => (
           <button
             key={item.label}
@@ -18,8 +22,9 @@ export function DesktopDock({ items }: IDesktopDockProps) {
           >
             <span className="text-3xl select-none">{item.icon}</span>
             <span
-              className="absolute -top-8 left-1/2 -translate-x-1/2 px-3 py-1 
-              bg-primary/60 dark:bg-primary-dark/60 backdrop-blur-2xl border border-primary/20 dark:border-primary-dark
+              className="absolute -top-9 left-1/2 -translate-x-1/2 px-3 py-1 
+              bg-primary/60 dark:bg-primary-dark/60 backdrop-blur-2xl 
+              border-2 border-[#222221]/20 dark:border-[#F0EEE6]/20
               text-primary dark:text-primary-dark rounded-lg text-sm 
               opacity-0 group-hover:opacity-100 whitespace-nowrap
               transition-all duration-200 transform group-hover:-translate-y-1
