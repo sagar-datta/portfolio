@@ -21,14 +21,14 @@ export default {
       },
       textColor: {
         primary: {
-          DEFAULT: "#171717",
-          dark: "#ededed",
+          DEFAULT: "#141413",
+          dark: "#F0EEE6",
         },
       },
       borderColor: {
         primary: {
           DEFAULT: "#F0EEE6",
-          dark: "#ededed",
+          dark: "#141413",
         },
       },
     },
