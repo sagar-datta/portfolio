@@ -1,19 +1,23 @@
 import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import { Dock } from "@/components/dock";
 import { GridItem } from "@/components/grid-item";
 
-const GRID_ITEMS = [
-  { id: 1, color: "bg-blue-500", title: "Projects" },
-  { id: 2, color: "bg-emerald-500", title: "Skills" },
-  { id: 3, color: "bg-purple-500", title: "Experience" },
-  { id: 4, color: "bg-pink-500", title: "Education" },
-  { id: 5, color: "bg-amber-500", title: "Contact" },
-  { id: 6, color: "bg-red-500", title: "Blog" },
-] as const;
+const GRID_ITEMS = Array.from({ length: 6 }, (_, i) => ({
+  id: i + 1,
+  color: [
+    "bg-blue-500",
+    "bg-emerald-500",
+    "bg-purple-500",
+    "bg-pink-500",
+    "bg-amber-500",
+    "bg-red-500",
+  ][i],
+  title: `Project ${i + 1}`,
+}));
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pb-20 lg:pb-24">
       <Header title="Sagar Datta's Portfolio" />
 
       <main className="flex-1 max-w-7xl mx-auto w-full p-6">
@@ -24,7 +28,7 @@ export default function Home() {
         </div>
       </main>
 
-      <Footer />
+      <Dock />
     </div>
   );
 }
