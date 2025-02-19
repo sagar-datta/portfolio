@@ -18,8 +18,8 @@ export function Dock() {
     { icon: "🐙", label: "GitHub" },
     { icon: "📧", label: "Contact" },
     {
-      icon: "🌙",
-      label: "Theme",
+      icon: "🌚",
+      label: "Dark Mode",
       onClick: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
     },
   ];
@@ -37,8 +37,8 @@ export function Dock() {
     { icon: "🐙", label: "GitHub" },
     { icon: "📧", label: "Contact" },
     {
-      icon: resolvedTheme === "dark" ? "☀️" : "🌙",
-      label: "Theme",
+      icon: resolvedTheme === "dark" ? "🌝" : "🌚",
+      label: resolvedTheme === "dark" ? "Light Mode" : "Dark Mode",
       onClick: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
     },
   ];
