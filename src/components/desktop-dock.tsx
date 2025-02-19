@@ -15,10 +15,10 @@ export function DesktopDock({ items }: IDesktopDockProps) {
         border-2 border-[#222221]/20 dark:border-[#F0EEE6]/20"
       >
         {items.map((item) => (
-          <button
+          <div
             key={item.label}
             onClick={item.onClick}
-            className="group relative flex items-center justify-center p-2.5 cursor-pointer transition-transform duration-200 hover:scale-125"
+            className="group relative flex items-center justify-center p-2.5 hover:cursor-pointer transition-transform duration-200 hover:scale-125"
           >
             <span className="text-3xl select-none">{item.icon}</span>
             <span
@@ -32,7 +32,7 @@ export function DesktopDock({ items }: IDesktopDockProps) {
             >
               {item.label}
             </span>
-          </button>
+          </div>
         ))}
       </div>
     </div>
