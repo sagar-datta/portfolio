@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/atoms/theme-provider";
-import { Providers } from "@/components/Providers";
+import { Providers } from "@/components/organisms/Providers";
 
 const geist = Geist({
   subsets: ["latin"],
