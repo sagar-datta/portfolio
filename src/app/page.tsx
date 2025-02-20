@@ -8,7 +8,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col pb-20 lg:pb-24">
       <Header title="Sagar Datta's Portfolio" />
 
-      <main className="flex-1 max-w-7xl mx-auto w-full p-6">
+      <main className="flex-1 max-w-7xl mx-auto w-full p-6 lg:grid lg:place-items-center">
         <div className="flex flex-col md:flex-row md:flex-wrap gap-6 justify-center items-center md:items-stretch">
           {GRID_ITEMS.map((item) => (
             <GridItem
