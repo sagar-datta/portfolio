@@ -1,0 +1,9 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "max-len": ["error", { "code": 80 }],
+    "comma-dangle": ["error", "always-multiline"],
+    "@typescript-eslint/no-unused-vars": "error"
+  }
+}
