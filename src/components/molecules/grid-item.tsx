@@ -7,6 +7,7 @@ import { TechStackBubble } from "@/components/atoms/TechStackBubble";
 import { Tooltip } from "@/components/atoms/Tooltip";
 import { ResponsiveImage } from "@/components/atoms/ResponsiveImage";
 import { FeatureBubble } from "@/components/atoms/FeatureBubble";
+import { COLORS, SPACING, BREAKPOINTS } from "@/utils/theme-constants";
 
 type GridItemProps = Omit<IPortfolioItem, "id" | "color">;
 
@@ -21,7 +22,7 @@ export const GridItem = ({
   return (
     <Tooltip
       content={
-        <div className="flex items-center gap-2 text-dark/70 dark:text-light/70">
+        <div className={`flex items-center gap-2 ${COLORS.text.dimmed}`}>
           <ExternalLink className="w-4 h-4" />
           <p className="text-xs">Opens in a new tab</p>
         </div>
@@ -43,32 +44,38 @@ export const GridItem = ({
             relative rounded-xl aspect-[16/9]
             transition-smooth w-full overflow-hidden
             hover-lift-lg touch-lift-lg
-            bg-button-light dark:bg-button-dark p-4
+            ${COLORS.glass.button} p-4
           `}
         >
           {/* Content overlay */}
           <div className="flex flex-col h-full select-none">
             {/* Title */}
-            <h3 className="font-semibold tracking-tight text-clamp-title text-dark dark:text-light leading-none">
+            <h3
+              className={`font-semibold tracking-tight text-clamp-title ${COLORS.text.primary} leading-none`}
+            >
               {title}
             </h3>
 
             {/* Description */}
-            <p className="mt-2 font-normal text-clamp-body text-dark/80 dark:text-light/80 leading-snug line-clamp-3">
+            <p
+              className={`mt-2 font-normal text-clamp-body ${COLORS.text.muted} leading-snug line-clamp-3`}
+            >
               {description}
             </p>
 
             {/* Tags Container */}
             <div className="flex-1 flex flex-col justify-end space-y-2 mt-auto md:group-hover:opacity-0 transition-smooth">
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-[clamp(0.25rem,1cqi,0.375rem)]">
+              <div className={`flex flex-wrap ${SPACING.gap.small}`}>
                 {techStack.map((tech, i) => (
                   <TechStackBubble key={i} tech={tech} />
                 ))}
               </div>
 
               {/* Key Features - only show at max width */}
-              <div className="hidden @[450px]:flex flex-wrap gap-[clamp(0.25rem,1cqi,0.375rem)]">
+              <div
+                className={`hidden ${BREAKPOINTS.mobile}:flex flex-wrap ${SPACING.gap.small}`}
+              >
                 {keyFeatures.map((feature, i) => (
                   <FeatureBubble key={i} feature={feature} />
                 ))}
@@ -87,7 +94,9 @@ export const GridItem = ({
 
             {/* External link info */}
             <div className="absolute left-[55%] right-4 bottom-4 top-[45%] flex flex-col opacity-0 md:group-hover:opacity-100 transition-smooth">
-              <div className="flex flex-wrap gap-[0.375rem] content-start">
+              <div
+                className={`flex flex-wrap ${SPACING.gap.medium} content-start`}
+              >
                 {techStack.map((tech, i) => (
                   <TechStackBubble key={i} tech={tech} variant="small" />
                 ))}
