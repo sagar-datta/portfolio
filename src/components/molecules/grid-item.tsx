@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { IPortfolioItem } from "@/types/portfolio";
 import { ExternalLink } from "lucide-react";
 import { TechStackBubble } from "@/components/atoms/TechStackBubble";
@@ -8,6 +7,7 @@ import { Tooltip } from "@/components/atoms/Tooltip";
 import { ResponsiveImage } from "@/components/atoms/ResponsiveImage";
 import { FeatureBubble } from "@/components/atoms/FeatureBubble";
 import { COLORS, SPACING, BREAKPOINTS } from "@/utils/theme-constants";
+import { useExternalLink } from "@/hooks/useExternalLink";
 
 type GridItemProps = Omit<IPortfolioItem, "id" | "color">;
 
@@ -19,6 +19,8 @@ export const GridItem = ({
   techStack,
   keyFeatures,
 }: GridItemProps) => {
+  const { handleClick } = useExternalLink(url);
+
   return (
     <Tooltip
       content={
@@ -34,7 +36,7 @@ export const GridItem = ({
         flex-1 @container cursor-pointer
       `}
     >
-      <div onClick={() => window.open(url, "_blank")}>
+      <div onClick={handleClick}>
         {/* Static background */}
         <div className="absolute -z-10 inset-[1px] bg-accent-red rounded-xl" />
 

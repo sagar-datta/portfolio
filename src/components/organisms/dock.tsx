@@ -5,6 +5,7 @@ import { DesktopDock } from "./desktop-dock";
 import { type IDockItem } from "@/types/dock";
 import { useTheme } from "next-themes";
 import { Suspense, useEffect, useState } from "react";
+import { useExternalLink } from "@/hooks/useExternalLink";
 
 const DockSkeleton = () => (
   <div className="h-16 bg-button-light dark:bg-button-dark animate-pulse rounded-t-xl" />
@@ -13,6 +14,9 @@ const DockSkeleton = () => (
 export const Dock = () => {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { handleClick: handleGithubClick } = useExternalLink(
+    "https://github.com/sagar-datta"
+  );
 
   useEffect(() => {
     setMounted(true);
@@ -22,7 +26,7 @@ export const Dock = () => {
     {
       icon: "🐙",
       label: "GitHub",
-      onClick: () => window.open("https://github.com/sagar-datta", "_blank"),
+      onClick: handleGithubClick,
     },
     { icon: "📧", label: "Contact" },
     {
