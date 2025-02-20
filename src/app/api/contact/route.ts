@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
-    const data = await request.json();
+    const _data = await request.json();
 
     // TODO: Add your email service integration here
 
@@ -10,7 +10,7 @@ export async function POST(request: Request) {
       { message: "Message sent successfully" },
       { status: 200 }
     );
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json(
       { message: "Failed to send message" },
       { status: 500 }
