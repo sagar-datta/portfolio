@@ -74,27 +74,27 @@ export const GridItem = ({
               flex
               flex-col
               justify-between
-              p-[4%]
+              p-[5%]
               transition-opacity
               duration-300
               [@media(hover:hover)]:group-hover:opacity-0
               ${isTouched ? "opacity-0" : "opacity-100"}
             `}
           >
-            <div className="space-y-[2%]">
-              <h3 className="text-primary-dark dark:text-primary font-medium text-[clamp(0.875rem,4cqi,1.25rem)]">
+            <div className="space-y-2">
+              <h3 className="text-primary-dark dark:text-primary font-medium tracking-tight text-[clamp(0.875rem,6cqi,1.375rem)] leading-tight">
                 {title}
               </h3>
-              <p className="text-primary-dark/70 dark:text-primary/70 font-light text-[clamp(0.75rem,3.5cqi,0.875rem)]">
+              <p className="text-primary-dark/60 dark:text-primary/60 font-normal text-[clamp(0.675rem,4cqi,0.875rem)] leading-relaxed">
                 {description}
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-2 mt-auto">
+            <div className="flex flex-wrap gap-[clamp(0.25rem,1.5cqi,0.5rem)] mt-auto">
               {techStack.map((tech, i) => (
                 <span
                   key={i}
-                  className="text-[clamp(0.5rem,2.5cqi,0.625rem)] tracking-wider uppercase font-medium px-3 py-1.5 rounded-full bg-[#3F3E3C] dark:bg-[#E3DACC] text-[#F0EEE6] dark:text-[#222221] ring-0"
+                  className="text-[clamp(0.5rem,3cqi,0.625rem)] tracking-wider uppercase font-medium px-[clamp(0.375rem,2.5cqi,0.75rem)] py-[clamp(0.125rem,1.25cqi,0.375rem)] rounded-full bg-[#3F3E3C] dark:bg-[#E3DACC] text-[#F0EEE6] dark:text-[#222221] ring-0"
                 >
                   {tech}
                 </span>
