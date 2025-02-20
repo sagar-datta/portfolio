@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { IPortfolioItem } from "@/types/portfolio";
 
-type IGridItemProps = Omit<IPortfolioItem, "id">;
+interface IGridItemProps extends Omit<IPortfolioItem, "id"> {}
 
 export const GridItem = ({
   color,
@@ -16,7 +16,11 @@ export const GridItem = ({
 }: IGridItemProps) => {
   return (
     <div
-      className="relative group w-full min-w-0 md:min-w-[390px] max-w-[450px] flex-1 @container cursor-pointer"
+      className={`
+        relative group w-full 
+        min-w-0 md:min-w-[390px] max-w-[450px] 
+        flex-1 @container cursor-pointer
+      `}
       onClick={() => window.open(url, "_blank")}
     >
       {/* Static background */}
@@ -25,14 +29,9 @@ export const GridItem = ({
       {/* Main card content */}
       <div
         className={`
-          relative
-          rounded-xl
-          aspect-[16/9]
-          transition-smooth
-          w-full
-          overflow-hidden
-          hover-lift-lg
-          touch-lift-lg
+          relative rounded-xl aspect-[16/9]
+          transition-smooth w-full overflow-hidden
+          hover-lift-lg touch-lift-lg
         `}
       >
         <Image
@@ -40,12 +39,9 @@ export const GridItem = ({
           alt={title}
           fill
           className={`
-            object-cover
-            rounded-lg
-            transition-smooth
-            opacity-100
-            scale-[0.99]
-            group-hover:scale-100
+            object-cover rounded-lg
+            transition-smooth opacity-100
+            scale-[0.99] group-hover:scale-100
           `}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority
@@ -53,16 +49,10 @@ export const GridItem = ({
         {/* Content overlay */}
         <div
           className={`
-            absolute
-            inset-0
-            flex
-            flex-col
-            justify-between
-            p-[5%]
-            transition-smooth
+            absolute inset-0 flex flex-col
+            justify-between p-[5%] transition-smooth
             bg-button-light dark:bg-button-dark
-            opacity-100
-            group-hover:opacity-0
+            opacity-100 group-hover:opacity-0
             group-active:opacity-0
           `}
         >
@@ -79,7 +69,13 @@ export const GridItem = ({
             {techStack.map((tech, i) => (
               <span
                 key={i}
-                className="text-modern-clamp px-[clamp(0.375rem,2.5cqi,0.75rem)] py-[clamp(0.125rem,1.25cqi,0.375rem)] rounded-full bg-light dark:bg-primary-dark text-dark dark:text-light ring-0"
+                className={`
+                  text-modern-clamp 
+                  px-[clamp(0.375rem,2.5cqi,0.75rem)] 
+                  py-[clamp(0.125rem,1.25cqi,0.375rem)] 
+                  rounded-full bg-light dark:bg-primary-dark 
+                  text-dark dark:text-light ring-0
+                `}
               >
                 {tech}
               </span>

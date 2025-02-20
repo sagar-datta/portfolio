@@ -4,7 +4,11 @@ import { MobileDock } from "./mobile-dock";
 import { DesktopDock } from "./desktop-dock";
 import { type IDockItem } from "@/types/dock";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
+
+const DockSkeleton = () => (
+  <div className="h-16 bg-button-light dark:bg-button-dark animate-pulse rounded-t-xl" />
+);
 
 export const Dock = () => {
   const { setTheme, resolvedTheme } = useTheme();
@@ -14,7 +18,7 @@ export const Dock = () => {
     setMounted(true);
   }, []);
 
-  const DOCK_ITEMS: IDockItem[] = [
+  const dockItems: IDockItem[] = [
     {
       icon: "🐙",
       label: "GitHub",
@@ -22,51 +26,25 @@ export const Dock = () => {
     },
     { icon: "📧", label: "Contact" },
     {
-      icon: "🌚",
-      label: "Dark",
-      desktopLabel: "Dark Mode",
-      onClick: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
-    },
-  ];
-
-  if (!mounted) {
-    return (
-      <footer className="fixed bottom-0 left-0 right-0 z-50">
-        <MobileDock items={DOCK_ITEMS} />
-        <DesktopDock
-          items={DOCK_ITEMS.map((item) => ({
-            ...item,
-            label: item.desktopLabel || item.label,
-          }))}
-        />
-      </footer>
-    );
-  }
-
-  const mountedDockItems: IDockItem[] = [
-    {
-      icon: "🐙",
-      label: "GitHub",
-      onClick: () => window.open("https://github.com/sagar-datta", "_blank"),
-    },
-    { icon: "📧", label: "Contact" },
-    {
-      icon: resolvedTheme === "dark" ? "🌝" : "🌚",
-      label: resolvedTheme === "dark" ? "Light" : "Dark",
-      desktopLabel: resolvedTheme === "dark" ? "Light Mode" : "Dark Mode",
+      icon: mounted && resolvedTheme === "dark" ? "🌝" : "🌚",
+      label: mounted && resolvedTheme === "dark" ? "Light" : "Dark",
+      desktopLabel:
+        mounted && resolvedTheme === "dark" ? "Light Mode" : "Dark Mode",
       onClick: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
     },
   ];
 
   return (
     <footer className="fixed bottom-0 left-0 right-0 z-50">
-      <MobileDock items={mountedDockItems} />
-      <DesktopDock
-        items={mountedDockItems.map((item) => ({
-          ...item,
-          label: item.desktopLabel || item.label,
-        }))}
-      />
+      <Suspense fallback={<DockSkeleton />}>
+        <MobileDock items={dockItems} />
+        <DesktopDock
+          items={dockItems.map((item) => ({
+            ...item,
+            label: item.desktopLabel || item.label,
+          }))}
+        />
+      </Suspense>
     </footer>
   );
 };
