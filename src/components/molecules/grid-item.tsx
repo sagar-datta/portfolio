@@ -1,12 +1,12 @@
 "use client";
 
-import { IPortfolioItem } from "@/types/portfolio";
+import { IPortfolioItem } from "@/types/Portfolio";
 import { ExternalLink } from "lucide-react";
 import { TechStackBubble } from "@/components/atoms/TechStackBubble";
 import { Tooltip } from "@/components/atoms/Tooltip";
 import { ResponsiveImage } from "@/components/atoms/ResponsiveImage";
 import { FeatureBubble } from "@/components/atoms/FeatureBubble";
-import { COLORS, SPACING, BREAKPOINTS } from "@/utils/theme-constants";
+import { COLORS, SPACING, BREAKPOINTS } from "@/utils/themeConstants";
 import { useExternalLink } from "@/hooks/useExternalLink";
 
 type GridItemProps = Omit<IPortfolioItem, "id" | "color">;
@@ -66,18 +66,16 @@ export const GridItem = ({
             </p>
 
             {/* Tags Container */}
-            <div className="flex-1 flex flex-col justify-end space-y-2 mt-auto md:group-hover:opacity-0 transition-smooth">
+            <div className="flex-1 flex flex-col justify-end gap-2 mt-auto md:group-hover:opacity-0 transition-smooth">
               {/* Tech Stack */}
-              <div className={`flex flex-wrap ${SPACING.gap.small}`}>
+              <div className="flex flex-wrap gap-1.5">
                 {techStack.map((tech, i) => (
                   <TechStackBubble key={i} tech={tech} />
                 ))}
               </div>
 
-              {/* Key Features - only show at max width */}
-              <div
-                className={`hidden ${BREAKPOINTS.mobile}:flex flex-wrap ${SPACING.gap.small}`}
-              >
+              {/* Key Features - only show when card width >= 450px */}
+              <div className="hidden @[450px]:flex flex-wrap gap-1.5">
                 {keyFeatures.map((feature, i) => (
                   <FeatureBubble key={i} feature={feature} />
                 ))}
@@ -96,9 +94,7 @@ export const GridItem = ({
 
             {/* External link info */}
             <div className="absolute left-[55%] right-4 bottom-4 top-[45%] flex flex-col opacity-0 md:group-hover:opacity-100 transition-smooth">
-              <div
-                className={`flex flex-wrap ${SPACING.gap.medium} content-start`}
-              >
+              <div className="flex flex-wrap gap-1.5 content-start">
                 {techStack.map((tech, i) => (
                   <TechStackBubble key={i} tech={tech} variant="small" />
                 ))}

@@ -1,4 +1,4 @@
-import { Header } from "@/components/organisms/header";
+import { Header } from "@/components/organisms/Header";
 import { Dock } from "@/components/organisms/dock";
 import { GridItem } from "@/components/molecules/grid-item";
 import { GRID_ITEMS } from "@/utils/constants";

@@ -1,4 +1,4 @@
-import { IPortfolioItem } from "@/types/portfolio";
+import { IPortfolioItem } from "@/types/Portfolio";
 
 export const GRID_ITEMS: IPortfolioItem[] = [
   {

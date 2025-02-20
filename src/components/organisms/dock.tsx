@@ -2,7 +2,7 @@
 
 import { MobileDock } from "./mobile-dock";
 import { DesktopDock } from "./desktop-dock";
-import { type IDockItem } from "@/types/dock";
+import { type IDockItem } from "@/types/Dock"; // Corrected casing
 import { useTheme } from "next-themes";
 import { Suspense, useEffect, useState } from "react";
 import { useExternalLink } from "@/hooks/useExternalLink";

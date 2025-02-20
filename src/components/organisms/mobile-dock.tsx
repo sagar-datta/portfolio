@@ -1,6 +1,6 @@
 "use client";
 
-import { type IDockItem } from "@/types/dock";
+import { IDockItem } from "@/types/Dock";
 
 interface IMobileDockProps {
   items: IDockItem[];
