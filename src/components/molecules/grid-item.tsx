@@ -94,18 +94,38 @@ export const GridItem = ({
 
           {/* Image that appears on hover */}
           <div className="absolute left-4 right-[50%] bottom-4 top-[45%] rounded-lg overflow-hidden select-none opacity-0 md:group-hover:opacity-100 transition-smooth">
-            <Image
-              src={imagePath}
-              alt={title}
-              fill
-              className={`
-                object-cover
-                transition-smooth opacity-100
-                scale-[0.99] group-hover:scale-100
-              `}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              priority
-            />
+            <div className="relative w-full h-full">
+              <picture>
+                <source
+                  srcSet={`${imagePath.split(".")[0]}/${imagePath
+                    .split("/")
+                    .pop()
+                    ?.replace(".png", ".webp")}`}
+                  type="image/webp"
+                />
+                <source
+                  srcSet={`${imagePath.split(".")[0]}/${imagePath
+                    .split("/")
+                    .pop()
+                    ?.replace(".png", ".jpg")}`}
+                  type="image/jpeg"
+                />
+                <Image
+                  src={`${imagePath.split(".")[0]}/${imagePath
+                    .split("/")
+                    .pop()}`}
+                  alt={title}
+                  fill
+                  className={`
+                    object-cover
+                    transition-smooth opacity-100
+                    scale-[0.99] group-hover:scale-100
+                  `}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                />
+              </picture>
+            </div>
           </div>
 
           {/* External link info */}
