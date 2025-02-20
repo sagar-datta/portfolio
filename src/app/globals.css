@@ -149,6 +149,10 @@
     @apply bg-button-light dark:bg-button-dark;
   }
 
+  .glass-blur {
+    @apply bg-primary/90 dark:bg-primary-dark/90 backdrop-blur-xl;
+  }
+
   /* Border utilities */
   .border-themed {
     @apply border-border-light/20 dark:border-border-dark/20;
