@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/atoms/theme-provider";
 import { Providers } from "@/components/organisms/Providers";
+import { DynamicFavicon } from "@/components/atoms/DynamicFavicon";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title: "Sagar Datta's Portfolio",
   description: "Personal portfolio showcasing my work and skills",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon-light.svg",
   },
 };
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className="bg-primary dark:bg-primary-dark text-primary dark:text-primary-dark">
         <Providers>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <DynamicFavicon />
             {children}
           </ThemeProvider>
         </Providers>
