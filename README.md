@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Sagar Datta's Portfolio
 
-## Getting Started
+A modern, personal portfolio site built with cutting-edge web technologies, featuring a minimal desktop-inspired interface.
 
-First, run the development server:
+## 🎨 Design Philosophy
+
+The site features a minimalist dock interface, drawing inspiration from familiar desktop environments while embracing modern web capabilities. Built with a mobile-first approach, it's fully responsive and accessible across all devices.
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) 15.1.7 with TypeScript
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with custom utilities and plugins
+- **Data Management**: [TanStack Query](https://tanstack.com/query) for efficient data handling
+- **Theme Switching**: [next-themes](https://github.com/pacocoursey/next-themes) for seamless dark/light mode
+
+## 🏗 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+├── app/             # Next.js app router pages
+├── components/      # React components (Atomic Design)
+│   ├── atoms/      # Basic building blocks
+│   ├── molecules/  # Combinations of atoms
+│   └── organisms/  # Complex components
+├── scripts/        # Build and utility scripts
+├── types/          # TypeScript type definitions
+└── utils/          # Helper functions and constants
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🌓 Dark/Light mode with system preference support
+- 📱 Fully responsive design
+- 🎯 Interactive dock with smooth animations
+- 🏃‍♂️ Static site generation for blazing-fast performance
+- 🔄 Automatic deployments via GitHub Actions
+- 🎨 Atomic design pattern for component organisation
+- 📦 Modern build optimizations
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Development
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/sagar-datta/sagar-datta.github.io.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Start the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Open in your browser:
+   ```
+   http://localhost:3000
+   ```
+
+## 🛠 Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build for production
+- `npm run start` - Start the production server
+- `npm run lint` - Check for code issues
+- `npm run lint:fix` - Fix code issues
+- `npm run clean` - Clear build caches
+- `npm run typecheck` - Check TypeScript types
+
+## 📦 Deployment
+
+The site is automatically deployed to GitHub Pages using GitHub Actions. Every push to the main branch triggers:
+
+1. Code quality checks
+2. TypeScript validation
+3. Optimised build process
+4. Static file generation
+5. Deployment to GitHub Pages
+
+## 🎯 Design Decisions
+
+- **Atomic Design**: Components are organised using atomic design principles for better maintainability
+- **Static Export**: Utilising Next.js static export for optimal performance
+- **Client Components**: Strategic use of 'use client' for interactive elements
+- **Build Optimisation**: Implemented caching and optimised build processes
+- **Type Safety**: Strict TypeScript configuration for robust code
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Built with 💖 by Sagar Datta
