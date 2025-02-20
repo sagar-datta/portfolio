@@ -8,7 +8,7 @@ interface IMobileDockProps {
 
 export const MobileDock = ({ items }: IMobileDockProps) => {
   return (
-    <div className="lg:hidden w-full glass-blur px-4 py-3">
+    <div className="block lg:[@media(hover:hover)]:hidden w-full glass-blur px-4 py-3">
       <div className="grid grid-cols-3 gap-2 max-w-sm mx-auto">
         {items.map((item) => (
           <div

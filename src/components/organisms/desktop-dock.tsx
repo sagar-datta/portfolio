@@ -8,7 +8,7 @@ interface IDesktopDockProps {
 
 export const DesktopDock = ({ items }: IDesktopDockProps) => {
   return (
-    <div className="hidden lg:flex justify-center p-6 pb-7">
+    <div className="hidden [@media(hover:hover)]:lg:flex justify-center p-6 pb-7">
       <div className="flex-center gap-5 px-5 py-2.5 rounded-2xl glass-button">
         {items.map((item) => (
           <div
