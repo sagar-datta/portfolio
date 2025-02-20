@@ -2,6 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    @apply bg-primary text-primary antialiased;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Consistent heading styles */
+  h1 {
+    @apply text-h1 font-bold;
+  }
+  h2 {
+    @apply text-h2 font-bold;
+  }
+  h3 {
+    @apply text-h3 font-semibold;
+  }
+  h4 {
+    @apply text-h4 font-semibold;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-primary text-primary-dark hover:opacity-90;
+  }
+  .btn-secondary {
+    @apply btn border-2 border-primary hover:bg-primary/10;
+  }
+
+  /* Cards */
+  .card {
+    @apply p-6 bg-primary rounded-xl shadow-lg;
+  }
+  .card-hover {
+    @apply card hover:shadow-xl transition-shadow duration-200;
+  }
+
+  /* Form elements */
+  .input {
+    @apply px-4 py-2 rounded-lg border border-primary bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+  .label {
+    @apply block text-sm font-medium mb-1;
+  }
+}
+
+@layer utilities {
+  /* Layout utilities */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+  .grid-center {
+    @apply grid place-items-center;
+  }
+
+  /* Text utilities */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r;
+  }
+
+  /* Animation utilities */
+  .animate-fade {
+    @apply transition-opacity duration-200;
+  }
+  .animate-scale {
+    @apply transition-transform duration-200;
+  }
+
+  /* Container utilities */
+  .content-wrapper {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
 }
