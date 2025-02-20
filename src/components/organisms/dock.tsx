@@ -1,7 +1,7 @@
 "use client";
 
-import { MobileDock } from "./mobile-dock";
-import { DesktopDock } from "./desktop-dock";
+import { MobileDock } from "./MobileDock";
+import { DesktopDock } from "./DesktopDock";
 import { type IDockItem } from "@/types/Dock"; // Corrected casing
 import { useTheme } from "next-themes";
 import { Suspense, useEffect, useState } from "react";

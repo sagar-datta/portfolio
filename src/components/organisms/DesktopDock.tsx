@@ -1,6 +1,6 @@
 "use client";
 
-import { type IDockItem } from "@/types/dock";
+import { type IDockItem } from "@/types/Dock";
 
 interface IDesktopDockProps {
   items: IDockItem[];
