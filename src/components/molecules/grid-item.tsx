@@ -37,7 +37,7 @@ export const GridItem = ({
       {/* Main card content */}
       <div
         className={`
-          bg-primary-dark dark:bg-primary
+          relative
           rounded-xl
           aspect-[16/9]
           transition-smooth
@@ -48,55 +48,52 @@ export const GridItem = ({
           ${isTouched ? "-translate-x-2 -translate-y-2" : ""}
         `}
       >
-        <div className="relative w-full h-full">
-          <Image
-            src={imagePath}
-            alt={title}
-            fill
-            className={`
-              object-cover
-              rounded-lg
-              transition-smooth
-              opacity-0
-              group-hover:opacity-100
-              ${isTouched ? "opacity-100" : ""}
-            `}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority
-          />
-          {/* Default state */}
-          <div
-            className={`
-              absolute
-              inset-0
-              flex
-              flex-col
-              justify-between
-              p-[5%]
-              transition-smooth
-              group-hover:opacity-0
-              ${isTouched ? "opacity-0" : "opacity-100"}
-            `}
-          >
-            <div className="space-y-2">
-              <h3 className="text-adaptive font-medium tracking-tight text-clamp-title">
-                {title}
-              </h3>
-              <p className="text-adaptive-60 font-normal text-clamp-body">
-                {description}
-              </p>
-            </div>
+        <Image
+          src={imagePath}
+          alt={title}
+          fill
+          className={`
+            object-cover
+            rounded-lg
+            transition-smooth
+            opacity-100
+          `}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
+        />
+        {/* Content overlay */}
+        <div
+          className={`
+            absolute
+            inset-0
+            flex
+            flex-col
+            justify-between
+            p-[5%]
+            transition-smooth
+            bg-primary-dark dark:bg-primary
+            group-hover:opacity-0
+            ${isTouched ? "opacity-0" : "opacity-100"}
+          `}
+        >
+          <div className="space-y-2">
+            <h3 className="text-adaptive font-medium tracking-tight text-clamp-title">
+              {title}
+            </h3>
+            <p className="text-adaptive-60 font-normal text-clamp-body">
+              {description}
+            </p>
+          </div>
 
-            <div className="flex flex-wrap gap-[clamp(0.25rem,1.5cqi,0.5rem)] mt-auto">
-              {techStack.map((tech, i) => (
-                <span
-                  key={i}
-                  className="text-clamp-small tracking-wider uppercase font-medium px-[clamp(0.375rem,2.5cqi,0.75rem)] py-[clamp(0.125rem,1.25cqi,0.375rem)] rounded-full bg-button-dark dark:bg-button-light text-light dark:text-dark ring-0"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
+          <div className="flex flex-wrap gap-[clamp(0.25rem,1.5cqi,0.5rem)] mt-auto">
+            {techStack.map((tech, i) => (
+              <span
+                key={i}
+                className="text-clamp-small tracking-wider uppercase font-medium px-[clamp(0.375rem,2.5cqi,0.75rem)] py-[clamp(0.125rem,1.25cqi,0.375rem)] rounded-full bg-button-dark dark:bg-button-light text-light dark:text-dark ring-0"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
         </div>
       </div>
