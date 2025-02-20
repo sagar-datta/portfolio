@@ -13,7 +13,6 @@ export default function Home() {
           {GRID_ITEMS.map((item) => (
             <GridItem
               key={item.id}
-              color={item.color}
               title={item.title}
               description={item.description}
               url={item.url}

@@ -3,17 +3,16 @@
 import Image from "next/image";
 import { IPortfolioItem } from "@/types/portfolio";
 
-interface IGridItemProps extends Omit<IPortfolioItem, "id"> {}
+type GridItemProps = Omit<IPortfolioItem, "id" | "color">;
 
 export const GridItem = ({
-  color,
   title,
   description,
   url,
   imagePath,
   techStack,
   keyFeatures,
-}: IGridItemProps) => {
+}: GridItemProps) => {
   return (
     <div
       className={`

@@ -1,11 +1,10 @@
 "use client";
 
 interface IErrorProps {
-  error: Error;
   reset: () => void;
 }
 
-export default function Error({ error: _error, reset }: IErrorProps) {
+export default function Error({ reset }: IErrorProps) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-4">
       <h2 className="text-xl font-medium">Something went wrong!</h2>
