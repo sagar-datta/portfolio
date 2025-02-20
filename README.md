@@ -4,7 +4,7 @@ A modern, personal portfolio site built with cutting-edge web technologies, feat
 
 ## 🎨 Design Philosophy
 
-The site features a minimalist dock interface, drawing inspiration from familiar desktop environments while embracing modern web capabilities. Built with a mobile-first approach, it's fully responsive and accessible across all devices.
+The site features a minimalist dock interface, drawing inspiration from familiar desktop environments whilst embracing modern web capabilities. Built with a mobile-first approach, it's fully responsive and accessible across all devices.
 
 ## 🛠 Tech Stack
 
@@ -22,7 +22,7 @@ src/
 │   ├── atoms/      # Basic building blocks
 │   ├── molecules/  # Combinations of atoms
 │   └── organisms/  # Complex components
-├── scripts/        # Build and utility scripts
+├── hooks/          # Custom React hooks
 ├── types/          # TypeScript type definitions
 └── utils/          # Helper functions and constants
 ```
@@ -35,7 +35,7 @@ src/
 - 🏃‍♂️ Static site generation for blazing-fast performance
 - 🔄 Automatic deployments via GitHub Actions
 - 🎨 Atomic design pattern for component organisation
-- 📦 Modern build optimizations
+- 📦 Modern build optimisations
 
 ## 🚀 Development
 
@@ -90,9 +90,9 @@ The site is automatically deployed to GitHub Pages using GitHub Actions. Every p
 - **Build Optimisation**: Implemented caching and optimised build processes
 - **Type Safety**: Strict TypeScript configuration for robust code
 
-## 📝 License
+## 📝 Licence
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licenced under the MIT Licence - see the [LICENCE](LICENCE) file for details.
 
 ---
 
