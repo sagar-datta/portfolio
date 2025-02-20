@@ -6,7 +6,7 @@ import { TechStackBubble } from "@/components/atoms/TechStackBubble";
 import { Tooltip } from "@/components/atoms/Tooltip";
 import { ResponsiveImage } from "@/components/atoms/ResponsiveImage";
 import { FeatureBubble } from "@/components/atoms/FeatureBubble";
-import { COLORS, SPACING, BREAKPOINTS } from "@/utils/themeConstants";
+import { COLORS } from "@/utils/themeConstants";
 import { useExternalLink } from "@/hooks/useExternalLink";
 
 type GridItemProps = Omit<IPortfolioItem, "id" | "color">;
