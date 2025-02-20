@@ -52,12 +52,22 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: ""
           NODE_ENV: production
-        run: npm run build
+        run: |
+          echo "Building Next.js app..."
+          npm run build
+          echo "Build complete. Checking output directory..."
+          pwd
+          echo "Contents of current directory:"
+          ls -la
+          echo "Contents of .next directory (if exists):"
+          ls -la .next || true
+          echo "Contents of out directory (if exists):"
+          ls -la out || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: out
+          path: ./out
 
   deploy:
     environment:
