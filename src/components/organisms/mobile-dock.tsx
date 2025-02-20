@@ -14,15 +14,22 @@ export const MobileDock = ({ items }: IMobileDockProps) => {
           <div
             key={item.label}
             onClick={item.onClick}
-            className="flex-center px-3 py-2 rounded-xl cursor-pointer bg-primary/80 dark:bg-primary-dark/80 backdrop-blur-sm border border-[#222221]/20 dark:border-[#F0EEE6]/20 active:bg-primary/60 dark:active:bg-primary-dark/60 animate-scale"
+            className="relative group w-full"
           >
-            <div className="flex-center gap-2">
-              <span className="text-2xl transform-gpu transition-transform active:scale-90">
-                {item.icon}
-              </span>
-              <span className="text-xs font-medium text-primary/90 dark:text-primary-dark/90">
-                {item.label}
-              </span>
+            <div className="absolute -z-10 inset-0 bg-[#E54D2E] rounded-xl shadow-sm transition-all duration-150 group-active:[@media(hover:none)]:shadow-none" />
+            <div
+              className="flex-center px-3 py-2 rounded-xl cursor-pointer bg-[#E2DBCB] dark:bg-[#3F3E3C] transition-all duration-150 
+              hover:[@media(hover:hover)]:-translate-x-0.5 hover:[@media(hover:hover)]:-translate-y-0.5 
+              active:[@media(hover:none)]:-translate-x-0.5 active:[@media(hover:none)]:-translate-y-0.5"
+            >
+              <div className="flex-center gap-2">
+                <span className="text-2xl transform-gpu transition-transform active:scale-90">
+                  {item.icon}
+                </span>
+                <span className="text-xs font-medium text-primary dark:text-primary-dark">
+                  {item.label}
+                </span>
+              </div>
             </div>
           </div>
         ))}
