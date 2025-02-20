@@ -8,7 +8,9 @@
         "code": 120,
         "ignoreStrings": true,
         "ignoreTemplateLiterals": true,
-        "ignoreComments": true
+        "ignoreComments": true,
+        "ignorePattern": "^\\s*className=|^\\s*class=|^\\s*<path\\s+d=|^\\s*d=",
+        "ignoreUrls": true
       }
     ],
     "comma-dangle": ["error", "always-multiline"],
