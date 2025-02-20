@@ -62,8 +62,13 @@ export const GridItem = ({
               {title}
             </h3>
 
-            {/* Tags Container - centered between title and description */}
-            <div className="flex-1 flex flex-col justify-center space-y-2 my-2">
+            {/* Description */}
+            <p className="mt-2 font-normal text-clamp-body text-dark/80 dark:text-light/80 leading-snug line-clamp-3">
+              {description}
+            </p>
+
+            {/* Tags Container */}
+            <div className="flex-1 flex flex-col justify-end space-y-2 mt-auto">
               {/* Tech Stack */}
               <div className="flex flex-wrap gap-[clamp(0.25rem,1cqi,0.375rem)]">
                 {techStack.map((tech, i) => (
@@ -91,8 +96,8 @@ export const GridItem = ({
                       text-modern-clamp font-medium
                       px-[clamp(0.25rem,2cqi,0.75rem)]
                       py-[clamp(0.1rem,1cqi,0.375rem)]
-                      rounded-full bg-light dark:bg-primary-dark 
-                      text-dark dark:text-light
+                      rounded-full bg-primary/55 dark:bg-primary-dark/55
+                      text-dark/75 dark:text-light/75
                     `}
                   >
                     {feature}
@@ -100,11 +105,6 @@ export const GridItem = ({
                 ))}
               </div>
             </div>
-
-            {/* Description */}
-            <p className="font-normal text-clamp-body text-dark/80 dark:text-light/80 leading-snug line-clamp-3">
-              {description}
-            </p>
           </div>
         </div>
       </div>
