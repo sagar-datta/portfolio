@@ -32,7 +32,7 @@ export const GridItem = ({
       onTouchEnd={handleTouchEnd}
     >
       {/* Static background */}
-      <div className="absolute -z-10 inset-0 bg-[#E54D2E] rounded-xl" />
+      <div className="absolute -z-10 inset-[1px] bg-accent-red rounded-xl" />
 
       {/* Main card content */}
       <div
@@ -40,8 +40,7 @@ export const GridItem = ({
           bg-primary-dark dark:bg-primary
           rounded-xl
           aspect-[16/9]
-          transition-transform
-          duration-300
+          transition-smooth
           w-full
           overflow-hidden
           group-hover:-translate-x-2
@@ -57,8 +56,7 @@ export const GridItem = ({
             className={`
               object-cover
               rounded-lg
-              transition-opacity
-              duration-300
+              transition-smooth
               opacity-0
               group-hover:opacity-100
               ${isTouched ? "opacity-100" : ""}
@@ -75,17 +73,16 @@ export const GridItem = ({
               flex-col
               justify-between
               p-[5%]
-              transition-opacity
-              duration-300
+              transition-smooth
               group-hover:opacity-0
               ${isTouched ? "opacity-0" : "opacity-100"}
             `}
           >
             <div className="space-y-2">
-              <h3 className="text-primary-dark dark:text-primary font-medium tracking-tight text-[clamp(0.875rem,6cqi,1.375rem)] leading-tight">
+              <h3 className="text-adaptive font-medium tracking-tight text-clamp-title">
                 {title}
               </h3>
-              <p className="text-primary-dark/60 dark:text-primary/60 font-normal text-[clamp(0.675rem,4cqi,0.875rem)] leading-relaxed">
+              <p className="text-adaptive-60 font-normal text-clamp-body">
                 {description}
               </p>
             </div>
@@ -94,7 +91,7 @@ export const GridItem = ({
               {techStack.map((tech, i) => (
                 <span
                   key={i}
-                  className="text-[clamp(0.5rem,3cqi,0.625rem)] tracking-wider uppercase font-medium px-[clamp(0.375rem,2.5cqi,0.75rem)] py-[clamp(0.125rem,1.25cqi,0.375rem)] rounded-full bg-[#3F3E3C] dark:bg-[#E3DACC] text-[#F0EEE6] dark:text-[#222221] ring-0"
+                  className="text-clamp-small tracking-wider uppercase font-medium px-[clamp(0.375rem,2.5cqi,0.75rem)] py-[clamp(0.125rem,1.25cqi,0.375rem)] rounded-full bg-button-dark dark:bg-button-light text-light dark:text-dark ring-0"
                 >
                   {tech}
                 </span>

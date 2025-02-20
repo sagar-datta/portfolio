@@ -18,6 +18,17 @@ export default {
       colors: {
         light: "#F0EEE6",
         dark: "#222221",
+        accent: {
+          red: "#E54D2E",
+        },
+        button: {
+          light: "#E2DBCB",
+          dark: "#3F3E3C",
+        },
+        border: {
+          light: "#222221",
+          dark: "#F0EEE6",
+        },
       },
       backgroundColor: {
         primary: {
@@ -76,6 +87,14 @@ export default {
           xl: "5rem",
           "2xl": "6rem",
         },
+      },
+      transitionDuration: {
+        150: "150ms",
+        200: "200ms",
+      },
+      transitionTimingFunction: {
+        smooth: "cubic-bezier(0.4, 0, 0.2, 1)",
+        bounce: "cubic-bezier(0.34, 1.56, 0.64, 1)",
       },
     },
   },

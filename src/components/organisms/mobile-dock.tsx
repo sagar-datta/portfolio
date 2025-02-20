@@ -16,12 +16,8 @@ export const MobileDock = ({ items }: IMobileDockProps) => {
             onClick={item.onClick}
             className="relative group w-full"
           >
-            <div className="absolute -z-10 inset-0 bg-[#E54D2E] rounded-xl shadow-sm transition-all duration-150 group-active:[@media(hover:none)]:shadow-none" />
-            <div
-              className="flex-center px-3 py-2 rounded-xl cursor-pointer bg-[#E2DBCB] dark:bg-[#3F3E3C] transition-all duration-150 
-              hover:[@media(hover:hover)]:-translate-x-0.5 hover:[@media(hover:hover)]:-translate-y-0.5 
-              active:[@media(hover:none)]:-translate-x-0.5 active:[@media(hover:none)]:-translate-y-0.5"
-            >
+            <div className="absolute -z-10 inset-[1px] bg-accent-red rounded-xl interactive-shadow" />
+            <div className="flex-center px-3 py-2 rounded-xl cursor-pointer glass-button transition-all duration-150 hover-lift touch-lift">
               <div className="flex-center gap-2">
                 <span className="text-2xl transform-gpu transition-transform active:scale-90">
                   {item.icon}

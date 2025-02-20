@@ -69,6 +69,14 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r;
   }
 
+  .text-adaptive {
+    @apply text-primary-dark dark:text-primary;
+  }
+
+  .text-adaptive-60 {
+    @apply text-primary-dark/60 dark:text-primary/60;
+  }
+
   /* Animation utilities */
   .animate-fade {
     @apply transition-opacity duration-200;
@@ -77,8 +85,60 @@
     @apply transition-transform duration-200;
   }
 
+  .transition-smooth {
+    @apply transition-all duration-150 ease-smooth;
+  }
+
+  .transition-bounce {
+    @apply transition-all duration-200 ease-bounce;
+  }
+
   /* Container utilities */
   .content-wrapper {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Interactive utilities */
+  .hover-lift {
+    @apply hover:[@media(hover:hover)]:-translate-x-1 hover:[@media(hover:hover)]:-translate-y-1;
+  }
+
+  .touch-lift {
+    @apply active:[@media(hover:none)]:-translate-x-1 active:[@media(hover:none)]:-translate-y-1;
+  }
+
+  .interactive-shadow {
+    @apply shadow-sm transition-shadow duration-150 group-active:[@media(hover:none)]:shadow-none;
+  }
+
+  .interactive-scale {
+    @apply hover:scale-[1.02] active:scale-[0.98] transition-smooth;
+  }
+
+  /* Background utilities */
+  .glass-light {
+    @apply bg-primary/90 dark:bg-primary-dark/90 backdrop-blur-xl;
+  }
+
+  .glass-button {
+    @apply bg-button-light dark:bg-button-dark;
+  }
+
+  /* Border utilities */
+  .border-themed {
+    @apply border-border-light/20 dark:border-border-dark/20;
+  }
+
+  /* Responsive text utilities */
+  .text-clamp-title {
+    @apply text-[clamp(0.875rem,6cqi,1.375rem)] leading-tight;
+  }
+
+  .text-clamp-body {
+    @apply text-[clamp(0.675rem,4cqi,0.875rem)] leading-relaxed;
+  }
+
+  .text-clamp-small {
+    @apply text-[clamp(0.5rem,3cqi,0.625rem)];
   }
 }
