@@ -18,11 +18,10 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       "Gemini Pro API",
     ],
     keyFeatures: [
-      "AI Recipe Generation",
-      "Interactive Checklists",
-      "Print-Ready Cards",
-      "Motion Design",
-      "A11y Support",
+      "AI Integration",
+      "Real-time UX",
+      "Responsive Design",
+      "State Management",
     ],
   },
   {
@@ -41,11 +40,10 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       "CSS Animations",
     ],
     keyFeatures: [
-      "Dynamic Gallery",
-      "Animated Cities",
-      "Progressive Loading",
-      "Location Mapping",
-      "Rich Metadata",
+      "Dynamic Loading",
+      "Custom Animations",
+      "API Integration",
+      "Modern UI/UX",
     ],
   },
 ];

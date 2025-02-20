@@ -18,7 +18,7 @@ export const GridItem = ({
     <div
       className={`
         relative group w-full 
-        min-w-0 md:min-w-[390px] max-w-[450px] 
+        min-w-0 md:min-w-[450px] max-w-[450px] 
         flex-1 @container cursor-pointer
       `}
       onClick={() => window.open(url, "_blank")}
@@ -87,8 +87,8 @@ export const GridItem = ({
                 ))}
               </div>
 
-              {/* Key Features - only show on lg screens */}
-              <div className="hidden lg:flex flex-wrap gap-[clamp(0.25rem,1cqi,0.375rem)]">
+              {/* Key Features - only show at max width */}
+              <div className="hidden @[450px]:flex flex-wrap gap-[clamp(0.25rem,1cqi,0.375rem)]">
                 {keyFeatures.map((feature, i) => (
                   <span
                     key={i}
