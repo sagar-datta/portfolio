@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { IPortfolioItem } from "@/types/portfolio";
+import { ExternalLink } from "lucide-react";
 
 type GridItemProps = Omit<IPortfolioItem, "id" | "color">;
 
@@ -22,6 +23,12 @@ export const GridItem = ({
       `}
       onClick={() => window.open(url, "_blank")}
     >
+      {/* Popover for external link info */}
+      <div className="absolute -top-12 left-1/2 -translate-x-1/2 flex items-center gap-2 text-dark/70 dark:text-light/70 opacity-0 group-hover:opacity-100 transition-smooth bg-button-light dark:bg-button-dark px-3 py-1.5 rounded-full shadow-sm">
+        <ExternalLink className="w-4 h-4" />
+        <p className="text-xs whitespace-nowrap">Opens in a new tab</p>
+      </div>
+
       {/* Static background */}
       <div className="absolute -z-10 inset-[1px] bg-accent-red rounded-xl" />
 
@@ -86,7 +93,7 @@ export const GridItem = ({
           </div>
 
           {/* Image that appears on hover */}
-          <div className="absolute inset-x-4 bottom-4 top-[45%] rounded-lg overflow-hidden select-none opacity-0 group-hover:opacity-100 transition-smooth">
+          <div className="absolute left-4 right-[50%] bottom-4 top-[45%] rounded-lg overflow-hidden select-none opacity-0 group-hover:opacity-100 transition-smooth">
             <Image
               src={imagePath}
               alt={title}
@@ -99,6 +106,25 @@ export const GridItem = ({
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority
             />
+          </div>
+
+          {/* External link info */}
+          <div className="absolute left-[55%] right-4 bottom-4 top-[45%] flex flex-col opacity-0 group-hover:opacity-100 transition-smooth">
+            <div className="flex flex-wrap gap-[0.375rem] content-start">
+              {techStack.map((tech, i) => (
+                <span
+                  key={i}
+                  className={`
+                    text-xs font-medium
+                    px-2 py-1
+                    rounded-full bg-light dark:bg-primary-dark 
+                    text-dark dark:text-light
+                  `}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
