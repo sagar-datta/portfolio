@@ -135,8 +135,9 @@ export const GridItem = ({
                 <span
                   key={i}
                   className={`
-                    text-xs font-medium
-                    px-2 py-1
+                    text-[clamp(0.5rem,3cqi,0.575rem)] uppercase tracking-wider font-medium
+                    px-[clamp(0.25rem,2cqi,0.625rem)]
+                    py-[clamp(0.1rem,1cqi,0.325rem)]
                     rounded-full bg-light dark:bg-primary-dark 
                     text-dark dark:text-light
                   `}
