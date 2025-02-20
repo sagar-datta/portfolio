@@ -50,36 +50,61 @@ export const GridItem = ({
         <div
           className={`
             absolute inset-0 flex flex-col
-            justify-between p-[5%] transition-smooth
+            p-[5%] transition-smooth
             bg-button-light dark:bg-button-dark
             opacity-100 group-hover:opacity-0
             group-active:opacity-0
           `}
         >
-          <div className="space-y-2 select-none">
-            <h3 className="font-medium tracking-tight text-clamp-title text-dark dark:text-light">
+          <div className="flex flex-col h-full select-none">
+            {/* Title */}
+            <h3 className="font-semibold tracking-tight text-clamp-title text-dark dark:text-light leading-none">
               {title}
             </h3>
-            <p className="font-normal text-clamp-body text-dark dark:text-light">
+
+            {/* Tags Container - centered between title and description */}
+            <div className="flex-1 flex flex-col justify-center space-y-2 my-2">
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-[clamp(0.25rem,1cqi,0.375rem)]">
+                {techStack.map((tech, i) => (
+                  <span
+                    key={i}
+                    className={`
+                      text-modern-clamp font-medium
+                      px-[clamp(0.25rem,2cqi,0.75rem)]
+                      py-[clamp(0.1rem,1cqi,0.375rem)]
+                      rounded-full bg-light dark:bg-primary-dark 
+                      text-dark dark:text-light
+                    `}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Key Features - only show on lg screens */}
+              <div className="hidden lg:flex flex-wrap gap-[clamp(0.25rem,1cqi,0.375rem)]">
+                {keyFeatures.map((feature, i) => (
+                  <span
+                    key={i}
+                    className={`
+                      text-modern-clamp font-medium
+                      px-[clamp(0.25rem,2cqi,0.75rem)]
+                      py-[clamp(0.1rem,1cqi,0.375rem)]
+                      rounded-full bg-light dark:bg-primary-dark 
+                      text-dark dark:text-light
+                    `}
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="font-normal text-clamp-body text-dark/80 dark:text-light/80 leading-snug line-clamp-3">
               {description}
             </p>
-          </div>
-
-          <div className="flex flex-wrap gap-[clamp(0.25rem,1.5cqi,0.5rem)] mt-auto select-none">
-            {techStack.map((tech, i) => (
-              <span
-                key={i}
-                className={`
-                  text-modern-clamp 
-                  px-[clamp(0.375rem,2.5cqi,0.75rem)] 
-                  py-[clamp(0.125rem,1.25cqi,0.375rem)] 
-                  rounded-full bg-light dark:bg-primary-dark 
-                  text-dark dark:text-light ring-0
-                `}
-              >
-                {tech}
-              </span>
-            ))}
           </div>
         </div>
       </div>

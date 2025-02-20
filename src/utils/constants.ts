@@ -18,11 +18,11 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       "Gemini Pro API",
     ],
     keyFeatures: [
-      "Smart recipe generation with AI",
-      "Interactive checklist for ingredients",
-      "Print-optimized recipe cards",
-      "Responsive design with animations",
-      "Accessibility features",
+      "AI Recipe Generation",
+      "Interactive Checklists",
+      "Print-Ready Cards",
+      "Motion Design",
+      "A11y Support",
     ],
   },
   {
@@ -41,11 +41,11 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       "CSS Animations",
     ],
     keyFeatures: [
-      "Dynamic image gallery with modal view",
-      "Cities ticker with smooth animations",
-      "Progressive image loading",
-      "Location data integration",
-      "Rich metadata display",
+      "Dynamic Gallery",
+      "Animated Cities",
+      "Progressive Loading",
+      "Location Mapping",
+      "Rich Metadata",
     ],
   },
 ];
