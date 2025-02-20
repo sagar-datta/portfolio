@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Sagar Datta's Portfolio",
   description: "Personal portfolio showcasing my work and skills",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
   },
 };
 
