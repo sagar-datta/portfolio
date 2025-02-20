@@ -7,17 +7,48 @@ const GRID_ITEMS = [
     id: 1,
     title: "Gastronaut AI",
     url: "https://sagar-datta.github.io/gastronaut-ai/",
-    description: "AI-powered recipe generator",
+    description: "AI-powered recipe generator using Google's Gemini Pro API",
     color: "bg-primary-dark dark:bg-primary",
     imagePath: "/images/projects/gastronaut.png",
+    techStack: [
+      "React 18",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Shadcn/ui",
+      "Framer Motion",
+      "Gemini Pro API",
+    ],
+    keyFeatures: [
+      "Smart recipe generation with AI",
+      "Interactive checklist for ingredients",
+      "Print-optimized recipe cards",
+      "Responsive design with animations",
+      "Accessibility features",
+    ],
   },
   {
     id: 2,
     title: "Galerie",
     url: "https://sagar-datta.github.io/galerie/",
-    description: "Photography portfolio",
+    description: "Modern photo gallery with dynamic city selection and mapping",
     color: "bg-primary-dark dark:bg-primary",
     imagePath: "/images/projects/galerie.png",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Cloudinary",
+      "CSS Animations",
+    ],
+    keyFeatures: [
+      "Dynamic image gallery with modal view",
+      "Cities ticker with smooth animations",
+      "Progressive image loading",
+      "Location data integration",
+      "Rich metadata display",
+    ],
   },
   // Add more portfolio items as needed
 ];
@@ -41,6 +72,8 @@ export default function Home() {
                   description={item.description}
                   url={item.url}
                   imagePath={item.imagePath}
+                  techStack={item.techStack}
+                  keyFeatures={item.keyFeatures}
                 />
               </div>
             ))}

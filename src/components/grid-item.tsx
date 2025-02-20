@@ -8,6 +8,8 @@ interface IGridItemProps {
   description: string;
   url: string;
   imagePath: string;
+  techStack: string[];
+  keyFeatures: string[];
 }
 
 export function GridItem({
@@ -16,6 +18,8 @@ export function GridItem({
   description,
   url,
   imagePath,
+  techStack,
+  keyFeatures,
 }: IGridItemProps) {
   return (
     <div
@@ -36,17 +40,52 @@ export function GridItem({
             src={imagePath}
             alt={title}
             fill
-            className="object-cover rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            className="object-cover rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
           />
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-4 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+          {/* Default state */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-6 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+            <h3 className="text-primary-dark dark:text-primary font-medium text-xl mb-2">
+              {title}
+            </h3>
+            <p className="text-primary-dark/80 dark:text-primary/80 text-sm text-center">
+              {description}
+            </p>
+          </div>
+
+          {/* Hover state with detailed info */}
+          <div className="absolute inset-0 flex flex-col p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-y-auto">
             <h3 className="text-primary-dark dark:text-primary font-medium text-lg mb-2">
               {title}
             </h3>
-            <p className="text-primary-dark/80 dark:text-primary/80 text-sm">
-              {description}
-            </p>
+            <div className="space-y-3">
+              <div>
+                <h4 className="text-primary-dark dark:text-primary font-medium text-sm mb-1">
+                  Tech Stack
+                </h4>
+                <div className="flex flex-wrap gap-1.5">
+                  {techStack.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="text-xs px-2 py-1 rounded-full bg-primary-dark/10 dark:bg-primary/10 text-primary-dark dark:text-primary"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="text-primary-dark dark:text-primary font-medium text-sm mb-1">
+                  Key Features
+                </h4>
+                <ul className="text-xs text-primary-dark/80 dark:text-primary/80 list-disc list-inside space-y-1">
+                  {keyFeatures.map((feature, i) => (
+                    <li key={i}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
