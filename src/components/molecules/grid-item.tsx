@@ -77,7 +77,7 @@ export const GridItem = ({
             {techStack.map((tech, i) => (
               <span
                 key={i}
-                className="text-modern px-[clamp(0.375rem,2.5cqi,0.75rem)] py-[clamp(0.125rem,1.25cqi,0.375rem)] rounded-full bg-button-dark dark:bg-button-light text-light dark:text-dark ring-0"
+                className="text-modern-clamp px-[clamp(0.375rem,2.5cqi,0.75rem)] py-[clamp(0.125rem,1.25cqi,0.375rem)] rounded-full bg-button-dark dark:bg-button-light text-light dark:text-dark ring-0"
               >
                 {tech}
               </span>

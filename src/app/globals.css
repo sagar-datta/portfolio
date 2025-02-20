@@ -81,6 +81,10 @@
     @apply text-xs uppercase tracking-wider font-medium;
   }
 
+  .text-modern-clamp {
+    @apply text-[clamp(0.5rem,3cqi,0.625rem)] uppercase tracking-wider font-medium;
+  }
+
   /* Animation utilities */
   .animate-fade {
     @apply transition-opacity duration-200;

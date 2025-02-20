@@ -23,7 +23,8 @@ export const Dock = () => {
     { icon: "📧", label: "Contact" },
     {
       icon: "🌚",
-      label: "Dark Mode",
+      label: "Dark",
+      desktopLabel: "Dark Mode",
       onClick: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
     },
   ];
@@ -32,7 +33,12 @@ export const Dock = () => {
     return (
       <footer className="fixed bottom-0 left-0 right-0 z-50">
         <MobileDock items={DOCK_ITEMS} />
-        <DesktopDock items={DOCK_ITEMS} />
+        <DesktopDock
+          items={DOCK_ITEMS.map((item) => ({
+            ...item,
+            label: item.desktopLabel || item.label,
+          }))}
+        />
       </footer>
     );
   }
@@ -46,7 +52,8 @@ export const Dock = () => {
     { icon: "📧", label: "Contact" },
     {
       icon: resolvedTheme === "dark" ? "🌝" : "🌚",
-      label: resolvedTheme === "dark" ? "Light Mode" : "Dark Mode",
+      label: resolvedTheme === "dark" ? "Light" : "Dark",
+      desktopLabel: resolvedTheme === "dark" ? "Light Mode" : "Dark Mode",
       onClick: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
     },
   ];
@@ -54,7 +61,12 @@ export const Dock = () => {
   return (
     <footer className="fixed bottom-0 left-0 right-0 z-50">
       <MobileDock items={mountedDockItems} />
-      <DesktopDock items={mountedDockItems} />
+      <DesktopDock
+        items={mountedDockItems.map((item) => ({
+          ...item,
+          label: item.desktopLabel || item.label,
+        }))}
+      />
     </footer>
   );
 };
