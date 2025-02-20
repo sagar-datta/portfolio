@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Fix ESLint issues
+        run: npx eslint --fix "src/**/*.{ts,tsx}"
+
       - name: Build with Next.js
         run: |
           npm run build
