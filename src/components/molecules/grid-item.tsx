@@ -6,6 +6,7 @@ import { ExternalLink } from "lucide-react";
 import { TechStackBubble } from "@/components/atoms/TechStackBubble";
 import { Tooltip } from "@/components/atoms/Tooltip";
 import { ResponsiveImage } from "@/components/atoms/ResponsiveImage";
+import { FeatureBubble } from "@/components/atoms/FeatureBubble";
 
 type GridItemProps = Omit<IPortfolioItem, "id" | "color">;
 
@@ -69,18 +70,7 @@ export const GridItem = ({
               {/* Key Features - only show at max width */}
               <div className="hidden @[450px]:flex flex-wrap gap-[clamp(0.25rem,1cqi,0.375rem)]">
                 {keyFeatures.map((feature, i) => (
-                  <span
-                    key={i}
-                    className={`
-                      text-modern-clamp font-medium
-                      px-[clamp(0.25rem,2cqi,0.75rem)]
-                      py-[clamp(0.1rem,1cqi,0.375rem)]
-                      rounded-full bg-primary/55 dark:bg-primary-dark/55
-                      text-dark/75 dark:text-light/75
-                    `}
-                  >
-                    {feature}
-                  </span>
+                  <FeatureBubble key={i} feature={feature} />
                 ))}
               </div>
             </div>
