@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { IPortfolioItem } from "@/types/portfolio";
 import { ExternalLink } from "lucide-react";
+import { TechStackBubble } from "@/components/atoms/TechStackBubble";
 
 type GridItemProps = Omit<IPortfolioItem, "id" | "color">;
 
@@ -58,18 +59,7 @@ export const GridItem = ({
             {/* Tech Stack */}
             <div className="flex flex-wrap gap-[clamp(0.25rem,1cqi,0.375rem)]">
               {techStack.map((tech, i) => (
-                <span
-                  key={i}
-                  className={`
-                    text-modern-clamp font-medium
-                    px-[clamp(0.25rem,2cqi,0.75rem)]
-                    py-[clamp(0.1rem,1cqi,0.375rem)]
-                    rounded-full bg-light dark:bg-primary-dark 
-                    text-dark dark:text-light
-                  `}
-                >
-                  {tech}
-                </span>
+                <TechStackBubble key={i} tech={tech} />
               ))}
             </div>
 
@@ -132,18 +122,7 @@ export const GridItem = ({
           <div className="absolute left-[55%] right-4 bottom-4 top-[45%] flex flex-col opacity-0 md:group-hover:opacity-100 transition-smooth">
             <div className="flex flex-wrap gap-[0.375rem] content-start">
               {techStack.map((tech, i) => (
-                <span
-                  key={i}
-                  className={`
-                    text-[clamp(0.5rem,3cqi,0.575rem)] uppercase tracking-wider font-medium
-                    px-[clamp(0.25rem,2cqi,0.625rem)]
-                    py-[clamp(0.1rem,1cqi,0.325rem)]
-                    rounded-full bg-light dark:bg-primary-dark 
-                    text-dark dark:text-light
-                  `}
-                >
-                  {tech}
-                </span>
+                <TechStackBubble key={i} tech={tech} variant="small" />
               ))}
             </div>
           </div>
