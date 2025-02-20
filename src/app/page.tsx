@@ -1,5 +1,5 @@
 import { Header } from "@/components/organisms/Header";
-import { Dock } from "@/components/organisms/Dock"; // Corrected casing
+import { Dock } from "@/components/organisms/Dock";
 import { GridItem } from "@/components/molecules/GridItem";
 import { GRID_ITEMS } from "@/utils/constants";
 

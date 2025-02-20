@@ -69,14 +69,14 @@ export const GridItem = ({
             <div className="flex-1 flex flex-col justify-end gap-2 mt-auto md:group-hover:opacity-0 transition-smooth">
               {/* Tech Stack */}
               <div className="flex flex-wrap gap-1.5">
-                {techStack.map((tech, i) => (
+                {techStack.map((tech: string, i: number) => (
                   <TechStackBubble key={i} tech={tech} />
                 ))}
               </div>
 
               {/* Key Features - only show when card width >= 450px */}
               <div className="hidden @[450px]:flex flex-wrap gap-1.5">
-                {keyFeatures.map((feature, i) => (
+                {keyFeatures.map((feature: string, i: number) => (
                   <FeatureBubble key={i} feature={feature} />
                 ))}
               </div>
@@ -95,7 +95,7 @@ export const GridItem = ({
             {/* External link info */}
             <div className="absolute left-[55%] right-4 bottom-4 top-[45%] flex flex-col opacity-0 md:group-hover:opacity-100 transition-smooth">
               <div className="flex flex-wrap gap-1.5 content-start">
-                {techStack.map((tech, i) => (
+                {techStack.map((tech: string, i: number) => (
                   <TechStackBubble key={i} tech={tech} variant="small" />
                 ))}
               </div>
