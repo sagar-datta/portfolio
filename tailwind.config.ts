@@ -22,7 +22,7 @@ export default {
           red: "#E54D2E",
         },
         button: {
-          light: "#E2DBCB",
+          light: "#CFC6BA",
           dark: "#3F3E3C",
         },
         border: {

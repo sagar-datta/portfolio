@@ -77,6 +77,10 @@
     @apply text-primary-dark/60 dark:text-primary/60;
   }
 
+  .text-modern {
+    @apply text-xs uppercase tracking-wider font-medium;
+  }
+
   /* Animation utilities */
   .animate-fade {
     @apply transition-opacity duration-200;
@@ -99,12 +103,29 @@
   }
 
   /* Interactive utilities */
-  .hover-lift {
+  .hover-lift-sm {
     @apply hover:[@media(hover:hover)]:-translate-x-1 hover:[@media(hover:hover)]:-translate-y-1;
   }
 
-  .touch-lift {
+  .hover-lift-lg {
+    @apply hover:[@media(hover:hover)]:-translate-x-2 hover:[@media(hover:hover)]:-translate-y-2;
+  }
+
+  .touch-lift-sm {
     @apply active:[@media(hover:none)]:-translate-x-1 active:[@media(hover:none)]:-translate-y-1;
+  }
+
+  .touch-lift-lg {
+    @apply active:[@media(hover:none)]:-translate-x-2 active:[@media(hover:none)]:-translate-y-2;
+  }
+
+  /* For backwards compatibility */
+  .hover-lift {
+    @apply hover-lift-sm;
+  }
+
+  .touch-lift {
+    @apply touch-lift-sm;
   }
 
   .interactive-shadow {

@@ -17,12 +17,12 @@ export const MobileDock = ({ items }: IMobileDockProps) => {
             className="relative group w-full"
           >
             <div className="absolute -z-10 inset-[1px] bg-accent-red rounded-xl interactive-shadow" />
-            <div className="flex-center px-3 py-2 rounded-xl cursor-pointer glass-button transition-all duration-150 hover-lift touch-lift">
+            <div className="flex-center px-3 py-2 rounded-xl cursor-pointer glass-button transition-smooth hover-lift-sm touch-lift-sm">
               <div className="flex-center gap-2">
-                <span className="text-2xl transform-gpu transition-transform active:scale-90">
+                <span className="text-2xl transform-gpu transition-transform active:scale-90 select-none">
                   {item.icon}
                 </span>
-                <span className="text-xs font-medium text-primary dark:text-primary-dark">
+                <span className="text-modern text-primary dark:text-primary-dark select-none">
                   {item.label}
                 </span>
               </div>
