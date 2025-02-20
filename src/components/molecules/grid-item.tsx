@@ -44,8 +44,8 @@ export const GridItem = ({
           duration-300
           w-full
           overflow-hidden
-          [@media(hover:hover)]:group-hover:-translate-x-2
-          [@media(hover:hover)]:group-hover:-translate-y-2
+          group-hover:-translate-x-2
+          group-hover:-translate-y-2
           ${isTouched ? "-translate-x-2 -translate-y-2" : ""}
         `}
       >
@@ -59,9 +59,9 @@ export const GridItem = ({
               rounded-lg
               transition-opacity
               duration-300
-              [@media(hover:hover)]:opacity-0
-              [@media(hover:hover)]:group-hover:opacity-100
-              ${isTouched ? "opacity-100" : "opacity-0"}
+              opacity-0
+              group-hover:opacity-100
+              ${isTouched ? "opacity-100" : ""}
             `}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
@@ -77,7 +77,7 @@ export const GridItem = ({
               p-[5%]
               transition-opacity
               duration-300
-              [@media(hover:hover)]:group-hover:opacity-0
+              group-hover:opacity-0
               ${isTouched ? "opacity-0" : "opacity-100"}
             `}
           >
