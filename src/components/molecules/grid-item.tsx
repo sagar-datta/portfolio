@@ -44,6 +44,8 @@ export const GridItem = ({
             rounded-lg
             transition-smooth
             opacity-100
+            scale-[0.99]
+            group-hover:scale-100
           `}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority
@@ -58,17 +60,17 @@ export const GridItem = ({
             justify-between
             p-[5%]
             transition-smooth
-            bg-primary-dark dark:bg-primary
+            bg-button-light dark:bg-button-dark
             opacity-100
             group-hover:opacity-0
             group-active:opacity-0
           `}
         >
           <div className="space-y-2 select-none">
-            <h3 className="text-adaptive font-medium tracking-tight text-clamp-title">
+            <h3 className="font-medium tracking-tight text-clamp-title text-dark dark:text-light">
               {title}
             </h3>
-            <p className="text-adaptive-60 font-normal text-clamp-body">
+            <p className="font-normal text-clamp-body text-dark dark:text-light">
               {description}
             </p>
           </div>
@@ -77,7 +79,7 @@ export const GridItem = ({
             {techStack.map((tech, i) => (
               <span
                 key={i}
-                className="text-modern-clamp px-[clamp(0.375rem,2.5cqi,0.75rem)] py-[clamp(0.125rem,1.25cqi,0.375rem)] rounded-full bg-button-dark dark:bg-button-light text-light dark:text-dark ring-0"
+                className="text-modern-clamp px-[clamp(0.375rem,2.5cqi,0.75rem)] py-[clamp(0.125rem,1.25cqi,0.375rem)] rounded-full bg-light dark:bg-primary-dark text-dark dark:text-light ring-0"
               >
                 {tech}
               </span>
