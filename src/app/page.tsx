@@ -1,6 +1,6 @@
-import { Header } from "@/components/header";
-import { Dock } from "@/components/dock";
-import { GridItem } from "@/components/grid-item";
+import { Header } from "@/components/organisms/header";
+import { Dock } from "@/components/organisms/dock";
+import { GridItem } from "@/components/molecules/grid-item";
 
 const GRID_ITEMS = [
   {
@@ -29,7 +29,7 @@ const GRID_ITEMS = [
   },
   {
     id: 2,
-    title: "Galerie",
+    title: "Galerie de Sagar",
     url: "https://sagar-datta.github.io/galerie/",
     description: "Modern photo gallery with dynamic city selection and mapping",
     color: "bg-primary-dark dark:bg-primary",

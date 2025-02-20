@@ -12,7 +12,7 @@ interface IGridItemProps {
   keyFeatures: string[];
 }
 
-export function GridItem({
+export const GridItem = ({
   color,
   title,
   description,
@@ -20,7 +20,7 @@ export function GridItem({
   imagePath,
   techStack,
   keyFeatures,
-}: IGridItemProps) {
+}: IGridItemProps) => {
   return (
     <div
       className="relative group hover:cursor-pointer"
@@ -72,4 +72,4 @@ export function GridItem({
       </div>
     </div>
   );
-}
+};

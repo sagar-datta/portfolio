@@ -6,7 +6,7 @@ interface IMobileDockProps {
   items: IDockItem[];
 }
 
-export function MobileDock({ items }: IMobileDockProps) {
+export const MobileDock = ({ items }: IMobileDockProps) => {
   return (
     <div className="lg:hidden w-full bg-primary/80 backdrop-blur-xl border-t border-[#222221]/20 dark:bg-primary-dark/80 dark:border-[#F0EEE6]/20 px-4 py-3">
       <div className="grid grid-cols-3 gap-2 max-w-sm mx-auto">
@@ -33,4 +33,4 @@ export function MobileDock({ items }: IMobileDockProps) {
       </div>
     </div>
   );
-}
+};

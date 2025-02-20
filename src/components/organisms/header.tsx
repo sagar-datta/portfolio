@@ -2,7 +2,7 @@ interface IHeaderProps {
   title: string;
 }
 
-export function Header({ title }: IHeaderProps) {
+export const Header = ({ title }: IHeaderProps) => {
   return (
     <header className="sticky top-0 z-10 backdrop-blur-sm bg-primary/75 dark:bg-primary-dark/75">
       <div className="max-w-7xl mx-auto p-6">
@@ -12,4 +12,4 @@ export function Header({ title }: IHeaderProps) {
       </div>
     </header>
   );
-}
+};

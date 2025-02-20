@@ -6,7 +6,7 @@ import { type IDockItem } from "@/types/dock";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-export function Dock() {
+export const Dock = () => {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -57,4 +57,4 @@ export function Dock() {
       <DesktopDock items={mountedDockItems} />
     </footer>
   );
-}
+};

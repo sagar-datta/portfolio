@@ -6,7 +6,7 @@ interface IDesktopDockProps {
   items: IDockItem[];
 }
 
-export function DesktopDock({ items }: IDesktopDockProps) {
+export const DesktopDock = ({ items }: IDesktopDockProps) => {
   return (
     <div className="hidden lg:flex justify-center p-6 pb-7">
       <div
@@ -37,4 +37,4 @@ export function DesktopDock({ items }: IDesktopDockProps) {
       </div>
     </div>
   );
-}
+};
