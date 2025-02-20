@@ -1,18 +1,9 @@
 {
   "extends": ["next/core-web-vitals"],
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "quotes": ["error", "single"],
-    "max-len": [
-      "error",
-      {
-        "code": 120,
-        "ignoreStrings": true,
-        "ignoreTemplateLiterals": true,
-        "ignoreComments": true,
-        "ignorePattern": "^\\s*className=|^\\s*class=|^\\s*<path\\s+d=|^\\s*d=",
-        "ignoreUrls": true
-      }
-    ],
+    "max-len": "off",
     "comma-dangle": ["error", "always-multiline"],
     "@typescript-eslint/no-unused-vars": [
       "error",
