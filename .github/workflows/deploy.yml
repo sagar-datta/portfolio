@@ -38,6 +38,9 @@ jobs:
           path: |
             .next/cache
             node_modules
+            .eslintcache
+            public/workbox-*.js
+            public/sw.js
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
@@ -48,40 +51,19 @@ jobs:
       - name: Fix ESLint issues
         run: npx eslint --fix --cache --cache-location ./node_modules/.cache/eslint "src/**/*.{ts,tsx}"
 
+      - name: Type check
+        run: npm run typecheck
+
       - name: Build with Next.js
         env:
           NODE_ENV: production
           NEXT_TELEMETRY_DISABLED: 1
-        run: |
-          echo "Current working directory:"
-          pwd
-          echo "Directory contents before build:"
-          ls -la
-          echo "Next.js version:"
-          npx next --version
-          echo "Checking next.config.mjs:"
-          cat next.config.mjs
-          echo "Running build..."
-          npm run build --verbose
-          echo "Build complete. Directory contents after build:"
-          ls -la
-          echo "Checking for output directory..."
-          find . -name "out" -type d
-
-      - name: Create out directory if missing
-        if: ${{ failure() }}
-        run: |
-          echo "Build output not found in expected location. Checking .next:"
-          ls -la .next/
-          if [ -d ".next/standalone" ]; then
-            echo "Found standalone output, copying to out..."
-            cp -r .next/standalone ./out
-          fi
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: out
 
   deploy:
     environment:

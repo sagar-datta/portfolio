@@ -41,3 +41,8 @@ yarn-error.log*
 next-env.d.ts
 .cursor/rules/projectrules.mdc
 .cursorrules
+
+# additional files to ignore
+.eslintcache
+.env*.local
+*.log

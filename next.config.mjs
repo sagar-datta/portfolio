@@ -17,6 +17,17 @@ const nextConfig = {
   trailingSlash: false,
   // Ensure assets are properly referenced
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || "",
+  poweredByHeader: false,
+  reactStrictMode: true,
+  compress: true,
+  compiler: {
+    removeConsole:
+      process.env.NODE_ENV === "production"
+        ? {
+            exclude: ["error", "warn"],
+          }
+        : false,
+  },
 };
 
 export default nextConfig;
