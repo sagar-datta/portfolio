@@ -18,12 +18,11 @@ export const TabItem = forwardRef<HTMLButtonElement, ITabItemProps>(
           '--font-weight': isSelected ? 600 : 500
         } as React.CSSProperties}
         className={`
-        relative text-base flex-1 md:flex-none md:font-medium
+        relative text-base flex-1 md:flex-none
         px-2 py-3 md:px-6 md:py-2
         flex items-center justify-center
-        [font-variation-settings:'wght'_var(--font-weight)] md:[font-variation-settings:normal]
-        transition-[font-variation-settings] duration-150 ease-smooth
-          transition-all duration-150 ease-smooth
+        [font-variation-settings:'wght'_var(--font-weight)] md:font-medium md:[font-variation-settings:initial]
+        tab-transitions
           rounded-xl
           ${
             isSelected

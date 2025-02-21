@@ -135,5 +135,13 @@ export default {
       },
     },
   },
-  plugins: [typography, aspectRatio, containerQueries],
+  plugins: [typography, aspectRatio, containerQueries, function({ addUtilities }: { addUtilities: any }) {
+    addUtilities({
+      '.tab-transitions': {
+        'transition-property': 'background-color, color, transform, font-variation-settings',
+        'transition-duration': '150ms',
+        'transition-timing-function': 'cubic-bezier(0.4, 0, 0.2, 1)'
+      }
+    })
+  }],
 } satisfies Config;
