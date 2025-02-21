@@ -115,7 +115,7 @@ export const Contact = () => {
                     </span>
                   </a>
                   {(showCopied || isHovering) && (
-                    <div className="absolute -bottom-12 left-8 px-3 py-1 bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass text-primary dark:text-primary-dark rounded-lg text-xs font-medium whitespace-nowrap animate-fade transform -translate-y-1 pointer-events-none select-none">
+                    <div className="absolute -bottom-8 left-8 px-3 py-1 bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass text-primary dark:text-primary-dark rounded-lg text-xs font-medium whitespace-nowrap animate-fade transform -translate-y-1 pointer-events-none select-none">
                       <div className="absolute -top-1 left-4 w-2 h-2 bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass transform rotate-45" />
                       {showCopied
                         ? "Copied email to clipboard successfully!"
