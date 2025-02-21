@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import { Suspense, useEffect, useState } from "react";
 import { useExternalLink } from "@/hooks/useExternalLink";
 import { VscGithubInverted } from "react-icons/vsc";
+import { SiLinkedin } from "react-icons/si";
 
 const DockSkeleton = () => (
   <div className="h-16 bg-button-light dark:bg-button-dark animate-pulse rounded-t-xl" />
@@ -17,6 +18,9 @@ export const Dock = () => {
   const [mounted, setMounted] = useState(false);
   const { handleClick: handleGithubClick } = useExternalLink(
     "https://github.com/sagar-datta"
+  );
+  const { handleClick: handleLinkedInClick } = useExternalLink(
+    "https://www.linkedin.com/in/sagar-datta98/"
   );
 
   useEffect(() => {
@@ -31,7 +35,13 @@ export const Dock = () => {
       label: "GitHub",
       onClick: handleGithubClick,
     },
-    { icon: "📧", label: "Contact" },
+    {
+      icon: (
+        <SiLinkedin className="text-primary dark:text-primary-dark text-2xl [@media(hover:hover)]:lg:text-4xl" />
+      ),
+      label: "LinkedIn",
+      onClick: handleLinkedInClick,
+    },
     {
       icon: mounted && resolvedTheme === "dark" ? "🌝" : "🌚",
       label: mounted && resolvedTheme === "dark" ? "Light" : "Dark",
