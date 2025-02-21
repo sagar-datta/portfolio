@@ -14,14 +14,21 @@ export const TabItem = forwardRef<HTMLButtonElement, ITabItemProps>(
       <button
         ref={ref}
         onClick={onClick}
-        className="relative px-6 py-2 text-base font-medium"
+        className={`
+          relative px-6 py-2 text-base font-medium
+          transition-all duration-200 ease-smooth
+          ${isSelected ? "bg-button-light dark:bg-button-dark rounded-xl" : ""}
+        `}
       >
         <span
-          className={`relative z-10 transition-colors duration-200 ${
-            isSelected
-              ? "text-primary dark:text-primary-dark"
-              : "text-dimmed-light dark:text-dimmed-dark hover:text-muted-light hover:dark:text-muted-dark"
-          }`}
+          className={`
+            transition-colors duration-200
+            ${
+              isSelected
+                ? "text-primary dark:text-primary-dark"
+                : "text-dimmed-light dark:text-dimmed-dark hover:text-muted-light hover:dark:text-muted-dark"
+            }
+          `}
         >
           {label}
         </span>

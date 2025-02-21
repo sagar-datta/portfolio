@@ -12,7 +12,7 @@ export const Header = ({ name, profession }: IHeaderProps) => {
       <div className="max-w-4xl mx-auto bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass rounded-2xl">
         <div className="relative flex items-center px-8 py-2.5">
           {/* Left section with icon and name */}
-          <div className="flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3">
             <div className="w-6 h-6 flex items-center justify-center text-primary dark:text-primary-dark">
               <SiGnometerminal className="w-5 h-5" />
             </div>
@@ -27,12 +27,12 @@ export const Header = ({ name, profession }: IHeaderProps) => {
           </div>
 
           {/* Center section with navigation tabs - Absolutely positioned for perfect center */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="w-full md:w-auto md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
             <NavigationTabs />
           </div>
 
           {/* Right section with status indicators */}
-          <div className="ml-auto flex items-center gap-3 text-xs">
+          <div className="hidden md:flex ml-auto items-center gap-3 text-xs">
             <div className="flex items-center gap-1.5">
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-soft-pulse"></div>
               <span className="font-medium text-dimmed-light dark:text-dimmed-dark">
