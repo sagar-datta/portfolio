@@ -22,9 +22,9 @@ export const TabItem = forwardRef<HTMLButtonElement, ITabItemProps>(
           rounded-xl
           ${
             isSelected
-              ? `bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass
-                 md:bg-button-light md:dark:bg-button-dark md:backdrop-blur-none`
-              : "bg-glass-blur/50 dark:bg-glass-blur-dark/50 backdrop-blur-glass/50 md:bg-transparent md:backdrop-blur-none"
+              ? `bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass font-semibold
+                 md:bg-button-light md:dark:bg-button-dark md:backdrop-blur-none md:font-medium`
+              : "bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass/30 md:bg-transparent md:backdrop-blur-none"
           }
         `}
       >
