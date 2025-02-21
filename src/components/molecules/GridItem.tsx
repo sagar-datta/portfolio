@@ -60,7 +60,7 @@ export const GridItem = ({
             </p>
 
             {/* Description Extended */}
-            <p className="font-light text-[13px]/relaxed text-dimmed-light dark:text-dimmed-dark line-clamp-3 mb-4 group-hover:opacity-0 transition-smooth">
+            <p className="hidden md:block font-light text-[13px]/relaxed text-dimmed-light dark:text-dimmed-dark line-clamp-3 mb-4 group-hover:opacity-0 transition-smooth">
               {descriptionExtended}
             </p>
 
