@@ -13,8 +13,8 @@ export const Header = ({ name, profession }: IHeaderProps) => {
         <div className="relative flex items-center p-1.5 md:px-8 md:py-4">
           {/* Left section with icon and name */}
           <div className="hidden md:flex items-center gap-3">
-            <div className="w-6 h-6 flex items-center justify-center text-primary dark:text-primary-dark">
-              <SiGnometerminal className="w-5 h-5" />
+            <div className="w-8 h-8 flex items-center justify-center text-primary dark:text-primary-dark">
+              <SiGnometerminal className="w-7 h-7" />
             </div>
             <div className="flex flex-col">
               <span className="text-base font-semibold select-none text-primary dark:text-primary-dark leading-snug">
