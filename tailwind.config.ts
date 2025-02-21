@@ -56,12 +56,12 @@ export default {
           dark: "#F0EEE6",
         },
         muted: {
-          light: "rgb(34 34 33 / 0.6)", // dark at 60% opacity
-          dark: "rgb(240 238 230 / 0.6)", // light at 60% opacity
+          light: "rgb(34 34 33 / 0.75)", // dark at 75% opacity
+          dark: "rgb(240 238 230 / 0.75)", // light at 75% opacity
         },
         dimmed: {
-          light: "rgb(34 34 33 / 0.35)", // dark at 35% opacity
-          dark: "rgb(240 238 230 / 0.35)", // light at 35% opacity
+          light: "rgb(34 34 33 / 0.6)", // dark at 60% opacity
+          dark: "rgb(240 238 230 / 0.6)", // light at 60% opacity
         },
       },
       borderColor: {
