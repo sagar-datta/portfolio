@@ -74,7 +74,7 @@ export const GridItem = ({
             </div>
 
             {/* Image that appears on hover */}
-            <div className="absolute left-4 right-[50%] bottom-4 top-[45%] rounded-lg overflow-hidden select-none opacity-0 md:group-hover:opacity-100 transition-smooth">
+            <div className="absolute left-4 right-[50%] bottom-4 top-[35%] rounded-lg overflow-hidden select-none opacity-0 md:group-hover:opacity-100 transition-smooth">
               <ResponsiveImage
                 src={imagePath}
                 alt={title}
@@ -84,7 +84,7 @@ export const GridItem = ({
             </div>
 
             {/* External link info */}
-            <div className="absolute left-[55%] right-4 bottom-4 top-[45%] flex flex-col opacity-0 md:group-hover:opacity-100 transition-smooth">
+            <div className="absolute left-[55%] right-4 bottom-4 top-[35%] flex flex-col opacity-0 md:group-hover:opacity-100 transition-smooth">
               <div className="flex flex-wrap gap-1.5 content-start">
                 {techStack.map((tech: string, i: number) => (
                   <TechStackBubble key={i} tech={tech} variant="small" />
