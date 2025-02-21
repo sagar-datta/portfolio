@@ -18,7 +18,7 @@ export const TabItem = forwardRef<HTMLButtonElement, ITabItemProps>(
           '--font-weight': isSelected ? 600 : 500
         } as React.CSSProperties}
         className={`
-        relative text-base flex-1 md:flex-none
+        relative text-clamp-tab md:text-base flex-1 md:flex-none
         px-2 py-3 md:px-6 md:py-2
         flex items-center justify-center
         [font-variation-settings:'wght'_var(--font-weight)] md:font-medium md:[font-variation-settings:initial]

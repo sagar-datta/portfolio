@@ -81,6 +81,7 @@ export default {
       },
       fontSize: {
         display: ["4.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+        "clamp-tab": ["clamp(0.875rem, 3.5vw, 1rem)", { lineHeight: "1.5" }],
         h1: ["3rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
         h2: ["2.25rem", { lineHeight: "1.3" }],
         h3: ["1.875rem", { lineHeight: "1.4" }],
