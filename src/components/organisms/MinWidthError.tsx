@@ -1,5 +1,3 @@
-"use client";
-
 export const MinWidthError = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-primary dark:bg-primary-dark p-4">
