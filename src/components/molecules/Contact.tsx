@@ -15,7 +15,6 @@ export const Contact = () => {
     e.preventDefault();
     navigator.clipboard.writeText("s@gar.jp.net");
     setShowCopied(true);
-    setIsHovering(false);
     setTimeout(() => setShowCopied(false), 2000);
   };
 
@@ -116,7 +115,7 @@ export const Contact = () => {
                   </a>
                   <div
                     className={`absolute -bottom-8 left-8 px-3 py-1 bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass text-primary dark:text-primary-dark rounded-lg text-xs font-medium whitespace-nowrap pointer-events-none select-none transition-all duration-200 ease-in-out ${
-                      showCopied || isHovering
+                      (showCopied && isHovering) || (!showCopied && isHovering)
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-1 pointer-events-none"
                     }`}
