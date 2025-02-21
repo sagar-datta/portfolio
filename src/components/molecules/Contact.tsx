@@ -1,7 +1,7 @@
 "use client";
 
 import { PageTransition } from "@/components/atoms/PageTransition";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiMapPin, FiFlag } from "react-icons/fi";
 
 export const Contact = () => {
   return (
@@ -10,87 +10,112 @@ export const Contact = () => {
         {/* Header Section */}
         <section className="space-y-3">
           <h1 className="text-4xl md:text-5xl font-bold text-primary dark:text-primary-dark">
-            Let&apos;s Connect
+            Let&apos;s Build Something Together
           </h1>
           <p className="text-xl md:text-2xl text-primary/90 dark:text-primary-dark/90 leading-relaxed">
-            I&apos;m always open to discussing new opportunities, projects, or
-            just having a friendly chat about technology.
+            Frontend Engineer with expertise in React, TypeScript, and modern
+            web technologies. Open to discussing innovative projects and
+            opportunities.
           </p>
+        </section>
+
+        {/* Professional Profile */}
+        <section className="space-y-4">
+          <div className="p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+              <div className="flex items-center gap-2">
+                <FiMapPin className="w-5 h-5 text-primary/70 dark:text-primary-dark/70 flex-shrink-0" />
+                <span className="text-lg text-primary/90 dark:text-primary-dark/90">
+                  Perth, Western Australia
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FiFlag className="w-5 h-5 text-primary/70 dark:text-primary-dark/70 flex-shrink-0" />
+                <span className="text-lg text-primary/90 dark:text-primary-dark/90">
+                  Australian Citizen
+                </span>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Contact Methods */}
         <section className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
+            {/* Professional Networks */}
+            <div className="space-y-4 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
+              <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark">
+                Professional Networks
+              </h2>
+              <div className="space-y-4">
+                <a
+                  href="https://linkedin.com/in/sagar-datta98"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
+                >
+                  <FiLinkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  <span className="group-hover:translate-x-0.5 transition-transform">
+                    LinkedIn Profile
+                  </span>
+                </a>
+                <a
+                  href="https://github.com/sagar-datta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
+                >
+                  <FiGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  <span className="group-hover:translate-x-0.5 transition-transform">
+                    GitHub Projects
+                  </span>
+                </a>
+              </div>
+            </div>
+
             {/* Direct Contact */}
             <div className="space-y-4 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
               <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark">
                 Direct Contact
               </h2>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <a
-                  href="mailto:your.email@example.com"
-                  className="flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors"
+                  href="mailto:s@gar.jp.net"
+                  className="flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
                 >
-                  <FiMail className="w-5 h-5" />
-                  your.email@example.com
-                </a>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="space-y-4 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
-              <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark">
-                Social Links
-              </h2>
-              <div className="space-y-3">
-                <a
-                  href="https://github.com/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors"
-                >
-                  <FiGithub className="w-5 h-5" />
-                  GitHub
-                </a>
-                <a
-                  href="https://linkedin.com/in/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors"
-                >
-                  <FiLinkedin className="w-5 h-5" />
-                  LinkedIn
+                  <FiMail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  <span className="group-hover:translate-x-0.5 transition-transform">
+                    s@gar.jp.net
+                  </span>
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Contact Form Alternative */}
+        {/* Availability */}
         <section className="space-y-4">
           <div className="p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
             <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark mb-4">
-              Preferred Contact Method
+              Professional Engagement
             </h2>
             <p className="text-lg text-primary/80 dark:text-primary-dark/80 leading-relaxed">
-              The best way to reach me is through LinkedIn or email. I typically
-              respond within 24-48 hours and am happy to schedule a call if
-              needed.
+              I&apos;m currently exploring opportunities where I can leverage my
+              expertise in frontend development and modern web technologies. I
+              specialize in building responsive, performance-driven applications
+              with a focus on exceptional user experiences.
             </p>
-          </div>
-        </section>
-
-        {/* Location */}
-        <section className="space-y-4">
-          <div className="p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
-            <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark mb-4">
-              Location
-            </h2>
-            <p className="text-lg text-primary/80 dark:text-primary-dark/80 leading-relaxed">
-              Based in Perth, Australia
-              <br />
-              Available for remote opportunities worldwide
-            </p>
+            <ul className="mt-4 space-y-2 text-lg text-primary/80 dark:text-primary-dark/80">
+              <li className="flex items-center gap-2 before:content-['•'] before:text-primary/60 before:dark:text-primary-dark/60">
+                Available for full-time positions and contract work
+              </li>
+              <li className="flex items-center gap-2 before:content-['•'] before:text-primary/60 before:dark:text-primary-dark/60">
+                Open to remote, hybrid, or on-site opportunities
+              </li>
+              <li className="flex items-center gap-2 before:content-['•'] before:text-primary/60 before:dark:text-primary-dark/60">
+                Quick response time within 24-48 hours
+              </li>
+            </ul>
           </div>
         </section>
       </div>
