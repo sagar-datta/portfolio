@@ -14,8 +14,11 @@ export const MobileDock = ({ items }: IMobileDockProps) => {
           <button
             key={item.label}
             onClick={item.onClick}
-            className="w-full @container px-3 py-2 rounded-xl cursor-pointer bg-button-light dark:bg-button-dark active:bg-button-light/80 active:dark:bg-button-dark/80 touch-none active:scale-95 tab-transitions [-webkit-tap-highlight-color:transparent]"
+            className="group relative w-full @container px-3 py-2 rounded-xl cursor-pointer bg-button-light dark:bg-button-dark active:bg-button-light/80 active:dark:bg-button-dark/80 touch-none active:scale-95 tab-transitions [-webkit-tap-highlight-color:transparent]"
           >
+            <span className="absolute -top-7 left-1/2 -translate-x-1/2 px-3 py-1 bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass text-primary dark:text-primary-dark rounded-lg text-xs font-medium opacity-0 [@media(hover:hover)]:group-hover:opacity-100 whitespace-nowrap animate-fade [@media(hover:hover)]:group-hover:-translate-y-1 pointer-events-none select-none">
+              {item.label}
+            </span>
             <div className="flex-center">
               <span className="text-2xl select-none">{item.icon}</span>
             </div>
