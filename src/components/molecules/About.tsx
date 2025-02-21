@@ -5,21 +5,33 @@ import { PageTransition } from "@/components/atoms/PageTransition";
 export const About = () => {
   return (
     <PageTransition>
-      <div className="w-full max-w-4xl mx-auto px-4 py-8 md:py-12 space-y-12">
-        {/* Intro Section */}
-        <section className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary dark:from-primary-dark to-primary/80 dark:to-primary-dark/80 bg-clip-text text-transparent">
-            Frontend Engineer
+      <div className="w-full max-w-4xl mx-auto px-4 py-6 space-y-8">
+        {/* Hero Section */}
+        <section className="space-y-3">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary dark:text-primary-dark">
+            Hi, I'm Sagar 👋
           </h1>
+          <p className="text-xl md:text-2xl text-primary/90 dark:text-primary-dark/90 leading-relaxed">
+            A frontend engineer from Perth, specializing in React applications
+            with a focus on performance optimization and type safety.
+          </p>
+        </section>
+
+        {/* Experience Section */}
+        <section className="space-y-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary dark:text-primary-dark">
+            Frontend Engineer
+          </h2>
           <p className="text-lg md:text-xl text-primary/80 dark:text-primary-dark/80 leading-relaxed">
-            Building high-performance web applications with React, TypeScript,
-            and modern web technologies. Focused on creating accessible,
-            scalable solutions that deliver exceptional user experiences.
+            I build high-performance web applications using React, TypeScript,
+            and modern web technologies. My work emphasizes code quality through
+            strict typing, automated testing, and measurable performance
+            improvements.
           </p>
         </section>
 
         {/* Experience Highlights */}
-        <section className="space-y-6">
+        <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark">
             Experience Highlights
           </h2>
@@ -48,7 +60,7 @@ export const About = () => {
         </section>
 
         {/* Technical Expertise */}
-        <section className="space-y-6">
+        <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark">
             Technical Expertise
           </h2>
@@ -90,7 +102,7 @@ export const About = () => {
         </section>
 
         {/* Education & Recognition */}
-        <section className="space-y-6">
+        <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark">
             Education & Recognition
           </h2>
