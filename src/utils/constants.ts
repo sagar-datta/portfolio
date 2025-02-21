@@ -17,12 +17,6 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       "Framer Motion",
       "Gemini Pro API",
     ],
-    keyFeatures: [
-      "AI Integration",
-      "Real-time UX",
-      "Responsive Design",
-      "State Management",
-    ],
   },
   {
     id: 2,
@@ -38,12 +32,6 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       "Tailwind CSS",
       "Cloudinary",
       "CSS Animations",
-    ],
-    keyFeatures: [
-      "Dynamic Loading",
-      "Custom Animations",
-      "API Integration",
-      "Modern UI/UX",
     ],
   },
 ];

@@ -5,7 +5,6 @@ import { ExternalLink } from "lucide-react";
 import { TechStackBubble } from "@/components/atoms/TechStackBubble";
 import { Tooltip } from "@/components/atoms/Tooltip";
 import { ResponsiveImage } from "@/components/atoms/ResponsiveImage";
-import { FeatureBubble } from "@/components/atoms/FeatureBubble";
 import { COLORS } from "@/utils/themeConstants";
 import { useExternalLink } from "@/hooks/useExternalLink";
 
@@ -17,7 +16,6 @@ export const GridItem = ({
   url,
   imagePath,
   techStack,
-  keyFeatures,
 }: GridItemProps) => {
   const { handleClick } = useExternalLink(url);
 
@@ -71,13 +69,6 @@ export const GridItem = ({
               <div className="flex flex-wrap gap-1.5">
                 {techStack.map((tech: string, i: number) => (
                   <TechStackBubble key={i} tech={tech} />
-                ))}
-              </div>
-
-              {/* Key Features - only show when card width >= 450px */}
-              <div className="hidden @[450px]:flex flex-wrap gap-1.5">
-                {keyFeatures.map((feature: string, i: number) => (
-                  <FeatureBubble key={i} feature={feature} />
                 ))}
               </div>
             </div>
