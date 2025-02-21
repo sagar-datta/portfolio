@@ -6,9 +6,9 @@ export const GRID_ITEMS: IPortfolioItem[] = [
     title: "Gastronaut AI",
     url: "https://sagar-datta.github.io/gastronaut-ai/",
     descriptionHeading:
-      "AI-powered recipe generator using Google's Gemini Pro API",
+      "AI-powered recipe generator utilising Google's Gemini Pro API",
     descriptionExtended:
-      "Leveraging the power of Google's Gemini Pro API to create personalized recipes based on your ingredients and preferences. Features real-time generation and dynamic UI updates.",
+      "Real-time recipe generation • Customised ingredient inputs • Dietary preferences • Step-by-step instructions • Nutritional insights • Mobile-optimised",
     color: "bg-primary-dark dark:bg-primary",
     imagePath: "/images/projects/gastronaut.png",
     techStack: [
@@ -28,7 +28,7 @@ export const GRID_ITEMS: IPortfolioItem[] = [
     descriptionHeading:
       "Modern photo gallery with dynamic city selection and mapping",
     descriptionExtended:
-      "A sleek photo gallery showcasing travel photography with interactive city selection, dynamic image loading, and smooth transitions. Built with performance and user experience in mind.",
+      "Interactive city navigation • Dynamic image loading • Smooth transitions • Optimised performance • Responsive grid layout • Cloudinary integration",
     color: "bg-primary-dark dark:bg-primary",
     imagePath: "/images/projects/galerie.png",
     techStack: [
