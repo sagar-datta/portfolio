@@ -15,9 +15,17 @@ export const TabItem = forwardRef<HTMLButtonElement, ITabItemProps>(
         ref={ref}
         onClick={onClick}
         className={`
-          relative px-6 py-2 text-base font-medium
+          relative text-base font-medium flex-1 md:flex-none
+          px-2 py-3 md:px-6 md:py-2
+          flex items-center justify-center
           transition-all duration-150 ease-smooth
-          ${isSelected ? "bg-button-light dark:bg-button-dark rounded-xl" : ""}
+          rounded-xl
+          ${
+            isSelected
+              ? `bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass
+                 md:bg-button-light md:dark:bg-button-dark md:backdrop-blur-none`
+              : "bg-glass-blur/50 dark:bg-glass-blur-dark/50 backdrop-blur-glass/50 md:bg-transparent md:backdrop-blur-none"
+          }
         `}
       >
         <span

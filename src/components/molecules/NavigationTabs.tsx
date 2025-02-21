@@ -15,7 +15,7 @@ export const NavigationTabs = () => {
   const [selectedTab, setSelectedTab] = useState<TabId>("info");
 
   return (
-    <div className="flex items-center justify-between md:justify-start bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass rounded-2xl p-1.5 w-full md:w-auto">
+    <div className="flex items-stretch md:items-center justify-between md:justify-start md:bg-glass-blur md:dark:bg-glass-blur-dark md:backdrop-blur-glass md:rounded-2xl md:p-1.5 w-full md:w-auto">
       {TABS.map((tab) => (
         <TabItem
           key={tab.id}
