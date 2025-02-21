@@ -51,8 +51,8 @@ export const GridItem = ({
             @container/card
           `}
         >
-          {/* External link icon for touch devices */}
-          <div className="hidden [@media(hover:none)]:flex [@media(hover:none)]:items-center [@media(hover:none)]:gap-1.5 absolute top-3 right-3 text-dimmed-light dark:text-dimmed-dark">
+          {/* External link icon */}
+          <div className="flex items-center gap-1.5 absolute top-3 right-3 text-dimmed-light dark:text-dimmed-dark [@media(hover:hover)]:@[400px]/card:hidden">
             <p className="text-xs @[400px]:block hidden">Opens in new tab</p>
             <ExternalLink className="w-4 h-4" />
           </div>
@@ -70,12 +70,12 @@ export const GridItem = ({
             </p>
 
             {/* Description Extended */}
-            <p className="hidden @[400px]/card:block font-light text-[13px]/relaxed text-dimmed-light dark:text-dimmed-dark line-clamp-3 mb-4 group-hover:opacity-0 transition-smooth">
+            <p className="hidden @[400px]/card:block font-light text-[13px]/relaxed text-dimmed-light dark:text-dimmed-dark line-clamp-3 mb-4 @[400px]/card:group-hover:opacity-0 transition-smooth">
               {descriptionExtended}
             </p>
 
             {/* Tags Container */}
-            <div className="mt-auto flex flex-col justify-end gap-2 group-hover:opacity-0 transition-smooth">
+            <div className="mt-auto flex flex-col justify-end gap-2 @[400px]/card:group-hover:opacity-0 transition-smooth">
               {/* Tech Stack */}
               <div className="flex flex-wrap gap-1.5">
                 {techStack.map((tech: string, i: number) => (
@@ -85,7 +85,7 @@ export const GridItem = ({
             </div>
 
             {/* Image that appears on hover */}
-            <div className="absolute left-4 right-[50%] bottom-4 top-[35%] rounded-lg overflow-hidden select-none opacity-0 group-hover:opacity-100 transition-smooth">
+            <div className="hidden @[400px]/card:block absolute left-4 right-[50%] bottom-4 top-[35%] rounded-lg overflow-hidden select-none opacity-0 group-hover:opacity-100 transition-smooth">
               <ResponsiveImage
                 src={imagePath}
                 alt={title}
@@ -94,8 +94,8 @@ export const GridItem = ({
               />
             </div>
 
-            {/* External link info */}
-            <div className="absolute left-[55%] right-4 bottom-4 top-[35%] flex flex-col opacity-0 group-hover:opacity-100 transition-smooth">
+            {/* Small Tech Stack */}
+            <div className="hidden @[400px]/card:flex absolute left-[55%] right-4 bottom-4 top-[35%] flex-col opacity-0 group-hover:opacity-100 transition-smooth">
               <div className="flex flex-wrap gap-1.5 content-start">
                 {techStack.map((tech: string, i: number) => (
                   <TechStackBubble key={i} tech={tech} variant="small" />

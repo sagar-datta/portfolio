@@ -9,7 +9,7 @@ interface IMobileDockProps {
 export const MobileDock = ({ items }: IMobileDockProps) => {
   return (
     <div className="block lg:[@media(hover:hover)]:hidden w-full bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass px-4 py-3">
-      <div className="grid grid-cols-3 gap-2 max-w-sm mx-auto">
+      <div className="grid grid-cols-4 gap-2 max-w-sm mx-auto">
         {items.map((item) => (
           <button
             key={item.label}
