@@ -8,7 +8,7 @@ interface IHeaderProps {
 
 export const Header = ({ name, profession }: IHeaderProps) => {
   return (
-    <header className="sticky top-4 z-10 mx-4">
+    <header className="sticky top-4 z-10 mx-6 md:mx-4">
       <div className="max-w-4xl mx-auto bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass rounded-2xl">
         <div className="relative flex items-center px-8 py-2.5">
           {/* Left section with icon and name */}
