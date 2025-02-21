@@ -172,30 +172,59 @@ export const About = () => {
           <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark">
             Education & Recognition
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-6">
+            <div className="space-y-3">
+              <div className="space-y-1">
+                <h3 className="text-lg font-medium text-primary dark:text-primary-dark">
+                  Bachelor of Information Technology
+                  <span className="text-primary/90 dark:text-primary-dark/90 font-normal">
+                    {" "}
+                    with Distinction
+                  </span>
+                </h3>
+                <p className="text-primary/70 dark:text-primary-dark/70">
+                  RMIT University, Melbourne • 2018 - 2024 • GPA: 3.5/4.0
+                </p>
+              </div>
+              <div className="space-y-1">
+                <p className="text-sm font-medium text-primary/60 dark:text-primary-dark/60">
+                  Key Coursework
+                </p>
+                <p className="text-sm text-primary/70 dark:text-primary-dark/70">
+                  Full Stack Development • User-Centred Design • Cloud Security
+                  • Software Engineering Project Management • AI Foundations for
+                  STEM
+                </p>
+              </div>
+            </div>
+
             <div className="space-y-2">
               <h3 className="text-lg font-medium text-primary dark:text-primary-dark">
-                Bachelor of Information Technology
+                International Exchange
               </h3>
               <p className="text-primary/70 dark:text-primary-dark/70">
-                RMIT University with Distinction (GPA: 3.5/4.0)
+                Technische Universität München • 2019 - 2020
               </p>
               <p className="text-primary/60 dark:text-primary-dark/60">
-                Specialised in Full Stack Development, Cloud Security, and AI
-                Foundations
+                Advanced computer science studies with focus on international
+                software development practices
               </p>
             </div>
+
             <div className="space-y-2">
               <h3 className="text-lg font-medium text-primary dark:text-primary-dark">
-                Global Experience & Recognition
+                Professional Certifications
               </h3>
-              <p className="text-primary/70 dark:text-primary-dark/70">
-                Exchange studies at Technische Universität München
-              </p>
-              <p className="text-primary/60 dark:text-primary-dark/60">
-                Google UX Design Certification • RMIT Global Leadership Program
-                • First Place in Applied IT
-              </p>
+              <ul className="space-y-1.5 text-primary/70 dark:text-primary-dark/70">
+                <li>
+                  Foundations of User Experience (UX) Design - Google (2024)
+                </li>
+                <li>
+                  RMIT Global Leadership Program - Global Citizenship
+                  (2021-2023)
+                </li>
+                <li>First Place in Applied Information Technology (2015)</li>
+              </ul>
             </div>
           </div>
         </section>
