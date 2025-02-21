@@ -2,8 +2,23 @@
 
 import { PageTransition } from "@/components/atoms/PageTransition";
 import { FiGithub, FiLinkedin, FiMail, FiMapPin, FiFlag } from "react-icons/fi";
+import { useState } from "react";
 
 export const Contact = () => {
+  const [showCopied, setShowCopied] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleEmailClick = (e: React.MouseEvent) => {
+    const isHoverableDevice = window.matchMedia("(hover: hover)").matches;
+    if (!isHoverableDevice) return;
+
+    e.preventDefault();
+    navigator.clipboard.writeText("s@gar.jp.net");
+    setShowCopied(true);
+    setIsHovering(false);
+    setTimeout(() => setShowCopied(false), 2000);
+  };
+
   return (
     <PageTransition>
       <div className="w-full max-w-4xl mx-auto px-4 py-6 space-y-8">
@@ -83,9 +98,15 @@ export const Contact = () => {
                 Direct Contact
               </h2>
               <div className="space-y-4">
-                <div className="flex">
+                <div className="flex flex-col relative">
                   <a
                     href="mailto:s@gar.jp.net"
+                    onClick={handleEmailClick}
+                    onMouseEnter={() =>
+                      window.matchMedia("(hover: hover)").matches &&
+                      setIsHovering(true)
+                    }
+                    onMouseLeave={() => setIsHovering(false)}
                     className="inline-flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
                   >
                     <FiMail className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -93,6 +114,14 @@ export const Contact = () => {
                       s@gar.jp.net
                     </span>
                   </a>
+                  {(showCopied || isHovering) && (
+                    <div className="absolute -bottom-8 left-8 px-3 py-1 rounded-md bg-black/80 dark:bg-white/80 text-white dark:text-black text-sm font-medium shadow-lg transform -translate-y-1 transition-all">
+                      <div className="absolute -top-1 left-4 w-2 h-2 bg-black/80 dark:bg-white/80 transform rotate-45" />
+                      {showCopied
+                        ? "Copied email to clipboard successfully!"
+                        : "Click to copy email to clipboard"}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
