@@ -1,5 +1,5 @@
 export interface IDockItem {
-  icon: string;
+  icon: string | React.ReactNode;
   label: string;
   desktopLabel?: string;
   onClick?: () => void;

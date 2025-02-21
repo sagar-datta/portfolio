@@ -6,6 +6,7 @@ import { type IDockItem } from "@/types/Dock";
 import { useTheme } from "next-themes";
 import { Suspense, useEffect, useState } from "react";
 import { useExternalLink } from "@/hooks/useExternalLink";
+import { VscGithubInverted } from "react-icons/vsc";
 
 const DockSkeleton = () => (
   <div className="h-16 bg-button-light dark:bg-button-dark animate-pulse rounded-t-xl" />
@@ -24,7 +25,9 @@ export const Dock = () => {
 
   const dockItems: IDockItem[] = [
     {
-      icon: "🐙",
+      icon: (
+        <VscGithubInverted className="text-primary dark:text-primary-dark text-2xl [@media(hover:hover)]:lg:text-4xl" />
+      ),
       label: "GitHub",
       onClick: handleGithubClick,
     },
