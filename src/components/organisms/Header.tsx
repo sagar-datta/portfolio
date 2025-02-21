@@ -1,5 +1,6 @@
 import { SiGnometerminal } from "react-icons/si";
 import { NavigationTabs } from "@/components/molecules/NavigationTabs";
+import { AvailabilityStatus } from "@/components/atoms/AvailabilityStatus";
 
 interface IHeaderProps {
   name: string;
@@ -33,12 +34,7 @@ export const Header = ({ name, profession }: IHeaderProps) => {
 
           {/* Right section with status indicators */}
           <div className="hidden md:flex ml-auto items-center gap-3 text-xs">
-            <div className="flex items-center gap-1.5">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-soft-pulse"></div>
-              <span className="font-medium text-dimmed-light dark:text-dimmed-dark">
-                Available for work
-              </span>
-            </div>
+            <AvailabilityStatus />
           </div>
         </div>
       </div>
