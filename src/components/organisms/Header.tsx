@@ -1,13 +1,20 @@
 import { SiGnometerminal } from "react-icons/si";
-import { NavigationTabs } from "@/components/molecules/NavigationTabs";
+import { NavigationTabs, TabId } from "@/components/molecules/NavigationTabs";
 import { AvailabilityStatus } from "@/components/atoms/AvailabilityStatus";
 
 interface IHeaderProps {
   name: string;
   profession: string;
+  selectedTab: TabId;
+  onTabChange: (tab: TabId) => void;
 }
 
-export const Header = ({ name, profession }: IHeaderProps) => {
+export const Header = ({
+  name,
+  profession,
+  selectedTab,
+  onTabChange,
+}: IHeaderProps) => {
   return (
     <header className="sticky top-4 z-10 mx-6 md:mx-4 mb-6 lg:mb-0">
       <div className="max-w-4xl mx-auto bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass rounded-2xl">
@@ -29,7 +36,10 @@ export const Header = ({ name, profession }: IHeaderProps) => {
 
           {/* Center section with navigation tabs - Absolutely positioned for perfect center */}
           <div className="w-full md:w-auto md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
-            <NavigationTabs />
+            <NavigationTabs
+              selectedTab={selectedTab}
+              onTabChange={onTabChange}
+            />
           </div>
 
           {/* Right section with status indicators */}

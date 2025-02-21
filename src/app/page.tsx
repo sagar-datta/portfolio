@@ -1,29 +1,42 @@
+"use client";
+
+import { useState } from "react";
 import { Header } from "@/components/organisms/Header";
 import { Dock } from "@/components/organisms/Dock";
-import { GridItem } from "@/components/molecules/GridItem";
 import { WidthCheck } from "@/components/organisms/WidthCheck";
-import { GRID_ITEMS } from "@/utils/constants";
+import { TabId } from "@/components/molecules/NavigationTabs";
+import { Projects } from "@/components/molecules/Projects";
+import { About } from "@/components/molecules/About";
+import { Contact } from "@/components/molecules/Contact";
 
 export default function Home() {
+  const [selectedTab, setSelectedTab] = useState<TabId>("about");
+
+  const renderContent = () => {
+    switch (selectedTab) {
+      case "about":
+        return <About />;
+      case "projects":
+        return <Projects />;
+      case "contact":
+        return <Contact />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <WidthCheck>
       <div className="min-h-screen flex flex-col pb-20 lg:pb-24">
-        <Header name="Sagar Datta" profession="Full Stack Developer" />
+        <Header
+          name="Sagar Datta"
+          profession="Full Stack Developer"
+          selectedTab={selectedTab}
+          onTabChange={setSelectedTab}
+        />
 
         <main className="flex-1 max-w-7xl mx-auto w-full pt-6 px-6 pb-0 lg:grid lg:place-items-center">
-          <div className="flex flex-col md:flex-row md:flex-wrap gap-6 justify-center items-center md:items-stretch">
-            {GRID_ITEMS.map((item) => (
-              <GridItem
-                key={item.id}
-                title={item.title}
-                descriptionHeading={item.descriptionHeading}
-                descriptionExtended={item.descriptionExtended}
-                url={item.url}
-                imagePath={item.imagePath}
-                techStack={item.techStack}
-              />
-            ))}
-          </div>
+          {renderContent()}
         </main>
 
         <Dock />

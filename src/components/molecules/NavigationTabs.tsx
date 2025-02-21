@@ -9,11 +9,17 @@ const TABS = [
   { id: "contact", label: "Contact" },
 ] as const;
 
-type TabId = (typeof TABS)[number]["id"];
+export type TabId = (typeof TABS)[number]["id"];
 
-export const NavigationTabs = () => {
-  const [selectedTab, setSelectedTab] = useState<TabId>("about");
+interface INavigationTabsProps {
+  selectedTab: TabId;
+  onTabChange: (tab: TabId) => void;
+}
 
+export const NavigationTabs = ({
+  selectedTab,
+  onTabChange,
+}: INavigationTabsProps) => {
   return (
     <div
       className="flex md:[@media(hover:none)]:grid md:[@media(hover:none)]:grid-cols-3 items-stretch md:items-center justify-between md:justify-start 
@@ -27,7 +33,7 @@ export const NavigationTabs = () => {
           key={tab.id}
           label={tab.label}
           isSelected={selectedTab === tab.id}
-          onClick={() => setSelectedTab(tab.id)}
+          onClick={() => onTabChange(tab.id)}
         />
       ))}
     </div>
