@@ -14,16 +14,21 @@ export const TabItem = forwardRef<HTMLButtonElement, ITabItemProps>(
       <button
         ref={ref}
         onClick={onClick}
+        style={{
+          '--font-weight': isSelected ? 600 : 500
+        } as React.CSSProperties}
         className={`
-          relative text-base font-medium flex-1 md:flex-none
-          px-2 py-3 md:px-6 md:py-2
-          flex items-center justify-center
+        relative text-base flex-1 md:flex-none md:font-medium
+        px-2 py-3 md:px-6 md:py-2
+        flex items-center justify-center
+        [font-variation-settings:'wght'_var(--font-weight)] md:[font-variation-settings:normal]
+        transition-[font-variation-settings] duration-150 ease-smooth
           transition-all duration-150 ease-smooth
           rounded-xl
           ${
             isSelected
               ? `bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass font-semibold
-                 md:bg-button-light md:dark:bg-button-dark md:backdrop-blur-none md:font-medium`
+                 md:bg-button-light md:dark:bg-button-dark md:backdrop-blur-none`
               : "bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass/30 md:bg-transparent md:backdrop-blur-none"
           }
         `}
