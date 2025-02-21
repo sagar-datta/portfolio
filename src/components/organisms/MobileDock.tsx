@@ -16,13 +16,8 @@ export const MobileDock = ({ items }: IMobileDockProps) => {
             onClick={item.onClick}
             className="w-full @container px-3 py-2 rounded-xl cursor-pointer bg-button-light dark:bg-button-dark active:bg-button-light/80 active:dark:bg-button-dark/80 touch-none active:scale-95 tab-transitions [-webkit-tap-highlight-color:transparent]"
           >
-            <div className="flex-center gap-2">
-              <span className="hidden @[122px]:block text-2xl select-none">
-                {item.icon}
-              </span>
-              <span className="text-base font-medium text-primary dark:text-primary-dark select-none">
-                {item.label}
-              </span>
+            <div className="flex-center">
+              <span className="text-2xl select-none">{item.icon}</span>
             </div>
           </button>
         ))}
