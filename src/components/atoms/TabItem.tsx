@@ -14,7 +14,7 @@ export const TabItem = forwardRef<HTMLButtonElement, ITabItemProps>(
       <button
         ref={ref}
         onClick={onClick}
-        className="relative px-4 py-1.5 text-sm font-medium"
+        className="relative px-6 py-2 text-base font-medium"
       >
         <span
           className={`relative z-10 transition-colors duration-200 ${
