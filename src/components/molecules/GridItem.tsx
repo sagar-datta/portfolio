@@ -50,6 +50,11 @@ export const GridItem = ({
             [@media(hover:none)]:transition-all [@media(hover:none)]:duration-150 [@media(hover:none)]:ease-in-out
           `}
         >
+          {/* External link icon for touch devices */}
+          <div className="hidden [@media(hover:none)]:block absolute top-3 right-3 text-dimmed-light dark:text-dimmed-dark">
+            <ExternalLink className="w-4 h-4" />
+          </div>
+
           {/* Content overlay */}
           <div className="flex flex-col h-full select-none">
             {/* Title */}
