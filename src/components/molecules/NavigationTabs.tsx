@@ -29,10 +29,10 @@ export const NavigationTabs = () => {
   }, [selectedTab]);
 
   return (
-    <div className="relative flex items-center bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass rounded-full p-1">
+    <div className="relative flex items-center bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass rounded-2xl p-1">
       {/* Sliding pill background */}
       <div
-        className="absolute bg-button-light dark:bg-button-dark rounded-full transition-all duration-200 ease-smooth"
+        className="absolute bg-button-light dark:bg-button-dark rounded-xl transition-all duration-200 ease-smooth"
         style={{
           left: pillStyles.left,
           width: pillStyles.width,
