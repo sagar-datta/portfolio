@@ -23,6 +23,7 @@ export const Tooltip = ({
       {children}
       <div
         className={`
+        pointer-events-none
         absolute left-1/2 -translate-x-1/2 ${positionStyles[position]}
         flex items-center gap-2 px-3 py-1.5 
         rounded-full shadow-sm opacity-0 lg:group-hover:opacity-100 
