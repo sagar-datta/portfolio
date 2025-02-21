@@ -1,7 +1,8 @@
 export interface IPortfolioItem {
   id: number;
   title: string;
-  description: string;
+  descriptionHeading: string;
+  descriptionExtended: string;
   url: string;
   imagePath: string;
   color: string;

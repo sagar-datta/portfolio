@@ -30,16 +30,38 @@ export default {
           dark: "#F0EEE6",
         },
       },
+      opacity: {
+        35: "0.35",
+        40: "0.40",
+        60: "0.60",
+      },
       backgroundColor: {
         primary: {
           DEFAULT: "#F0EEE6",
           dark: "#222221",
         },
+        glass: {
+          button: "rgb(219 212 203 / 0.9)", // button-light with opacity
+          "button-dark": "rgb(63 62 60 / 0.9)", // button-dark with opacity
+          blur: "rgb(240 238 230 / 0.9)", // primary with opacity
+          "blur-dark": "rgb(34 34 33 / 0.9)", // primary-dark with opacity
+        },
+      },
+      backdropBlur: {
+        glass: "12px",
       },
       textColor: {
         primary: {
           DEFAULT: "#141413",
           dark: "#F0EEE6",
+        },
+        muted: {
+          light: "rgb(34 34 33 / 0.6)", // dark at 60% opacity
+          dark: "rgb(240 238 230 / 0.6)", // light at 60% opacity
+        },
+        dimmed: {
+          light: "rgb(34 34 33 / 0.35)", // dark at 35% opacity
+          dark: "rgb(240 238 230 / 0.35)", // light at 35% opacity
         },
       },
       borderColor: {
@@ -69,6 +91,8 @@ export default {
         "2xl": "3rem",
         "3xl": "4rem",
         "4xl": "6rem",
+        "bubble-x": "clamp(0.25rem,2cqi,0.75rem)",
+        "bubble-y": "clamp(0.1rem,1cqi,0.375rem)",
       },
       screens: {
         xs: "475px",
@@ -95,6 +119,10 @@ export default {
       transitionTimingFunction: {
         smooth: "cubic-bezier(0.4, 0, 0.2, 1)",
         bounce: "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      },
+      gap: {
+        "xs-dynamic": "clamp(0.25rem,1cqi,0.375rem)",
+        "sm-fixed": "0.375rem",
       },
     },
   },

@@ -55,7 +55,7 @@ export const TechStackBubble = ({
       className={`
         ${sizeStyles[variant]}
         rounded-full bg-light dark:bg-primary-dark 
-        text-dark dark:text-light
+        text-primary dark:text-primary-dark
         flex items-center gap-1.5
       `}
     >

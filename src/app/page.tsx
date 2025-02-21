@@ -14,11 +14,11 @@ export default function Home() {
             <GridItem
               key={item.id}
               title={item.title}
-              description={item.description}
+              descriptionHeading={item.descriptionHeading}
+              descriptionExtended={item.descriptionExtended}
               url={item.url}
               imagePath={item.imagePath}
               techStack={item.techStack}
-              keyFeatures={item.keyFeatures}
             />
           ))}
         </div>
