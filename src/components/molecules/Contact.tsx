@@ -101,15 +101,24 @@ export const Contact = () => {
                   <a
                     href="mailto:s@gar.jp.net"
                     onClick={handleEmailClick}
-                    onMouseEnter={() =>
-                      window.matchMedia("(hover: hover)").matches &&
-                      setIsHovering(true)
-                    }
-                    onMouseLeave={() => setIsHovering(false)}
                     className="inline-flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
                   >
-                    <FiMail className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                    <span className="group-hover:translate-x-0.5 transition-transform">
+                    <FiMail
+                      className="w-5 h-5 group-hover:scale-110 transition-transform"
+                      onMouseEnter={() =>
+                        window.matchMedia("(hover: hover)").matches &&
+                        setIsHovering(true)
+                      }
+                      onMouseLeave={() => setIsHovering(false)}
+                    />
+                    <span
+                      className="group-hover:translate-x-0.5 transition-transform"
+                      onMouseEnter={() =>
+                        window.matchMedia("(hover: hover)").matches &&
+                        setIsHovering(true)
+                      }
+                      onMouseLeave={() => setIsHovering(false)}
+                    >
                       s@gar.jp.net
                     </span>
                   </a>
