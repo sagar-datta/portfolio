@@ -44,9 +44,14 @@ const Dock = () => {
     },
     {
       icon: mounted && resolvedTheme === "dark" ? "🌝" : "🌚",
-      label: mounted && resolvedTheme === "dark" ? "Light" : "Dark",
+      label:
+        mounted && resolvedTheme === "dark"
+          ? "Toggle Light Mode"
+          : "Toggle Dark Mode",
       desktopLabel:
-        mounted && resolvedTheme === "dark" ? "Light Mode" : "Dark Mode",
+        mounted && resolvedTheme === "dark"
+          ? "Toggle Light Mode"
+          : "Toggle Dark Mode",
       onClick: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
     },
   ];
