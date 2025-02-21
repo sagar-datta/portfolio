@@ -53,3 +53,5 @@ export const TabItem = forwardRef<HTMLButtonElement, ITabItemProps>(
     );
   }
 );
+
+TabItem.displayName = "TabItem";

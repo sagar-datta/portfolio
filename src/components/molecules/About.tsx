@@ -9,7 +9,7 @@ export const About = () => {
         {/* Hero Section */}
         <section className="space-y-3">
           <h1 className="text-4xl md:text-5xl font-bold text-primary dark:text-primary-dark">
-            Hi, I'm Sagar 👋
+            Hi, I&apos;m Sagar 👋
           </h1>
           <p className="text-xl md:text-2xl text-primary/90 dark:text-primary-dark/90 leading-relaxed">
             A frontend engineer from Perth, specialising in React applications

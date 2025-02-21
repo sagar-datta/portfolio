@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { TabItem } from "@/components/atoms/TabItem";
 
 const TABS = [
