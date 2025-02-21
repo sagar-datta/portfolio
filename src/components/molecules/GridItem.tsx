@@ -51,7 +51,8 @@ export const GridItem = ({
           `}
         >
           {/* External link icon for touch devices */}
-          <div className="hidden [@media(hover:none)]:block absolute top-3 right-3 text-dimmed-light dark:text-dimmed-dark">
+          <div className="hidden [@media(hover:none)]:flex [@media(hover:none)]:items-center [@media(hover:none)]:gap-1.5 absolute top-3 right-3 text-dimmed-light dark:text-dimmed-dark">
+            <p className="text-xs @[400px]:block hidden">Opens in new tab</p>
             <ExternalLink className="w-4 h-4" />
           </div>
 
