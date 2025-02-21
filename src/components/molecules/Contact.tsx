@@ -114,14 +114,18 @@ export const Contact = () => {
                       s@gar.jp.net
                     </span>
                   </a>
-                  {(showCopied || isHovering) && (
-                    <div className="absolute -bottom-8 left-8 px-3 py-1 bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass text-primary dark:text-primary-dark rounded-lg text-xs font-medium whitespace-nowrap animate-fade transform -translate-y-1 pointer-events-none select-none">
-                      <div className="absolute -top-1 left-4 w-2 h-2 bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass transform rotate-45" />
-                      {showCopied
-                        ? "Copied email to clipboard successfully!"
-                        : "Click to copy email to clipboard"}
-                    </div>
-                  )}
+                  <div
+                    className={`absolute -bottom-8 left-8 px-3 py-1 bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass text-primary dark:text-primary-dark rounded-lg text-xs font-medium whitespace-nowrap pointer-events-none select-none transition-all duration-200 ease-in-out ${
+                      showCopied || isHovering
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-1 pointer-events-none"
+                    }`}
+                  >
+                    <div className="absolute -top-1 left-4 w-2 h-2 bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass transform rotate-45" />
+                    {showCopied
+                      ? "Copied email to clipboard successfully!"
+                      : "Click to copy email to clipboard"}
+                  </div>
                 </div>
               </div>
             </div>
