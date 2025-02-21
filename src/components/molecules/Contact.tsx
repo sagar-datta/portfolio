@@ -101,10 +101,10 @@ export const Contact = () => {
                   <a
                     href="mailto:s@gar.jp.net"
                     onClick={handleEmailClick}
-                    className="inline-flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
+                    className="inline-flex items-center gap-3 text-lg"
                   >
                     <FiMail
-                      className="w-5 h-5 group-hover:scale-110 transition-transform"
+                      className="w-5 h-5 transition-transform text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark hover:scale-110"
                       onMouseEnter={() =>
                         window.matchMedia("(hover: hover)").matches &&
                         setIsHovering(true)
@@ -112,7 +112,7 @@ export const Contact = () => {
                       onMouseLeave={() => setIsHovering(false)}
                     />
                     <span
-                      className="group-hover:translate-x-0.5 transition-transform"
+                      className="transition-transform text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark hover:translate-x-0.5"
                       onMouseEnter={() =>
                         window.matchMedia("(hover: hover)").matches &&
                         setIsHovering(true)
