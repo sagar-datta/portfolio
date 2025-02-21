@@ -48,6 +48,7 @@ export const GridItem = ({
             [@media(hover:none)]:touch-none [@media(hover:none)]:[-webkit-tap-highlight-color:transparent]
             [@media(hover:none)]:active:scale-[0.98] [@media(hover:none)]:active:opacity-80
             [@media(hover:none)]:transition-all [@media(hover:none)]:duration-150 [@media(hover:none)]:ease-in-out
+            @container/card
           `}
         >
           {/* External link icon for touch devices */}
@@ -64,7 +65,7 @@ export const GridItem = ({
             </h3>
 
             {/* Description Heading */}
-            <p className="font-medium text-[15px] text-muted-light dark:text-muted-dark leading-snug line-clamp-2 mb-2">
+            <p className="font-medium text-clamp-body text-muted-light dark:text-muted-dark leading-snug line-clamp-2 @container/card:line-clamp-1 mb-2">
               {descriptionHeading}
             </p>
 
