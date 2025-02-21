@@ -10,7 +10,7 @@ export const Header = ({ name, profession }: IHeaderProps) => {
   return (
     <header className="sticky top-4 z-10 mx-6 md:mx-4">
       <div className="max-w-4xl mx-auto bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass rounded-2xl">
-        <div className="relative flex items-center px-8 py-2.5">
+        <div className="relative flex items-center p-1.5 md:px-8 md:py-2.5">
           {/* Left section with icon and name */}
           <div className="hidden md:flex items-center gap-3">
             <div className="w-6 h-6 flex items-center justify-center text-primary dark:text-primary-dark">
