@@ -35,8 +35,8 @@ export const GridItem = ({
       `}
     >
       <div onClick={handleClick} className="group relative">
-        {/* Static background */}
-        <div className="absolute -z-10 inset-[1px] bg-accent-red rounded-xl" />
+        {/* Static background - only for mouse devices */}
+        <div className="absolute -z-10 inset-[1px] bg-accent-red rounded-xl hidden [@media(hover:hover)]:block" />
 
         {/* Main card content */}
         <div
