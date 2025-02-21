@@ -14,9 +14,11 @@ export const TabItem = forwardRef<HTMLButtonElement, ITabItemProps>(
       <button
         ref={ref}
         onClick={onClick}
-        style={{
-          '--font-weight': isSelected ? 600 : 500
-        } as React.CSSProperties}
+        style={
+          {
+            "--font-weight": isSelected ? 600 : 500,
+          } as React.CSSProperties
+        }
         className={`
         relative text-clamp-tab md:text-base flex-1 md:flex-none
         px-2 py-3 md:px-6 md:py-2
