@@ -45,6 +45,8 @@ export const GridItem = ({
             transition-smooth w-full overflow-hidden
             hover-lift-lg touch-lift-lg
             bg-button-light dark:bg-button-dark p-4
+            [@media(hover:none)]:active:scale-95 [@media(hover:none)]:active:bg-button-light/80 [@media(hover:none)]:active:dark:bg-button-dark/80
+            [@media(hover:none)]:touch-none [@media(hover:none)]:[-webkit-tap-highlight-color:transparent]
           `}
         >
           {/* Content overlay */}
