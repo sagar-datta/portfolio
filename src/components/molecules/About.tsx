@@ -1,6 +1,15 @@
 "use client";
 
 import { PageTransition } from "@/components/atoms/PageTransition";
+import { SiReact, SiTypescript, SiRedux, SiLighthouse } from "react-icons/si";
+import {
+  MdOutlineDesignServices,
+  MdOutlineArchitecture,
+  MdSecurity,
+  MdApi,
+} from "react-icons/md";
+import { TbBrandCypress, TbDeviceMobile, TbAccessible } from "react-icons/tb";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 export const About = () => {
   return (
@@ -90,33 +99,69 @@ export const About = () => {
               <h3 className="text-sm font-medium text-primary/60 dark:text-primary-dark/60">
                 Frontend Core
               </h3>
-              <ul className="space-y-1 text-primary/80 dark:text-primary-dark/80">
-                <li>React.js</li>
-                <li>TypeScript</li>
-                <li>State Management</li>
-                <li>Performance Optimisation</li>
+              <ul className="space-y-2 text-primary/80 dark:text-primary-dark/80">
+                <li className="flex items-center gap-2">
+                  <SiReact className="w-4 h-4" />
+                  React.js
+                </li>
+                <li className="flex items-center gap-2">
+                  <SiTypescript className="w-4 h-4" />
+                  TypeScript
+                </li>
+                <li className="flex items-center gap-2">
+                  <SiRedux className="w-4 h-4" />
+                  State Management
+                </li>
+                <li className="flex items-center gap-2">
+                  <SiLighthouse className="w-4 h-4" />
+                  Performance Optimisation
+                </li>
               </ul>
             </div>
             <div className="space-y-2">
               <h3 className="text-sm font-medium text-primary/60 dark:text-primary-dark/60">
                 Architecture & Design
               </h3>
-              <ul className="space-y-1 text-primary/80 dark:text-primary-dark/80">
-                <li>Component Design</li>
-                <li>Design Systems</li>
-                <li>Type Safety</li>
-                <li>REST APIs</li>
+              <ul className="space-y-2 text-primary/80 dark:text-primary-dark/80">
+                <li className="flex items-center gap-2">
+                  <MdOutlineArchitecture className="w-4 h-4" />
+                  Component Design
+                </li>
+                <li className="flex items-center gap-2">
+                  <MdOutlineDesignServices className="w-4 h-4" />
+                  Design Systems
+                </li>
+                <li className="flex items-center gap-2">
+                  <VscWorkspaceTrusted className="w-4 h-4" />
+                  Type Safety
+                </li>
+                <li className="flex items-center gap-2">
+                  <MdApi className="w-4 h-4" />
+                  REST APIs
+                </li>
               </ul>
             </div>
             <div className="space-y-2">
               <h3 className="text-sm font-medium text-primary/60 dark:text-primary-dark/60">
                 Development
               </h3>
-              <ul className="space-y-1 text-primary/80 dark:text-primary-dark/80">
-                <li>CI/CD Workflows</li>
-                <li>Test-Driven Development</li>
-                <li>Mobile-First Design</li>
-                <li>Accessibility (ARIA)</li>
+              <ul className="space-y-2 text-primary/80 dark:text-primary-dark/80">
+                <li className="flex items-center gap-2">
+                  <MdSecurity className="w-4 h-4" />
+                  CI/CD Workflows
+                </li>
+                <li className="flex items-center gap-2">
+                  <TbBrandCypress className="w-4 h-4" />
+                  Test-Driven Development
+                </li>
+                <li className="flex items-center gap-2">
+                  <TbDeviceMobile className="w-4 h-4" />
+                  Mobile-First Design
+                </li>
+                <li className="flex items-center gap-2">
+                  <TbAccessible className="w-4 h-4" />
+                  Accessibility (ARIA)
+                </li>
               </ul>
             </div>
           </div>
