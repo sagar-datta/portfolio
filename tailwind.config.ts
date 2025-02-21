@@ -30,6 +30,15 @@ export default {
           dark: "#F0EEE6",
         },
       },
+      keyframes: {
+        softPulse: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
+        },
+      },
+      animation: {
+        "soft-pulse": "softPulse 4s ease-in-out infinite",
+      },
       opacity: {
         35: "0.35",
         40: "0.40",
