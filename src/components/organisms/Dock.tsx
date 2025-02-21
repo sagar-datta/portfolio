@@ -7,7 +7,7 @@ import { useTheme } from "next-themes";
 import { Suspense, useEffect, useState } from "react";
 import { useExternalLink } from "@/hooks/useExternalLink";
 import { VscGithubInverted } from "react-icons/vsc";
-import { SiLinkedin } from "react-icons/si";
+import { SiLinkedin, SiGoogledocs } from "react-icons/si";
 
 const DockSkeleton = () => (
   <div className="h-16 bg-button-light dark:bg-button-dark animate-pulse rounded-t-xl" />
@@ -22,6 +22,11 @@ const Dock = () => {
   const { handleClick: handleLinkedInClick } = useExternalLink(
     "https://www.linkedin.com/in/sagar-datta98/"
   );
+
+  const handleCVDownload = () => {
+    // This will trigger download or open in new tab depending on browser
+    window.open("/assets/sagar-datta-cv.pdf", "_blank");
+  };
 
   useEffect(() => {
     setMounted(true);
@@ -41,6 +46,14 @@ const Dock = () => {
       ),
       label: "LinkedIn",
       onClick: handleLinkedInClick,
+    },
+    {
+      icon: (
+        <SiGoogledocs className="text-primary dark:text-primary-dark text-2xl [@media(hover:hover)]:lg:text-4xl" />
+      ),
+      label: "Download CV",
+      desktopLabel: "Download CV",
+      onClick: handleCVDownload,
     },
     {
       icon: mounted && resolvedTheme === "dark" ? "🌝" : "🌚",
