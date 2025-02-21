@@ -43,10 +43,11 @@ export const GridItem = ({
           className={`
             relative rounded-xl aspect-[16/9]
             transition-smooth w-full overflow-hidden
-            hover-lift-lg touch-lift-lg
+            hover-lift-lg
             bg-button-light dark:bg-button-dark p-4
-            [@media(hover:none)]:active:scale-95 [@media(hover:none)]:active:bg-button-light/80 [@media(hover:none)]:active:dark:bg-button-dark/80
             [@media(hover:none)]:touch-none [@media(hover:none)]:[-webkit-tap-highlight-color:transparent]
+            [@media(hover:none)]:active:scale-[0.98] [@media(hover:none)]:active:opacity-80
+            [@media(hover:none)]:transition-all [@media(hover:none)]:duration-150 [@media(hover:none)]:ease-in-out
           `}
         >
           {/* Content overlay */}
