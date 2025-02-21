@@ -13,7 +13,7 @@ const DockSkeleton = () => (
   <div className="h-16 bg-button-light dark:bg-button-dark animate-pulse rounded-t-xl" />
 );
 
-export const Dock = () => {
+const Dock = () => {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const { handleClick: handleGithubClick } = useExternalLink(
@@ -65,3 +65,5 @@ export const Dock = () => {
     </footer>
   );
 };
+
+export { Dock };
