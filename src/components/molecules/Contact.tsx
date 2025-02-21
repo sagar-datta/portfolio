@@ -98,30 +98,23 @@ export const Contact = () => {
               </h2>
               <div className="space-y-4">
                 <div className="flex flex-col relative">
-                  <a
-                    href="mailto:s@gar.jp.net"
-                    onClick={handleEmailClick}
-                    className="inline-flex items-center gap-3 text-lg"
-                  >
-                    <FiMail
-                      className="w-5 h-5 transition-transform text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark hover:scale-110"
+                  <div className="flex">
+                    <a
+                      href="mailto:s@gar.jp.net"
+                      onClick={handleEmailClick}
                       onMouseEnter={() =>
                         window.matchMedia("(hover: hover)").matches &&
                         setIsHovering(true)
                       }
                       onMouseLeave={() => setIsHovering(false)}
-                    />
-                    <span
-                      className="transition-transform text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark hover:translate-x-0.5"
-                      onMouseEnter={() =>
-                        window.matchMedia("(hover: hover)").matches &&
-                        setIsHovering(true)
-                      }
-                      onMouseLeave={() => setIsHovering(false)}
+                      className="inline-flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
                     >
-                      s@gar.jp.net
-                    </span>
-                  </a>
+                      <FiMail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                      <span className="group-hover:translate-x-0.5 transition-transform">
+                        s@gar.jp.net
+                      </span>
+                    </a>
+                  </div>
                   <div
                     className={`absolute -bottom-8 left-8 px-3 py-1 bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass text-primary dark:text-primary-dark rounded-lg text-xs font-medium whitespace-nowrap pointer-events-none select-none transition-all duration-200 ease-in-out ${
                       (showCopied && isHovering) || (!showCopied && isHovering)
