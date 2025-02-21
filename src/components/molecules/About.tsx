@@ -12,8 +12,8 @@ export const About = () => {
             Hi, I'm Sagar 👋
           </h1>
           <p className="text-xl md:text-2xl text-primary/90 dark:text-primary-dark/90 leading-relaxed">
-            A frontend engineer from Perth, specializing in React applications
-            with a focus on performance optimization and type safety.
+            A frontend engineer from Perth, specialising in React applications
+            with a focus on UX design and performance optimisation.
           </p>
         </section>
 
@@ -23,10 +23,10 @@ export const About = () => {
             Frontend Engineer
           </h2>
           <p className="text-lg md:text-xl text-primary/80 dark:text-primary-dark/80 leading-relaxed">
-            I build high-performance web applications using React, TypeScript,
-            and modern web technologies. My work emphasizes code quality through
-            strict typing, automated testing, and measurable performance
-            improvements.
+            I build high-performance web applications using React and
+            TypeScript, with expertise in modern animation systems and state
+            management. My work combines technical excellence with user-centered
+            design principles.
           </p>
         </section>
 
@@ -41,9 +41,9 @@ export const About = () => {
                 Frontend Software Engineer
               </h3>
               <p className="text-primary/70 dark:text-primary-dark/70">
-                Led development of a real-time data visualization dashboard for
+                Led development of a real-time data visualisation dashboard for
                 wildfire monitoring, achieving 40% faster load times through
-                optimized state management and caching strategies.
+                optimised state management and caching strategies.
               </p>
             </div>
             <div className="space-y-3 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
@@ -53,7 +53,7 @@ export const About = () => {
               <p className="text-primary/70 dark:text-primary-dark/70">
                 Architected reusable component libraries and implemented
                 mobile-first responsive layouts with modern performance
-                optimization techniques.
+                optimisation techniques.
               </p>
             </div>
           </div>
