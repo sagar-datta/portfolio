@@ -16,7 +16,7 @@ export const TabItem = forwardRef<HTMLButtonElement, ITabItemProps>(
         onClick={onClick}
         className={`
           relative px-6 py-2 text-base font-medium
-          transition-all duration-200 ease-smooth
+          transition-all duration-150 ease-smooth
           ${isSelected ? "bg-button-light dark:bg-button-dark rounded-xl" : ""}
         `}
       >
