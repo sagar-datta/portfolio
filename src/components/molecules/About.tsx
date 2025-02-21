@@ -33,7 +33,7 @@ export const About = () => {
             Engineering Approach
           </h2>
           <p className="text-lg md:text-xl text-primary/80 dark:text-primary-dark/80 leading-relaxed">
-            My development process emphasizes component-driven architecture and
+            My development process emphasises component-driven architecture and
             robust state management patterns. I deliver production-ready code
             through comprehensive type safety, automated testing workflows, and
             systematic code review processes. This methodical approach ensures

@@ -108,7 +108,7 @@ export const Contact = () => {
             <p className="text-lg text-primary/80 dark:text-primary-dark/80 leading-relaxed">
               I&apos;m currently exploring opportunities where I can leverage my
               expertise in frontend development and modern web technologies. I
-              specialize in building responsive, performance-driven applications
+              specialise in building responsive, performance-driven applications
               with a focus on exceptional user experiences.
             </p>
             <ul className="mt-4 space-y-2 text-lg text-primary/80 dark:text-primary-dark/80">
