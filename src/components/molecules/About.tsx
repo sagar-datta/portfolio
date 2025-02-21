@@ -12,48 +12,69 @@ export const About = () => {
             Hi, I&apos;m Sagar 👋
           </h1>
           <p className="text-xl md:text-2xl text-primary/90 dark:text-primary-dark/90 leading-relaxed">
-            A frontend engineer from Perth, specialising in React applications
-            with a focus on UX design and performance optimisation.
+            A frontend engineer from Perth, specialising in responsive,
+            performance-driven React applications with a focus on intuitive user
+            experiences and mobile-first design.
           </p>
         </section>
 
-        {/* Experience Section */}
+        {/* Engineering Approach */}
         <section className="space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-primary dark:text-primary-dark">
-            Frontend Engineer
+            Engineering Approach
           </h2>
           <p className="text-lg md:text-xl text-primary/80 dark:text-primary-dark/80 leading-relaxed">
-            I build high-performance web applications using React and
-            TypeScript, with expertise in modern animation systems and state
-            management. My work combines technical excellence with user-centered
-            design principles.
+            My development process emphasizes component-driven architecture and
+            robust state management patterns. I deliver production-ready code
+            through comprehensive type safety, automated testing workflows, and
+            systematic code review processes. This methodical approach ensures
+            scalable, maintainable applications that stand up to enterprise
+            demands.
           </p>
         </section>
 
-        {/* Experience Highlights */}
+        {/* Featured Projects */}
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark">
-            Experience Highlights
+            Featured Projects
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-3 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
               <h3 className="text-lg font-medium text-primary dark:text-primary-dark">
-                Frontend Software Engineer
+                <a
+                  href="https://sagar-datta.github.io/gastronaut-ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  Gastronaut AI
+                </a>
               </h3>
               <p className="text-primary/70 dark:text-primary-dark/70">
-                Led development of a real-time data visualisation dashboard for
-                wildfire monitoring, achieving 40% faster load times through
-                optimised state management and caching strategies.
+                Engineered a production-ready recipe generator using React and
+                Google Gemini Pro API. Implemented comprehensive error handling,
+                ARIA compliance, and sophisticated UX patterns for an
+                enterprise-grade user experience.
               </p>
             </div>
             <div className="space-y-3 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
               <h3 className="text-lg font-medium text-primary dark:text-primary-dark">
-                Frontend Developer
+                Wildfire Protection Dashboard
               </h3>
               <p className="text-primary/70 dark:text-primary-dark/70">
-                Architected reusable component libraries and implemented
-                mobile-first responsive layouts with modern performance
-                optimisation techniques.
+                At{" "}
+                <a
+                  href="https://homewildfireprotection.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary dark:text-primary-dark hover:underline"
+                >
+                  Fyto Inc.
+                </a>
+                , designed and developed an interactive dashboard for monitoring
+                real-time wildfire protection systems. Implemented mobile-first
+                responsive design with optimised state management for efficient
+                cross-device performance.
               </p>
             </div>
           </div>
@@ -72,19 +93,19 @@ export const About = () => {
               <ul className="space-y-1 text-primary/80 dark:text-primary-dark/80">
                 <li>React.js</li>
                 <li>TypeScript</li>
-                <li>Tailwind CSS</li>
-                <li>Framer Motion</li>
+                <li>State Management</li>
+                <li>Performance Optimisation</li>
               </ul>
             </div>
             <div className="space-y-2">
               <h3 className="text-sm font-medium text-primary/60 dark:text-primary-dark/60">
-                Architecture
+                Architecture & Design
               </h3>
               <ul className="space-y-1 text-primary/80 dark:text-primary-dark/80">
                 <li>Component Design</li>
-                <li>State Management</li>
-                <li>REST APIs</li>
+                <li>Design Systems</li>
                 <li>Type Safety</li>
+                <li>REST APIs</li>
               </ul>
             </div>
             <div className="space-y-2">
@@ -92,10 +113,10 @@ export const About = () => {
                 Development
               </h3>
               <ul className="space-y-1 text-primary/80 dark:text-primary-dark/80">
-                <li>Git</li>
-                <li>CI/CD</li>
-                <li>TDD</li>
-                <li>Agile</li>
+                <li>CI/CD Workflows</li>
+                <li>Test-Driven Development</li>
+                <li>Mobile-First Design</li>
+                <li>Accessibility (ARIA)</li>
               </ul>
             </div>
           </div>
@@ -115,15 +136,20 @@ export const About = () => {
                 RMIT University with Distinction (GPA: 3.5/4.0)
               </p>
               <p className="text-primary/60 dark:text-primary-dark/60">
-                Focus: Full Stack Development, Cloud Security, AI Foundations
+                Specialised in Full Stack Development, Cloud Security, and AI
+                Foundations
               </p>
             </div>
             <div className="space-y-2">
               <h3 className="text-lg font-medium text-primary dark:text-primary-dark">
-                International Experience
+                Global Experience & Recognition
               </h3>
               <p className="text-primary/70 dark:text-primary-dark/70">
                 Exchange studies at Technische Universität München
+              </p>
+              <p className="text-primary/60 dark:text-primary-dark/60">
+                Google UX Design Certification • RMIT Global Leadership Program
+                • First Place in Applied IT
               </p>
             </div>
           </div>

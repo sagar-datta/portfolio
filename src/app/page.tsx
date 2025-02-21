@@ -30,7 +30,7 @@ export default function Home() {
       <div className="min-h-screen flex flex-col pb-20 lg:pb-24">
         <Header
           name="Sagar Datta"
-          profession="Full Stack Developer"
+          profession="Frontend Engineer"
           selectedTab={selectedTab}
           onTabChange={setSelectedTab}
         />
