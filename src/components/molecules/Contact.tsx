@@ -48,28 +48,32 @@ export const Contact = () => {
                 Professional Networks
               </h2>
               <div className="space-y-4">
-                <a
-                  href="https://linkedin.com/in/sagar-datta98"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
-                >
-                  <FiLinkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span className="group-hover:translate-x-0.5 transition-transform">
-                    LinkedIn Profile
-                  </span>
-                </a>
-                <a
-                  href="https://github.com/sagar-datta"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
-                >
-                  <FiGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span className="group-hover:translate-x-0.5 transition-transform">
-                    GitHub Projects
-                  </span>
-                </a>
+                <div className="flex">
+                  <a
+                    href="https://linkedin.com/in/sagar-datta98"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
+                  >
+                    <FiLinkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                    <span className="group-hover:translate-x-0.5 transition-transform">
+                      LinkedIn Profile
+                    </span>
+                  </a>
+                </div>
+                <div className="flex">
+                  <a
+                    href="https://github.com/sagar-datta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
+                  >
+                    <FiGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                    <span className="group-hover:translate-x-0.5 transition-transform">
+                      GitHub Projects
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -79,15 +83,17 @@ export const Contact = () => {
                 Direct Contact
               </h2>
               <div className="space-y-4">
-                <a
-                  href="mailto:s@gar.jp.net"
-                  className="flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
-                >
-                  <FiMail className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span className="group-hover:translate-x-0.5 transition-transform">
-                    s@gar.jp.net
-                  </span>
-                </a>
+                <div className="flex">
+                  <a
+                    href="mailto:s@gar.jp.net"
+                    className="inline-flex items-center gap-3 text-lg text-primary/80 dark:text-primary-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors group"
+                  >
+                    <FiMail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                    <span className="group-hover:translate-x-0.5 transition-transform">
+                      s@gar.jp.net
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
