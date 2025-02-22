@@ -22,7 +22,7 @@ export const MobileDock = ({ items }: IMobileDockProps) => {
       <div
         className={`w-full bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass px-4 pt-3 ${
           isStandalone
-            ? "pb-[calc(env(safe-area-inset-bottom)+0.75rem)]"
+            ? "pb-[calc(env(safe-area-inset-bottom)+1.5rem)]"
             : "pb-3"
         }`}
       >
