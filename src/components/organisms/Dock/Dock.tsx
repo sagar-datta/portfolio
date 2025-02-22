@@ -19,7 +19,8 @@ const Dock = () => {
 
   const handleCVDownload = () => {
     // This will trigger download or open in new tab depending on browser
-    window.open("/assets/sagar-datta-cv.pdf", "_blank");
+    // Use the configured base path for GitHub Pages deployment
+    window.open("/portfolio/assets/sagar-datta-cv.pdf", "_blank");
   };
 
   useEffect(() => {
