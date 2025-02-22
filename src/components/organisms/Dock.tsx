@@ -13,6 +13,50 @@ const DockSkeleton = () => (
   <div className="h-16 bg-button-light dark:bg-button-dark animate-pulse rounded-t-xl" />
 );
 
+const getDockItems = (
+  resolvedTheme: string | undefined,
+  mounted: boolean,
+  handleGithubClick: () => void,
+  handleLinkedInClick: () => void,
+  handleCVDownload: () => void,
+  handleThemeToggle: () => void
+): IDockItem[] => [
+  {
+    icon: (
+      <VscGithubInverted className="text-primary dark:text-primary-dark text-2xl [@media(hover:hover)]:lg:text-4xl" />
+    ),
+    label: "GitHub",
+    onClick: handleGithubClick,
+  },
+  {
+    icon: (
+      <SiLinkedin className="text-primary dark:text-primary-dark text-2xl [@media(hover:hover)]:lg:text-4xl" />
+    ),
+    label: "LinkedIn",
+    onClick: handleLinkedInClick,
+  },
+  {
+    icon: (
+      <SiGoogledocs className="text-primary dark:text-primary-dark text-2xl [@media(hover:hover)]:lg:text-4xl" />
+    ),
+    label: "Download CV",
+    desktopLabel: "Download CV",
+    onClick: handleCVDownload,
+  },
+  {
+    icon: mounted && resolvedTheme === "dark" ? "🌝" : "🌚",
+    label:
+      mounted && resolvedTheme === "dark"
+        ? "Toggle Light Mode"
+        : "Toggle Dark Mode",
+    desktopLabel:
+      mounted && resolvedTheme === "dark"
+        ? "Toggle Light Mode"
+        : "Toggle Dark Mode",
+    onClick: handleThemeToggle,
+  },
+];
+
 const Dock = () => {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -32,42 +76,17 @@ const Dock = () => {
     setMounted(true);
   }, []);
 
-  const dockItems: IDockItem[] = [
-    {
-      icon: (
-        <VscGithubInverted className="text-primary dark:text-primary-dark text-2xl [@media(hover:hover)]:lg:text-4xl" />
-      ),
-      label: "GitHub",
-      onClick: handleGithubClick,
-    },
-    {
-      icon: (
-        <SiLinkedin className="text-primary dark:text-primary-dark text-2xl [@media(hover:hover)]:lg:text-4xl" />
-      ),
-      label: "LinkedIn",
-      onClick: handleLinkedInClick,
-    },
-    {
-      icon: (
-        <SiGoogledocs className="text-primary dark:text-primary-dark text-2xl [@media(hover:hover)]:lg:text-4xl" />
-      ),
-      label: "Download CV",
-      desktopLabel: "Download CV",
-      onClick: handleCVDownload,
-    },
-    {
-      icon: mounted && resolvedTheme === "dark" ? "🌝" : "🌚",
-      label:
-        mounted && resolvedTheme === "dark"
-          ? "Toggle Light Mode"
-          : "Toggle Dark Mode",
-      desktopLabel:
-        mounted && resolvedTheme === "dark"
-          ? "Toggle Light Mode"
-          : "Toggle Dark Mode",
-      onClick: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
-    },
-  ];
+  const handleThemeToggle = () =>
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+
+  const dockItems = getDockItems(
+    resolvedTheme,
+    mounted,
+    handleGithubClick,
+    handleLinkedInClick,
+    handleCVDownload,
+    handleThemeToggle
+  );
 
   return (
     <footer className="fixed bottom-0 left-0 right-0 z-50">
