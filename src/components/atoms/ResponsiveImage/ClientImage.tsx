@@ -3,52 +3,32 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useTheme } from "next-themes";
+import { ImageProps } from "./types";
 
-interface IResponsiveImageProps {
-  src: string | { light: string; dark: string };
-  alt: string;
-  priority?: boolean;
-  className?: string;
-  sizes?: string;
-  containerClassName?: string;
-}
-
-export const ResponsiveImage = ({
+export const ClientImage = ({
   src,
   alt,
   priority = false,
   className = "",
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
   containerClassName = "",
-}: IResponsiveImageProps) => {
+}: ImageProps) => {
   const [error, setError] = useState(false);
   const { resolvedTheme } = useTheme();
   const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
-  console.log("ResponsiveImage props:", { src, resolvedTheme, basePath });
-
   const getImagePath = () => {
-    // Log the incoming src to see its structure
-    console.log("Image src type:", typeof src);
-    console.log("Image src value:", src);
-
     // Check if src is an object with light/dark properties
     if (src && typeof src === "object" && "light" in src && "dark" in src) {
       const themePath = resolvedTheme === "light" ? src.light : src.dark;
-      console.log("Using themed path:", themePath);
       return `${basePath}${themePath}`;
     }
-
-    // Fallback for string paths
-    console.log("Using default path:", src);
     return `${basePath}${src}`;
   };
 
   const imagePath = getImagePath();
-  console.log("Final image path:", imagePath);
 
   if (error) {
-    console.log("Image error occurred");
     return (
       <div className={`relative w-full h-full ${containerClassName}`}>
         <div
@@ -80,10 +60,7 @@ export const ResponsiveImage = ({
           className={`object-cover ${className}`}
           sizes={sizes}
           priority={priority}
-          onError={(e) => {
-            console.log("Image load error:", e);
-            setError(true);
-          }}
+          onError={() => setError(true)}
         />
       </picture>
     </div>
