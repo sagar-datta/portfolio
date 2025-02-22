@@ -11,8 +11,11 @@ export const DynamicFavicon = () => {
     const favicon = document.querySelector<HTMLLinkElement>('link[rel="icon"]');
 
     if (favicon) {
-      favicon.href =
-        currentTheme === "dark" ? "/favicon-dark.svg" : "/favicon-light.svg";
+      const basePath =
+        process.env.NODE_ENV === "production" ? "/portfolio" : "";
+      favicon.href = `${basePath}${
+        currentTheme === "dark" ? "/favicon-dark.svg" : "/favicon-light.svg"
+      }`;
     }
   }, [theme, systemTheme]);
 
