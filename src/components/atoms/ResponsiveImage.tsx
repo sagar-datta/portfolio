@@ -17,7 +17,7 @@ export const ResponsiveImage = ({
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
   containerClassName = "",
 }: IResponsiveImageProps) => {
-  const basePath = src.split(".")[0];
+  const basePath = process.env.NODE_ENV === "production" ? `/portfolio${src.split(".")[0]}` : src.split(".")[0];
   const fileName = src.split("/").pop() || "";
 
   return (
