@@ -18,9 +18,8 @@ const Dock = () => {
   );
 
   const handleCVDownload = () => {
-    // This will trigger download or open in new tab depending on browser
-    // Use the configured base path for GitHub Pages deployment
-    window.open("/portfolio/assets/sagar-datta-cv.pdf", "_blank");
+    const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
+    window.open(`${basePath}/assets/sagar-datta-cv.pdf`, "_blank");
   };
 
   useEffect(() => {
