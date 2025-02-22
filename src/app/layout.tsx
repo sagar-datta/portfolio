@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   viewport: {
     width: "device-width",
     initialScale: 1,
-    viewportFit: "cover",
+    maximumScale: 1,
+    userScalable: false,
   },
 };
 
@@ -29,7 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={geist.className} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${geist.className} h-full`}
+      suppressHydrationWarning
+    >
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
@@ -37,7 +42,7 @@ export default function RootLayout({
           content="black-translucent"
         />
       </head>
-      <body className="bg-primary dark:bg-primary-dark text-primary dark:text-primary-dark min-h-[100dvh] pb-[env(safe-area-inset-bottom)]">
+      <body className="bg-primary dark:bg-primary-dark text-primary dark:text-primary-dark h-[100svh] overflow-auto overscroll-none">
         <Providers>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <DynamicFavicon />
