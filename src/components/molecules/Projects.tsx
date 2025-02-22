@@ -3,9 +3,11 @@ import { GridItem } from "@/components/molecules/GridItem";
 import { GRID_ITEMS } from "@/utils/constants";
 
 const ProjectsContent = () => {
+  const sortedItems = [...GRID_ITEMS].sort((a, b) => a.id - b.id);
+
   return (
     <div className="flex flex-col md:flex-row md:flex-wrap gap-6 justify-center items-center md:items-stretch">
-      {GRID_ITEMS.map((item) => (
+      {sortedItems.map((item) => (
         <GridItem
           key={item.id}
           title={item.title}
