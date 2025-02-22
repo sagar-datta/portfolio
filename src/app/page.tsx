@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "@/components/organisms/Header";
 import { Dock } from "@/components/organisms/Dock";
 import { WidthCheck } from "@/components/organisms/WidthCheck";
@@ -11,6 +11,14 @@ import { Contact } from "@/components/molecules/Contact";
 
 export default function Home() {
   const [selectedTab, setSelectedTab] = useState<TabId>("about");
+  const [isStandalone, setIsStandalone] = useState(false);
+
+  useEffect(() => {
+    setIsStandalone(
+      window.navigator.standalone ||
+        window.matchMedia("(display-mode: standalone)").matches
+    );
+  }, []);
 
   const renderContent = () => {
     switch (selectedTab) {
@@ -27,7 +35,11 @@ export default function Home() {
 
   return (
     <WidthCheck>
-      <div className="min-h-screen flex flex-col pb-[calc(5rem+env(safe-area-inset-bottom))] lg:pb-24">
+      <div
+        className={`min-h-screen flex flex-col ${
+          isStandalone ? "pb-[calc(5rem+env(safe-area-inset-bottom))]" : "pb-20"
+        } lg:pb-24`}
+      >
         <Header
           name="Sagar Datta"
           profession="Frontend Engineer"
