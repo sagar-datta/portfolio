@@ -25,7 +25,7 @@ export const Content = ({
         <p className="font-medium text-clamp-body text-muted-light dark:text-muted-dark leading-snug line-clamp-2 @container/card:line-clamp-1 mb-2">
           {descriptionHeading}
         </p>
-        <p className="hidden @[400px]/card:block font-light text-[13px]/relaxed text-dimmed-light dark:text-dimmed-dark line-clamp-3 mb-4 @[400px]/card:group-hover:opacity-0 transition-smooth">
+        <p className="font-light text-[13px]/relaxed text-dimmed-light dark:text-dimmed-dark line-clamp-5 mb-4 @[400px]/card:group-hover:opacity-0 transition-smooth">
           {descriptionExtended}
         </p>
         <div className="mt-auto flex flex-col justify-end gap-2 @[400px]/card:group-hover:opacity-0 transition-smooth">
