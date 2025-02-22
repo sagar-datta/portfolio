@@ -4,7 +4,10 @@ export interface IPortfolioItem {
   descriptionHeading: string;
   descriptionExtended: string;
   url: string;
-  imagePath: string;
+  imagePath: {
+    light: string;
+    dark: string;
+  };
   color: string;
   techStack: string[];
 }

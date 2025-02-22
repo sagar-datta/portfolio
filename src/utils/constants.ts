@@ -10,7 +10,10 @@ export const GRID_ITEMS: IPortfolioItem[] = [
     descriptionExtended:
       "Dark/light theme • Responsive design • Container queries • Smooth animations • Optimised images • Accessibility features",
     color: "bg-primary-dark dark:bg-primary",
-    imagePath: "/images/projects/portfolio.png",
+    imagePath: {
+      light: "/images/projects/portfolio/portfolio-light.png",
+      dark: "/images/projects/portfolio/portfolio.png",
+    },
     techStack: [
       "React",
       "TypeScript",
@@ -28,7 +31,10 @@ export const GRID_ITEMS: IPortfolioItem[] = [
     descriptionExtended:
       "Real-time generation • Customised preferences • Step-by-step instructions • Nutritional insights • Mobile-optimised • Error handling",
     color: "bg-primary-dark dark:bg-primary",
-    imagePath: "/images/projects/gastronaut.png",
+    imagePath: {
+      light: "/images/projects/gastronaut/gastronaut.png",
+      dark: "/images/projects/gastronaut/gastronaut.png",
+    },
     techStack: [
       "React",
       "TypeScript",
@@ -47,7 +53,10 @@ export const GRID_ITEMS: IPortfolioItem[] = [
     descriptionExtended:
       "Interactive navigation • Dynamic image loading • Smooth transitions • Optimised performance • Responsive layout • Cloud integration",
     color: "bg-primary-dark dark:bg-primary",
-    imagePath: "/images/projects/galerie.png",
+    imagePath: {
+      light: "/images/projects/galerie/galerie.png",
+      dark: "/images/projects/galerie/galerie.png",
+    },
     techStack: ["React", "TypeScript", "Vite", "Tailwind", "Cloudinary", "CSS"],
   },
 ];
