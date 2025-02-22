@@ -4,7 +4,7 @@ import { IPortfolioItem } from "@/types/Portfolio";
 import { ExternalLink } from "lucide-react";
 import { Tooltip } from "@/components/atoms/Tooltip";
 import { useExternalLink } from "@/hooks/useExternalLink";
-import { GridItemContent } from "./GridItemContent";
+import { Content } from "@/components/molecules/GridItem/Content";
 
 type GridItemProps = Omit<IPortfolioItem, "id" | "color">;
 
@@ -24,7 +24,7 @@ export const GridItem = (props: GridItemProps) => {
     >
       <div onClick={handleClick} className="group relative">
         <div className="absolute -z-10 inset-[1px] bg-accent-red rounded-xl hidden [@media(hover:hover)]:block" />
-        <GridItemContent {...props} />
+        <Content {...props} />
       </div>
     </Tooltip>
   );
