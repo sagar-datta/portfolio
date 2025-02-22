@@ -2,6 +2,23 @@ import { IPortfolioItem } from "@/types/Portfolio";
 
 export const GRID_ITEMS: IPortfolioItem[] = [
   {
+    id: 3,
+    title: "Portfolio",
+    url: "https://sagar-datta.github.io/portfolio/",
+    descriptionHeading: "Modern, responsive portfolio website built with Next.js and TypeScript",
+    descriptionExtended: "Dark/light theme • Responsive design • Container queries • Smooth animations • Optimised images • Accessibility features",
+    color: "bg-primary-dark dark:bg-primary",
+    imagePath: "/images/projects/portfolio.png",
+    techStack: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Container Queries",
+      "next-themes",
+    ],
+  },
+  {
     id: 1,
     title: "Gastronaut AI",
     url: "https://sagar-datta.github.io/gastronaut-ai/",

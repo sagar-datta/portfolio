@@ -11,6 +11,8 @@ import {
   SiCloudinary,
   SiCss3,
   SiShadcnui,
+  SiNextdotjs,
+  SiContainerd,
 } from "react-icons/si";
 
 interface TechStackBubbleProps {
@@ -29,6 +31,9 @@ const techIcons: { [key: string]: IconType } = {
   Cloudinary: SiCloudinary,
   "CSS Animations": SiCss3,
   "Shadcn/ui": SiShadcnui,
+  "Next.js 15": SiNextdotjs,
+  "Container Queries": SiContainerd,
+  "next-themes": SiNextdotjs,
 };
 
 export const TechStackBubble = ({
