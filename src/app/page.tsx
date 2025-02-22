@@ -35,7 +35,7 @@ export default function Home() {
           onTabChange={setSelectedTab}
         />
 
-        <main className="flex-1 max-w-7xl mx-auto w-full pt-6 px-6 pb-0 lg:grid lg:place-items-center">
+        <main className="flex-1 w-full pt-6 px-6 pb-0 lg:grid lg:place-items-center">
           {renderContent()}
         </main>
 

@@ -6,7 +6,7 @@ const ProjectsContent = () => {
   const sortedItems = [...GRID_ITEMS].sort((a, b) => a.id - b.id);
 
   return (
-    <div className="w-full lg:w-[90%] mx-auto">
+    <div className="w-full max-w-[1450px] mx-auto px-4">
       <div className="flex flex-col md:flex-row md:flex-wrap gap-6 justify-center items-center md:items-stretch">
         {sortedItems.map((item) => (
           <GridItem
