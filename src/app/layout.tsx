@@ -19,10 +19,11 @@ export const metadata: Metadata = {
   viewport: {
     width: "device-width",
     initialScale: 1,
+    viewportFit: "cover",
   },
   other: {
     "apple-mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "apple-mobile-web-app-status-bar-style": "default",
   },
 };
 
@@ -35,25 +36,22 @@ export default function RootLayout({
     <html lang="en" className={geist.className} suppressHydrationWarning>
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="black-translucent"
-        />
-        <meta
-          name="theme-color"
-          content="#ffffff"
-          media="(prefers-color-scheme: light)"
-        />
-        <meta
-          name="theme-color"
-          content="#000000"
-          media="(prefers-color-scheme: dark)"
-        />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <style>{`
           @media all and (display-mode: standalone) {
-            body { 
-              padding-bottom: 8rem !important;
-              padding-top: env(safe-area-inset-top) !important;
+            :root {
+              --sat: env(safe-area-inset-top);
+              --sab: env(safe-area-inset-bottom);
+            }
+            @media (prefers-color-scheme: light) {
+              :root {
+                --background-color: #ffffff;
+              }
+            }
+            @media (prefers-color-scheme: dark) {
+              :root {
+                --background-color: #000000;
+              }
             }
           }
         `}</style>
