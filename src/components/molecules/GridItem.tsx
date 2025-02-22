@@ -2,9 +2,7 @@
 
 import { IPortfolioItem } from "@/types/Portfolio";
 import { ExternalLink } from "lucide-react";
-import { TechStackBubble } from "@/components/atoms/TechStackBubble";
 import { Tooltip } from "@/components/atoms/Tooltip";
-import { ResponsiveImage } from "@/components/atoms/ResponsiveImage";
 import { useExternalLink } from "@/hooks/useExternalLink";
 import { GridItemContent } from "./GridItemContent";
 
