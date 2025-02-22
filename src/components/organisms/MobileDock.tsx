@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { IDockItem } from "@/types/Dock";
 
 interface IMobileDockProps {
@@ -8,15 +5,6 @@ interface IMobileDockProps {
 }
 
 export const MobileDock = ({ items }: IMobileDockProps) => {
-  const [isStandalone, setIsStandalone] = useState(false);
-
-  useEffect(() => {
-    setIsStandalone(
-      window.navigator.standalone ||
-        window.matchMedia("(display-mode: standalone)").matches
-    );
-  }, []);
-
   return (
     <div className="block lg:[@media(hover:hover)]:hidden fixed bottom-0 left-0 right-0 z-10">
       <div className="w-full bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass px-4 py-3">

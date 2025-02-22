@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { SiGnometerminal } from "react-icons/si";
 import { NavigationTabs, TabId } from "@/components/molecules/NavigationTabs";
 import { AvailabilityStatus } from "@/components/atoms/AvailabilityStatus";
