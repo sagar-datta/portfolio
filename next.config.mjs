@@ -12,11 +12,11 @@ const nextConfig = {
     ],
   },
   // Configure base path for GitHub Pages
-  basePath: "",
+  basePath: "/portfolio",
   // Disable trailing slashes
   trailingSlash: false,
   // Ensure assets are properly referenced
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || "",
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || "/portfolio",
   poweredByHeader: false,
   reactStrictMode: true,
   compress: true,

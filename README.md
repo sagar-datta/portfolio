@@ -76,6 +76,31 @@ src/
 - **Client Components**: Strategic use of 'use client' for interactive elements
 - **Type Safety**: Strict TypeScript configuration for robust code
 
+## 📦 Deployment
+
+The site is deployed as a project site on GitHub Pages and can be accessed at:
+
+```
+https://sagar-datta.github.io/portfolio
+```
+
+To deploy your own version:
+
+1. Update the `next.config.js` to include the correct base path:
+
+   ```js
+   /** @type {import('next').NextConfig} */
+   const nextConfig = {
+     basePath: "/portfolio",
+     output: "export",
+     images: {
+       unoptimized: true,
+     },
+   };
+   ```
+
+2. Push changes to the main branch and GitHub Actions will handle the deployment
+
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
