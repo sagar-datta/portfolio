@@ -27,9 +27,9 @@ export const Tooltip = ({
         absolute left-1/2 -translate-x-1/2 ${positionStyles[position]}
         flex items-center gap-2 px-3 py-1.5 
         rounded-full shadow-sm opacity-0 lg:group-hover:opacity-100 
-        transition-smooth bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass whitespace-nowrap
+        transition-smooth bg-accent-red text-light whitespace-nowrap
         before:content-[''] before:absolute before:w-2 before:h-2 
-        before:rotate-45 before:bg-glass-button dark:before:bg-glass-button-dark
+        before:rotate-45 before:bg-accent-red
         ${position === "top" ? "before:-bottom-1" : "before:-top-1"}
         before:left-1/2 before:-translate-x-1/2
       `}

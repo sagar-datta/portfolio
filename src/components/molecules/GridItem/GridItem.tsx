@@ -14,7 +14,7 @@ export const GridItem = (props: GridItemProps) => {
   return (
     <Tooltip
       content={
-        <div className="flex items-center gap-2 text-dimmed-light dark:text-dimmed-dark">
+        <div className="flex items-center gap-2 text-light">
           <ExternalLink className="w-4 h-4" />
           <p className="text-xs">Opens in a new tab</p>
         </div>
