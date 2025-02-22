@@ -9,7 +9,7 @@ interface IMobileDockProps {
 export const MobileDock = ({ items }: IMobileDockProps) => {
   return (
     <div className="block lg:[@media(hover:hover)]:hidden fixed bottom-0 left-0 right-0 z-10">
-      <div className="w-full bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass px-4 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-3">
+      <div className="w-full bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass px-4 pb-7 pt-3">
         <div className="grid grid-cols-4 gap-2 max-w-sm mx-auto">
           {items.map((item) => (
             <button
