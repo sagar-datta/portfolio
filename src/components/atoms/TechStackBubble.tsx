@@ -4,15 +4,15 @@ import { IconType } from "react-icons";
 import {
   SiReact,
   SiTypescript,
-  SiVite,
   SiTailwindcss,
   SiFramer,
   SiGooglegemini,
   SiCloudinary,
   SiCss3,
-  SiShadcnui,
   SiNextdotjs,
   SiContainerd,
+  SiShadcnui,
+  SiVite,
 } from "react-icons/si";
 
 interface TechStackBubbleProps {
@@ -22,18 +22,16 @@ interface TechStackBubbleProps {
 
 const techIcons: { [key: string]: IconType } = {
   React: SiReact,
-  "React 18": SiReact,
   TypeScript: SiTypescript,
   Vite: SiVite,
-  "Tailwind CSS": SiTailwindcss,
-  "Framer Motion": SiFramer,
-  "Gemini Pro API": SiGooglegemini,
+  Tailwind: SiTailwindcss,
+  Framer: SiFramer,
+  "Gemini AI": SiGooglegemini,
   Cloudinary: SiCloudinary,
-  "CSS Animations": SiCss3,
-  "Shadcn/ui": SiShadcnui,
-  "Next.js 15": SiNextdotjs,
+  CSS: SiCss3,
+  "Next.js": SiNextdotjs,
   "Container Queries": SiContainerd,
-  "next-themes": SiNextdotjs,
+  Shadcn: SiShadcnui,
 };
 
 export const TechStackBubble = ({
@@ -44,14 +42,12 @@ export const TechStackBubble = ({
 
   const sizeStyles = {
     default: `
-      text-modern-clamp font-medium
-      px-[clamp(0.25rem,2cqi,0.75rem)]
-      py-[clamp(0.1rem,1cqi,0.375rem)]
+      text-[13px] font-medium tracking-wide
+      px-2.5 py-1
     `,
     small: `
-      text-[clamp(0.5rem,3cqi,0.575rem)] uppercase tracking-wider font-medium
-      px-[clamp(0.25rem,2cqi,0.625rem)]
-      py-[clamp(0.1rem,1cqi,0.325rem)]
+      text-[11px] uppercase tracking-wider font-medium
+      px-2 py-0.5
     `,
   };
 
@@ -59,16 +55,16 @@ export const TechStackBubble = ({
     <span
       className={`
         ${sizeStyles[variant]}
-        rounded-full bg-light dark:bg-primary-dark 
-        text-primary dark:text-primary-dark
-        flex items-center gap-1.5
+        rounded-full bg-light/90 dark:bg-dark/90 
+        text-primary/80 dark:text-primary-dark/80
+        flex items-center gap-1.5 transition-colors hover:bg-light dark:hover:bg-dark
       `}
     >
       {Icon && (
         <Icon
           className={`${
-            variant === "small" ? "w-2.5 h-2.5" : "w-3.5 h-3.5"
-          } hidden md:block`}
+            variant === "small" ? "w-3 h-3" : "w-3.5 h-3.5"
+          } hidden md:block opacity-80`}
         />
       )}
       {tech}
