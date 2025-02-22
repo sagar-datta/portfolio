@@ -18,26 +18,10 @@ export const Header = ({
   selectedTab,
   onTabChange,
 }: IHeaderProps) => {
-  const [isStandalone, setIsStandalone] = useState(false);
-
-  useEffect(() => {
-    setIsStandalone(
-      window.navigator.standalone ||
-        window.matchMedia("(display-mode: standalone)").matches
-    );
-  }, []);
-
   return (
     <header className="sticky top-0 z-10">
-      {isStandalone && (
-        <div className="absolute top-0 left-0 right-0 h-[env(safe-area-inset-top)] bg-primary dark:bg-primary-dark" />
-      )}
       <div className="absolute inset-0 bg-primary/80 dark:bg-primary-dark/80 backdrop-blur-glass" />
-      <div
-        className={`relative mx-6 md:mx-4 py-4 ${
-          isStandalone ? "pt-[calc(env(safe-area-inset-top)+1rem)]" : ""
-        }`}
-      >
+      <div className="relative mx-6 md:mx-4 py-4">
         <div className="max-w-4xl mx-auto bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass rounded-2xl">
           <div className="relative flex items-center p-1.5 md:px-8 md:py-4">
             {/* Left section with icon and name */}
