@@ -37,7 +37,11 @@ export const getDockItems = (
     onClick: handleCVDownload,
   },
   {
-    icon: mounted && resolvedTheme === "dark" ? "🌝" : "🌚",
+    icon: (
+      <span className="text-primary dark:text-primary-dark text-2xl [@media(hover:hover)]:lg:text-4xl">
+        {mounted && resolvedTheme === "dark" ? "🌝" : "🌚"}
+      </span>
+    ),
     label:
       mounted && resolvedTheme === "dark"
         ? "Toggle Light Mode"
