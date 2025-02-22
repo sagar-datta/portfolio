@@ -42,7 +42,7 @@ export default function RootLayout({
           content="black-translucent"
         />
       </head>
-      <body className="bg-primary dark:bg-primary-dark text-primary dark:text-primary-dark h-[100svh] overflow-auto overscroll-none">
+      <body className="bg-primary dark:bg-primary-dark text-primary dark:text-primary-dark min-h-screen">
         <Providers>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <DynamicFavicon />
