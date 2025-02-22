@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/atoms/ThemeProvider";
-import { Providers } from "@/components/organisms/Providers";
+import { Providers } from "@/components/atoms/Providers";
 import { DynamicFavicon } from "@/components/atoms/DynamicFavicon";
 
 const geist = Geist({
