@@ -3,13 +3,24 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    height: 100%;
+    min-height: -webkit-fill-available;
+  }
+
   html {
     scroll-behavior: smooth;
+    height: 100%;
+    min-height: -webkit-fill-available;
   }
 
   body {
     @apply bg-primary text-primary antialiased;
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 100%;
+    min-height: -webkit-fill-available;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   /* Consistent heading styles */

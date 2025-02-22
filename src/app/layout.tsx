@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon-light.svg",
   },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    viewportFit: "cover",
+  },
 };
 
 export default function RootLayout({
@@ -25,7 +30,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geist.className} suppressHydrationWarning>
-      <body className="bg-primary dark:bg-primary-dark text-primary dark:text-primary-dark">
+      <head>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+      </head>
+      <body className="bg-primary dark:bg-primary-dark text-primary dark:text-primary-dark min-h-[100dvh] pb-[env(safe-area-inset-bottom)]">
         <Providers>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <DynamicFavicon />
