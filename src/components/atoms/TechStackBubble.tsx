@@ -64,7 +64,7 @@ export const TechStackBubble = ({
         <Icon
           className={`${
             variant === "small" ? "w-3 h-3" : "w-3.5 h-3.5"
-          } hidden md:block opacity-80`}
+          } opacity-80`}
         />
       )}
       {tech}

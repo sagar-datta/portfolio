@@ -13,7 +13,7 @@ export const Content = ({
   techStack,
 }: ContentProps) => {
   return (
-    <div className="relative rounded-xl aspect-[16/9] transition-smooth w-full overflow-hidden hover-lift-lg bg-button-light dark:bg-button-dark p-4 [@media(hover:none)]:touch-none [@media(hover:none)]:[-webkit-tap-highlight-color:transparent] [@media(hover:none)]:active:scale-[0.98] [@media(hover:none)]:active:opacity-80 [@media(hover:none)]:transition-all [@media(hover:none)]:duration-150 [@media(hover:none)]:ease-in-out @container/card">
+    <div className="relative rounded-xl min-h-[250px] h-full transition-smooth w-full overflow-hidden hover-lift-lg bg-button-light dark:bg-button-dark p-4 [@media(hover:none)]:touch-none [@media(hover:none)]:[-webkit-tap-highlight-color:transparent] [@media(hover:none)]:active:scale-[0.98] [@media(hover:none)]:active:opacity-80 [@media(hover:none)]:transition-all [@media(hover:none)]:duration-150 [@media(hover:none)]:ease-in-out @container/card">
       <div className="flex items-center gap-1.5 absolute top-3 right-3 text-dimmed-light dark:text-dimmed-dark [@media(hover:hover)]:@[400px]/card:hidden">
         <p className="text-xs @[400px]:block hidden">Opens in new tab</p>
         <ExternalLink className="w-4 h-4" />
@@ -35,7 +35,7 @@ export const Content = ({
             ))}
           </div>
         </div>
-        <div className="hidden @[400px]/card:block absolute left-4 right-[50%] bottom-4 top-[35%] rounded-lg overflow-hidden select-none opacity-0 group-hover:opacity-100 transition-smooth">
+        <div className="hidden @[400px]/card:block absolute left-4 right-[50%] bottom-4 h-[60%] rounded-lg overflow-hidden select-none opacity-0 group-hover:opacity-100 transition-smooth">
           <ResponsiveImage
             src={imagePath}
             alt={title}
@@ -43,7 +43,7 @@ export const Content = ({
             className="transition-smooth opacity-100 scale-[0.99] group-hover:scale-100"
           />
         </div>
-        <div className="hidden @[400px]/card:flex absolute left-[55%] right-4 bottom-4 top-[35%] flex-col opacity-0 group-hover:opacity-100 transition-smooth">
+        <div className="hidden @[400px]/card:flex absolute left-[55%] right-4 bottom-4 h-[60%] flex-col opacity-0 group-hover:opacity-100 transition-smooth">
           <div className="flex flex-wrap gap-1.5 content-start">
             {techStack.map((tech: string, i: number) => (
               <TechStackBubble key={i} tech={tech} variant="small" />
