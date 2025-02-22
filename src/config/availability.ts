@@ -1,3 +1,3 @@
 export const AVAILABILITY_STATUS = {
-  isAvailable: true, // Set this to false when you want to show as unavailable
+  isAvailable: true, // Set to false for unavailable and true for available
 } as const;
