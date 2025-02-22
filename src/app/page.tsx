@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <WidthCheck>
-      <div className="min-h-screen flex flex-col pb-20 lg:pb-24">
+      <div className="min-h-screen flex flex-col pb-[calc(5rem+env(safe-area-inset-bottom))] lg:pb-24">
         <Header
           name="Sagar Datta"
           profession="Frontend Engineer"
