@@ -9,22 +9,22 @@ The site features a minimalist dock interface, drawing inspiration from familiar
 ## 🛠 Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) 15.1.7 with TypeScript
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with custom utilities and plugins
-- **Data Management**: [TanStack Query](https://tanstack.com/query) for efficient data handling
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with custom utilities
 - **Theme Switching**: [next-themes](https://github.com/pacocoursey/next-themes) for seamless dark/light mode
 
 ## 🏗 Project Structure
 
 ```bash
 src/
-├── app/             # Next.js app router pages
+├── app/             # Next.js app router pages and layouts
 ├── components/      # React components (Atomic Design)
 │   ├── atoms/      # Basic building blocks
 │   ├── molecules/  # Combinations of atoms
-│   └── organisms/  # Complex components
+│   └── organisms/  # Complex UI components
+├── config/         # Configuration files and constants
 ├── hooks/          # Custom React hooks
 ├── types/          # TypeScript type definitions
-└── utils/          # Helper functions and constants
+└── utils/          # Helper functions and utilities
 ```
 
 ## ✨ Features
@@ -33,8 +33,7 @@ src/
 - 📱 Fully responsive design
 - 🎯 Interactive dock with smooth animations
 - 🏃‍♂️ Static site generation for blazing-fast performance
-- 🔄 Automatic deployments via GitHub Actions
-- 🎨 Atomic design pattern for component organisation
+- ⚛️ Atomic design pattern for component organisation
 - 📦 Modern build optimisations
 
 ## 🚀 Development
@@ -42,7 +41,7 @@ src/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/sagar-datta/sagar-datta.github.io.git
+   git clone https://github.com/sagar-datta/portfolio.git
    ```
 
 2. Install dependencies:
@@ -68,31 +67,18 @@ src/
 - `npm run build` - Build for production
 - `npm run start` - Start the production server
 - `npm run lint` - Check for code issues
-- `npm run lint:fix` - Fix code issues
-- `npm run clean` - Clear build caches
 - `npm run typecheck` - Check TypeScript types
-
-## 📦 Deployment
-
-The site is automatically deployed to GitHub Pages using GitHub Actions. Every push to the main branch triggers:
-
-1. Code quality checks
-2. TypeScript validation
-3. Optimised build process
-4. Static file generation
-5. Deployment to GitHub Pages
 
 ## 🎯 Design Decisions
 
 - **Atomic Design**: Components are organised using atomic design principles for better maintainability
-- **Static Export**: Utilising Next.js static export for optimal performance
+- **App Router**: Utilizing Next.js 14+ App Router for enhanced routing and layouts
 - **Client Components**: Strategic use of 'use client' for interactive elements
-- **Build Optimisation**: Implemented caching and optimised build processes
 - **Type Safety**: Strict TypeScript configuration for robust code
 
-## 📝 Licence
+## 📝 License
 
-This project is licenced under the MIT Licence - see the [LICENCE](LICENCE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
