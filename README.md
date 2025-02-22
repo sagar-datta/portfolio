@@ -1,16 +1,19 @@
 # 🚀 Sagar Datta's Portfolio
 
-A modern, personal portfolio site built with cutting-edge web technologies, featuring a minimal desktop-inspired interface.
+A modern, personal portfolio site built with cutting-edge web technologies, featuring a minimalist desktop-inspired interface.
 
 ## 🎨 Design Philosophy
 
-The site features a minimalist dock interface, drawing inspiration from familiar desktop environments whilst embracing modern web capabilities. Built with a mobile-first approach, it's fully responsive and accessible across all devices.
+The site features a minimalist dock interface, drawing inspiration from familiar desktop environments while embracing modern web capabilities. Built with a mobile-first approach, it's fully responsive and accessible across all devices.
 
 ## 🛠 Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) 15.1.7 with TypeScript
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) with custom utilities
+- **Animation**: [Framer Motion](https://www.framer.com/motion/) for smooth animations
 - **Theme Switching**: [next-themes](https://github.com/pacocoursey/next-themes) for seamless dark/light mode
+- **State Management**: [@tanstack/react-query](https://tanstack.com/query/latest) for efficient data fetching
+- **Icons**: [Lucide React](https://lucide.dev/) and [React Icons](https://react-icons.github.io/react-icons/) for beautiful UI elements
 
 ## 🏗 Project Structure
 
@@ -35,6 +38,9 @@ src/
 - 🏃‍♂️ Static site generation for blazing-fast performance
 - ⚛️ Atomic design pattern for component organisation
 - 📦 Modern build optimisations
+- 🔍 SEO optimised with Next.js metadata
+- 🎨 Custom SVG favicons with theme support
+- 🌐 Optimised image loading with remote patterns support
 
 ## 🚀 Development
 
@@ -67,6 +73,8 @@ src/
 - `npm run build` - Build for production
 - `npm run start` - Start the production server
 - `npm run lint` - Check for code issues
+- `npm run lint:fix` - Automatically fix code issues
+- `npm run clean` - Remove build directories
 - `npm run typecheck` - Check TypeScript types
 
 ## 🎯 Design Decisions
