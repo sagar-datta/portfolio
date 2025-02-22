@@ -1,12 +1,12 @@
 "use client";
 
 import { PageTransition } from "@/components/atoms/PageTransition";
-import { AboutContent } from "./About/Content";
+import { Content } from "./Content";
 
 export const About = () => {
   return (
     <PageTransition>
-      <AboutContent />
+      <Content />
     </PageTransition>
   );
 };

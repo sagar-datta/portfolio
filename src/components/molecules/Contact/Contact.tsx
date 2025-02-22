@@ -2,7 +2,7 @@
 
 import { PageTransition } from "@/components/atoms/PageTransition";
 import { useState } from "react";
-import { ContactContent } from "./ContactContent";
+import { Content } from "./Content";
 
 export const Contact = () => {
   const [showCopied, setShowCopied] = useState(false);
@@ -20,7 +20,7 @@ export const Contact = () => {
 
   return (
     <PageTransition>
-      <ContactContent
+      <Content
         showCopied={showCopied}
         isHovering={isHovering}
         onEmailClick={handleEmailClick}

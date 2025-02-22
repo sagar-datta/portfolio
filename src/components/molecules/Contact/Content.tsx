@@ -1,6 +1,6 @@
 import { FiGithub, FiLinkedin, FiMail, FiMapPin, FiFlag } from "react-icons/fi";
 
-interface ContactContentProps {
+interface ContentProps {
   showCopied: boolean;
   isHovering: boolean;
   onEmailClick: (e: React.MouseEvent) => void;
@@ -8,13 +8,13 @@ interface ContactContentProps {
   onEmailLeave: () => void;
 }
 
-export const ContactContent = ({
+export const Content = ({
   showCopied,
   isHovering,
   onEmailClick,
   onEmailHover,
   onEmailLeave,
-}: ContactContentProps) => {
+}: ContentProps) => {
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-6 space-y-8">
       {/* Header Section */}
