@@ -22,7 +22,8 @@ export const metadata: Metadata = {
   },
   other: {
     "apple-mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "apple-mobile-web-app-status-bar-style": "black",
+    "theme-color": "#000000",
   },
 };
 
@@ -35,16 +36,16 @@ export default function RootLayout({
     <html lang="en" className={geist.className} suppressHydrationWarning>
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="black-translucent"
-        />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="theme-color" content="#000000" />
       </head>
       <body className="bg-primary dark:bg-primary-dark text-primary dark:text-primary-dark">
         <Providers>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <DynamicFavicon />
-            {children}
+            <div className="min-h-screen pb-[env(safe-area-inset-bottom,_96px)] standalone:pb-36">
+              {children}
+            </div>
           </ThemeProvider>
         </Providers>
       </body>
