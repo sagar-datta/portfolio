@@ -46,7 +46,7 @@ export const TechStackBubble = ({
       px-2.5 py-1
     `,
     small: `
-      text-[11px] uppercase tracking-wider font-medium
+      text-[11px] tracking-wider font-medium
       px-2 py-0.5
     `,
   };
