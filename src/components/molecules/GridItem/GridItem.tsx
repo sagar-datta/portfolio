@@ -20,7 +20,7 @@ export const GridItem = (props: GridItemProps) => {
           {isPortfolio ? (
             <>
               <FaRegHandPointUp className="w-4 h-4" />
-              <p className="text-xs">You're here!</p>
+              <p className="text-xs">You&apos;re here!</p>
             </>
           ) : (
             <>
