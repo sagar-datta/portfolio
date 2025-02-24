@@ -12,6 +12,12 @@ import { Contact } from "@/components/molecules/Contact";
 export default function Home() {
   const [selectedTab, setSelectedTab] = useState<TabId>("about");
 
+  const handleTabChange = (tab: TabId) => {
+    // Force an immediate scroll reset without animation
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    setSelectedTab(tab);
+  };
+
   const renderContent = () => {
     switch (selectedTab) {
       case "about":
@@ -32,7 +38,7 @@ export default function Home() {
           name="Sagar Datta"
           profession="Frontend Engineer"
           selectedTab={selectedTab}
-          onTabChange={setSelectedTab}
+          onTabChange={handleTabChange}
         />
 
         <main className="flex-1 w-full pt-6 px-6 pb-0 lg:grid lg:place-items-center">
