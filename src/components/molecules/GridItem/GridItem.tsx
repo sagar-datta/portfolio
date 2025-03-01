@@ -5,7 +5,6 @@ import { ExternalLink } from "lucide-react";
 import { Tooltip } from "@/components/atoms/Tooltip";
 import { useExternalLink } from "@/hooks/useExternalLink";
 import { Content } from "@/components/molecules/GridItem/Content";
-import { FaRegHandPointUp } from "react-icons/fa";
 
 type GridItemProps = Omit<IPortfolioItem, "id" | "color">;
 
