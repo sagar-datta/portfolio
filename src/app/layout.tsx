@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/atoms/ThemeProvider";
@@ -10,16 +10,17 @@ const geist = Geist({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata: Metadata = {
   title: "Sagar Datta's Portfolio",
   description: "Personal portfolio showcasing my work and skills",
   icons: {
     icon: "/favicon-light.svg",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    viewportFit: "cover",
   },
   other: {
     "apple-mobile-web-app-capable": "yes",
