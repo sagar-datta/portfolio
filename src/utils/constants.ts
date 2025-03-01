@@ -4,7 +4,7 @@ export const GRID_ITEMS: IPortfolioItem[] = [
   {
     id: 3,
     title: "Portfolio",
-    url: "https://sagar-datta.github.io/portfolio/",
+    url: "https://github.com/sagar-datta/portfolio/",
     descriptionHeading:
       "Modern portfolio with minimalist desktop-inspired interface",
     descriptionExtended:
