@@ -2,6 +2,28 @@ import { IPortfolioItem } from "@/types/Portfolio";
 
 export const GRID_ITEMS: IPortfolioItem[] = [
   {
+    id: 1,
+    title: "Itinerai",
+    url: "https://sagar-datta.github.io/travel-itinerary-ai/",
+    descriptionHeading:
+      "AI-powered travel planner with intelligent itinerary generation",
+    descriptionExtended:
+      "Smart destination search • Custom React hooks • Advanced state management • Dark mode • Accessibility features • Type-safe development",
+    color: "bg-primary-dark dark:bg-primary",
+    imagePath: {
+      light: "/images/projects/itinerai/itinerai-light.png",
+      dark: "/images/projects/itinerai/itinerai.png",
+    },
+    techStack: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "React Hook Form",
+      "Tailwind",
+      "Gemini AI",
+    ],
+  },
+  {
     id: 3,
     title: "Portfolio",
     url: "https://github.com/sagar-datta/portfolio/",
@@ -15,16 +37,16 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       dark: "/images/projects/portfolio/portfolio.png",
     },
     techStack: [
-      "React",
       "TypeScript",
       "Next.js",
+      "React",
       "Tailwind",
       "Framer",
       "Container Queries",
     ],
   },
   {
-    id: 1,
+    id: 2,
     title: "Gastronaut AI",
     url: "https://sagar-datta.github.io/gastronaut-ai/",
     descriptionHeading: "AI-powered recipe generator with enterprise-grade UX",
@@ -36,8 +58,8 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       dark: "/images/projects/gastronaut/gastronaut.png",
     },
     techStack: [
-      "React",
       "TypeScript",
+      "React",
       "Vite",
       "Tailwind",
       "Shadcn",
@@ -46,7 +68,7 @@ export const GRID_ITEMS: IPortfolioItem[] = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     title: "Galerie de Sagar",
     url: "https://sagar-datta.github.io/galerie/",
     descriptionHeading: "Interactive photo gallery with dynamic city mapping",
@@ -57,6 +79,6 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       light: "/images/projects/galerie/galerie.png",
       dark: "/images/projects/galerie/galerie.png",
     },
-    techStack: ["React", "TypeScript", "Vite", "Tailwind", "Cloudinary", "CSS"],
+    techStack: ["TypeScript", "React", "Vite", "Tailwind", "Cloudinary", "CSS"],
   },
 ];

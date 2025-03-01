@@ -13,6 +13,7 @@ import {
   SiContainerd,
   SiShadcnui,
   SiVite,
+  SiReacthookform,
 } from "react-icons/si";
 
 interface TechStackBubbleProps {
@@ -32,6 +33,7 @@ const techIcons: { [key: string]: IconType } = {
   "Next.js": SiNextdotjs,
   "Container Queries": SiContainerd,
   Shadcn: SiShadcnui,
+  "React Hook Form": SiReacthookform,
 };
 
 export const TechStackBubble = ({
