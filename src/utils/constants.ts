@@ -11,7 +11,7 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       "Smart destination search • Custom React hooks • Advanced state management • Dark mode • Accessibility features • Type-safe development",
     color: "bg-primary-dark dark:bg-primary",
     imagePath: {
-      light: "/images/projects/itinerai/itinerai-light.png",
+      light: "/images/projects/itinerai/itinerai.png",
       dark: "/images/projects/itinerai/itinerai.png",
     },
     techStack: [
