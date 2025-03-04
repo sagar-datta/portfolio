@@ -9,9 +9,9 @@ interface IDesktopDockProps {
 export const DesktopDock = ({ items }: IDesktopDockProps) => {
   return (
     <div className="hidden [@media(hover:hover)]:lg:block fixed bottom-0 left-0 right-0 z-10">
-      <div className="absolute inset-0 bg-primary/80 dark:bg-primary-dark/80 backdrop-blur-glass" />
+      <div className="absolute inset-0 bg-primary/80 dark:bg-primary-dark/80 backdrop-blur-glass theme-transition" />
       <div className="relative h-20 flex items-center justify-center py-2">
-        <div className="flex-center gap-6 px-6 py-2 rounded-xl bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass">
+        <div className="flex-center gap-6 px-6 py-2 rounded-xl bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass theme-transition">
           {items.map((item) => (
             <div
               key={item.label}

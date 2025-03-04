@@ -21,6 +21,7 @@
     width: 100%;
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
   }
 
   /* Consistent heading styles */
@@ -165,7 +166,10 @@
   }
 
   .glass-blur {
-    @apply bg-primary/90 dark:bg-primary-dark/90 backdrop-blur-xl;
+    @apply bg-primary/90 dark:bg-primary-dark/90;
+    transition: background-color 0.15s ease-in-out;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   /* Border utilities */
@@ -184,5 +188,14 @@
 
   .text-clamp-small {
     @apply text-[clamp(0.5rem,3cqi,0.625rem)];
+  }
+
+  /* Theme transition utility */
+  .theme-transition {
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-transition: background-color 0.15s ease-in-out,
+      color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
   }
 }

@@ -19,9 +19,9 @@ export const Header = ({
 }: IHeaderProps) => {
   return (
     <header className="sticky top-0 z-10">
-      <div className="absolute inset-0 bg-primary/80 dark:bg-primary-dark/80 backdrop-blur-glass" />
+      <div className="absolute inset-0 bg-primary/80 dark:bg-primary-dark/80 backdrop-blur-glass theme-transition" />
       <div className="relative mx-6 md:mx-4 py-4">
-        <div className="max-w-4xl mx-auto bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass rounded-2xl">
+        <div className="max-w-4xl mx-auto bg-glass-button dark:bg-glass-button-dark backdrop-blur-glass rounded-2xl theme-transition">
           <div className="relative flex items-center p-1.5 md:px-8 md:py-4">
             {/* Left section with icon and name */}
             <div className="hidden md:flex items-center gap-3">

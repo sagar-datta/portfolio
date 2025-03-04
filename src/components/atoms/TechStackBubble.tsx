@@ -59,8 +59,10 @@ export const TechStackBubble = ({
         ${sizeStyles[variant]}
         rounded-full bg-light/90 dark:bg-dark/90 
         text-primary/80 dark:text-primary-dark/80
-        flex items-center gap-1.5 transition-colors hover:bg-light dark:hover:bg-dark
+        flex items-center gap-1.5 
+        transform-gpu
       `}
+      style={{ willChange: "transform" }}
     >
       {Icon && (
         <Icon

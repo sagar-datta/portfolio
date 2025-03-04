@@ -30,25 +30,25 @@ export const Content = ({
         <p className="font-medium text-clamp-body text-muted-light dark:text-muted-dark leading-snug line-clamp-2 @container/card:line-clamp-1 mb-2">
           {descriptionHeading}
         </p>
-        <p className="font-light text-[13px]/relaxed text-dimmed-light dark:text-dimmed-dark line-clamp-5 mb-4 @[400px]/card:group-hover:opacity-0 transition-smooth">
+        <p className="font-light text-[13px]/relaxed text-dimmed-light dark:text-dimmed-dark line-clamp-5 mb-4 @[400px]/card:group-hover:translate-y-2 @[400px]/card:group-hover:opacity-0 transition-transform duration-150">
           {descriptionExtended}
         </p>
-        <div className="mt-auto flex flex-col justify-end gap-2 @[400px]/card:group-hover:opacity-0 transition-smooth">
+        <div className="mt-auto flex flex-col justify-end gap-2 @[400px]/card:group-hover:translate-y-2 @[400px]/card:group-hover:opacity-0 transition-transform duration-150">
           <div className="flex flex-wrap gap-1.5">
             {techStack.map((tech: string, i: number) => (
               <TechStackBubble key={i} tech={tech} />
             ))}
           </div>
         </div>
-        <div className="hidden @[400px]/card:block absolute left-4 right-[50%] bottom-4 h-[60%] rounded-lg overflow-hidden select-none opacity-0 group-hover:opacity-100 transition-smooth">
+        <div className="hidden @[400px]/card:block absolute left-4 right-[50%] bottom-4 h-[60%] rounded-lg overflow-hidden select-none opacity-0 group-hover:opacity-100 transition-all duration-150">
           <ResponsiveImage
             src={imagePath}
             alt={title}
             priority
-            className="transition-smooth opacity-100 scale-[0.99] group-hover:scale-100"
+            className="transition-transform duration-150 opacity-100 scale-[0.99] group-hover:scale-100"
           />
         </div>
-        <div className="hidden @[400px]/card:flex absolute left-[55%] right-4 bottom-4 h-[60%] flex-col opacity-0 group-hover:opacity-100 transition-smooth">
+        <div className="hidden @[400px]/card:flex absolute left-[55%] right-4 bottom-4 h-[60%] flex-col opacity-0 group-hover:opacity-100 transition-all duration-150">
           <div className="flex flex-wrap gap-1.5 content-start">
             {techStack.map((tech: string, i: number) => (
               <TechStackBubble key={i} tech={tech} variant="small" />
