@@ -25,7 +25,8 @@ export const NavigationTabs = ({
       md:[@media(hover:hover)]:bg-glass-blur md:[@media(hover:hover)]:dark:bg-glass-blur-dark md:[@media(hover:hover)]:backdrop-blur-glass 
       md:rounded-2xl md:[@media(hover:hover)]:p-1.5 md:[@media(hover:none)]:p-0
       w-full md:w-auto md:[@media(hover:none)]:min-w-[350px]
-      gap-1.5 md:[@media(hover:hover)]:gap-0 md:[@media(hover:none)]:gap-1.5"
+      gap-1.5 md:[@media(hover:hover)]:gap-0 md:[@media(hover:none)]:gap-1.5
+      transform-gpu will-change-transform transition-[background-color] duration-150"
     >
       {TABS.map((tab) => (
         <TabItem

@@ -31,7 +31,7 @@ export const Content = ({
 
       {/* Professional Profile */}
       <section className="space-y-4">
-        <div className="p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
+        <div className="p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass transform-gpu will-change-transform theme-transition">
           <div className="flex flex-col md:flex-row gap-4 md:gap-8">
             <div className="flex items-center gap-2">
               <FiMapPin className="w-5 h-5 text-primary/70 dark:text-primary-dark/70 flex-shrink-0" />
@@ -53,7 +53,7 @@ export const Content = ({
       <section className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           {/* Professional Networks */}
-          <div className="space-y-4 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
+          <div className="space-y-4 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass transform-gpu will-change-transform theme-transition">
             <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark">
               Professional Networks
             </h2>
@@ -88,7 +88,7 @@ export const Content = ({
           </div>
 
           {/* Direct Contact */}
-          <div className="space-y-4 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
+          <div className="space-y-4 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass transform-gpu will-change-transform theme-transition">
             <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark">
               Direct Contact
             </h2>
@@ -128,7 +128,7 @@ export const Content = ({
 
       {/* Availability */}
       <section className="space-y-4">
-        <div className="p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
+        <div className="p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass transform-gpu will-change-transform theme-transition">
           <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark mb-4">
             Professional Engagement
           </h2>

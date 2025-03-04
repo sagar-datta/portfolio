@@ -44,7 +44,7 @@ export const Content = () => {
           Featured Projects
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="space-y-3 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
+          <div className="space-y-3 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass transform-gpu will-change-transform theme-transition">
             <h3 className="text-lg font-medium text-primary dark:text-primary-dark">
               <a
                 href="https://sagar-datta.github.io/gastronaut-ai/"
@@ -62,7 +62,7 @@ export const Content = () => {
               enterprise-grade user experience.
             </p>
           </div>
-          <div className="space-y-3 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass">
+          <div className="space-y-3 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass transform-gpu will-change-transform theme-transition">
             <h3 className="text-lg font-medium text-primary dark:text-primary-dark">
               Wildfire Protection Dashboard
             </h3>
@@ -168,7 +168,7 @@ export const Content = () => {
         <h2 className="text-2xl font-semibold text-primary dark:text-primary-dark">
           Education & Recognition
         </h2>
-        <div className="space-y-6">
+        <div className="space-y-6 p-6 rounded-2xl bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass transform-gpu will-change-transform theme-transition">
           <div className="space-y-3">
             <div className="space-y-1">
               <h3 className="text-lg font-medium text-primary dark:text-primary-dark">

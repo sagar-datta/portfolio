@@ -26,24 +26,24 @@ export const TabItem = forwardRef<HTMLButtonElement, ITabItemProps>(
         touch-none active:scale-95
         [-webkit-tap-highlight-color:transparent]
         [font-variation-settings:'wght'_var(--font-weight)] md:[@media(hover:hover)]:font-medium md:[@media(hover:hover)]:[font-variation-settings:initial]
-        tab-transitions
+        transform-gpu will-change-transform
         rounded-xl
           ${
             isSelected
               ? `bg-glass-blur dark:bg-glass-blur-dark backdrop-blur-glass font-semibold 
                  active:bg-glass-blur/80 active:dark:bg-glass-blur-dark/80 
                  md:[@media(hover:hover)]:bg-button-light md:[@media(hover:hover)]:dark:bg-button-dark md:[@media(hover:hover)]:backdrop-blur-none`
-              : "bg-glass-blur/30 dark:bg-glass-blur-dark/30 backdrop-blur-glass/30 active:bg-glass-blur/50 active:dark:bg-glass-blur-dark/50 md:[@media(hover:hover)]:bg-transparent md:[@media(hover:hover)]:backdrop-blur-none"
+              : "md:[@media(hover:hover)]:bg-transparent"
           }
+          transition-[background-color] duration-150
         `}
       >
         <span
           className={`
-            transition-colors duration-200
             ${
               isSelected
                 ? "text-primary dark:text-primary-dark"
-                : "text-dimmed-light dark:text-dimmed-dark hover:text-muted-light hover:dark:text-muted-dark"
+                : "text-dimmed-light dark:text-dimmed-dark"
             }
           `}
         >

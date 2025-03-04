@@ -60,7 +60,8 @@ export const TechStackBubble = ({
         rounded-full bg-light/90 dark:bg-dark/90 
         text-primary/80 dark:text-primary-dark/80
         flex items-center gap-1.5 
-        transform-gpu
+        transform-gpu will-change-transform
+        transition-[background-color] duration-150
       `}
       style={{ willChange: "transform" }}
     >
@@ -71,7 +72,7 @@ export const TechStackBubble = ({
           } opacity-80`}
         />
       )}
-      {tech}
+      <span className="transition-none">{tech}</span>
     </span>
   );
 };

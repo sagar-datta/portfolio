@@ -16,7 +16,7 @@ export const Content = ({
   isPortfolio,
 }: ContentProps) => {
   return (
-    <div className="relative rounded-xl min-h-[250px] h-full transition-smooth w-full overflow-hidden hover-lift-lg bg-button-light dark:bg-button-dark p-4 [@media(hover:none)]:touch-none [@media(hover:none)]:[-webkit-tap-highlight-color:transparent] [@media(hover:none)]:active:scale-[0.98] [@media(hover:none)]:active:opacity-80 [@media(hover:none)]:transition-all [@media(hover:none)]:duration-150 [@media(hover:none)]:ease-in-out @container/card">
+    <div className="relative rounded-xl min-h-[250px] h-full w-full overflow-hidden hover-lift-lg bg-button-light dark:bg-button-dark p-4 [@media(hover:none)]:touch-none [@media(hover:none)]:[-webkit-tap-highlight-color:transparent] [@media(hover:none)]:active:scale-[0.98] [@media(hover:none)]:active:opacity-80 [@media(hover:none)]:transition-all [@media(hover:none)]:duration-150 [@media(hover:none)]:ease-in-out @container/card transform-gpu will-change-transform theme-transition">
       {!isPortfolio && (
         <div className="flex items-center gap-1.5 absolute top-3 right-3 text-dimmed-light dark:text-dimmed-dark [@media(hover:hover)]:@[400px]/card:hidden">
           <p className="text-xs @[400px]:block hidden">Opens in new tab</p>
