@@ -18,6 +18,7 @@ const ProjectsContent = () => {
             imagePath={item.imagePath}
             techStack={item.techStack}
             size={item.size}
+            stackSections={item.stackSections}
           />
         ))}
       </div>

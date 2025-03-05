@@ -14,6 +14,14 @@ import {
   SiShadcnui,
   SiVite,
   SiReacthookform,
+  SiRedux,
+  SiReactquery,
+  SiRadixui,
+  SiExpress,
+  SiPostgresql,
+  SiSupabase,
+  SiClerk,
+  SiRender,
 } from "react-icons/si";
 
 interface TechStackBubbleProps {
@@ -34,6 +42,14 @@ const techIcons: { [key: string]: IconType } = {
   "Container Queries": SiContainerd,
   Shadcn: SiShadcnui,
   "React Hook Form": SiReacthookform,
+  Redux: SiRedux,
+  "React Query": SiReactquery,
+  "Radix UI": SiRadixui,
+  "Express.js": SiExpress,
+  PostgreSQL: SiPostgresql,
+  Supabase: SiSupabase,
+  Clerk: SiClerk,
+  Render: SiRender,
 };
 
 export const TechStackBubble = ({

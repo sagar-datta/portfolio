@@ -13,6 +13,7 @@ export const Content = ({
   descriptionExtended,
   imagePath,
   techStack,
+  stackSections,
   isPortfolio,
 }: ContentProps) => {
   return (
@@ -34,11 +35,40 @@ export const Content = ({
           {descriptionExtended}
         </p>
         <div className="mt-auto flex flex-col justify-end gap-2 @[400px]/card:group-hover:translate-y-2 @[400px]/card:group-hover:opacity-0 transition-transform duration-150">
-          <div className="flex flex-wrap gap-1.5">
-            {techStack.map((tech: string, i: number) => (
-              <TechStackBubble key={i} tech={tech} />
-            ))}
-          </div>
+          {stackSections ? (
+            <div className="space-y-4">
+              <div className="space-y-2.5">
+                <div className="flex items-center gap-2">
+                  <h4 className="text-xs uppercase tracking-wider font-semibold text-primary/70 dark:text-primary-dark/70">
+                    Frontend
+                  </h4>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {stackSections.frontend.map((tech: string, i: number) => (
+                    <TechStackBubble key={i} tech={tech} />
+                  ))}
+                </div>
+              </div>
+              <div className="space-y-2.5">
+                <div className="flex items-center gap-2">
+                  <h4 className="text-xs uppercase tracking-wider font-semibold text-primary/70 dark:text-primary-dark/70">
+                    Backend
+                  </h4>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {stackSections.backend.map((tech: string, i: number) => (
+                    <TechStackBubble key={i} tech={tech} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="flex flex-wrap gap-1.5">
+              {techStack.map((tech: string, i: number) => (
+                <TechStackBubble key={i} tech={tech} />
+              ))}
+            </div>
+          )}
         </div>
         <div className="hidden @[400px]/card:block absolute left-4 right-[50%] bottom-4 h-[60%] rounded-lg overflow-hidden select-none opacity-0 group-hover:opacity-100 transition-all duration-150">
           <ResponsiveImage
@@ -49,11 +79,40 @@ export const Content = ({
           />
         </div>
         <div className="hidden @[400px]/card:flex absolute left-[55%] right-4 bottom-4 h-[60%] flex-col opacity-0 group-hover:opacity-100 transition-all duration-150">
-          <div className="flex flex-wrap gap-1.5 content-start">
-            {techStack.map((tech: string, i: number) => (
-              <TechStackBubble key={i} tech={tech} variant="small" />
-            ))}
-          </div>
+          {stackSections ? (
+            <div className="space-y-4 w-full">
+              <div className="space-y-2.5">
+                <div className="flex items-center gap-2">
+                  <h4 className="text-xs uppercase tracking-wider font-semibold text-primary/70 dark:text-primary-dark/70">
+                    Frontend
+                  </h4>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {stackSections.frontend.map((tech: string, i: number) => (
+                    <TechStackBubble key={i} tech={tech} variant="small" />
+                  ))}
+                </div>
+              </div>
+              <div className="space-y-2.5">
+                <div className="flex items-center gap-2">
+                  <h4 className="text-xs uppercase tracking-wider font-semibold text-primary/70 dark:text-primary-dark/70">
+                    Backend
+                  </h4>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {stackSections.backend.map((tech: string, i: number) => (
+                    <TechStackBubble key={i} tech={tech} variant="small" />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="flex flex-wrap gap-1.5 content-start">
+              {techStack.map((tech: string, i: number) => (
+                <TechStackBubble key={i} tech={tech} variant="small" />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

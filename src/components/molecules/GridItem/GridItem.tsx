@@ -32,7 +32,7 @@ export const GridItem = (props: GridItemProps) => {
       position="top"
       className={`relative w-full min-w-0 md:min-w-[450px] ${
         props.size === "large"
-          ? "md:min-w-[920px] md:max-w-[920px]"
+          ? "max-w-[920px] lg:min-w-[920px] md:min-w-full"
           : "max-w-[450px]"
       } flex-1 @container cursor-pointer`}
     >
