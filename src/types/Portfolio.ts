@@ -10,4 +10,5 @@ export interface IPortfolioItem {
   };
   color: string;
   techStack: string[];
+  size?: "default" | "large";
 }

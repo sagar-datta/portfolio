@@ -30,7 +30,11 @@ export const GridItem = (props: GridItemProps) => {
         </div>
       }
       position="top"
-      className="relative w-full min-w-0 md:min-w-[450px] max-w-[450px] flex-1 @container cursor-pointer"
+      className={`relative w-full min-w-0 md:min-w-[450px] ${
+        props.size === "large"
+          ? "md:min-w-[920px] md:max-w-[920px]"
+          : "max-w-[450px]"
+      } flex-1 @container cursor-pointer`}
     >
       <div onClick={handleClick} className="group relative">
         <div className="absolute -z-10 inset-[1px] bg-accent-red rounded-xl hidden [@media(hover:hover)]:block" />

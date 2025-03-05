@@ -3,6 +3,29 @@ import { IPortfolioItem } from "@/types/Portfolio";
 export const GRID_ITEMS: IPortfolioItem[] = [
   {
     id: 1,
+    title: "ClariFi",
+    url: "https://clarifi-finance.vercel.app/dashboard",
+    descriptionHeading:
+      "Modern full-stack personal finance management platform",
+    descriptionExtended:
+      "Monorepo architecture • Real-time updates • Smart categorisation • Financial insights • PWA support • Type-safe operations",
+    color: "bg-primary-dark dark:bg-primary",
+    imagePath: {
+      light: "/images/projects/clarifi/clarifi.png",
+      dark: "/images/projects/clarifi/clarifi.png",
+    },
+    techStack: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Tailwind",
+      "Redux",
+      "Express.js",
+    ],
+    size: "large",
+  },
+  {
+    id: 5,
     title: "Itinerai",
     url: "https://sagar-datta.github.io/travel-itinerary-ai/",
     descriptionHeading:
