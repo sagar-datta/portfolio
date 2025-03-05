@@ -3,46 +3,47 @@ import { IPortfolioItem } from "@/types/Portfolio";
 export const GRID_ITEMS: IPortfolioItem[] = [
   {
     id: 1,
-    title: "ClariFi",
+    title: "ClariFi Finance",
     url: "https://clarifi-finance.vercel.app/dashboard",
     descriptionHeading:
-      "Full-stack personal finance platform with real-time insights and smart categorisation",
+      "Enterprise-grade full-stack fintech platform with real-time analytics and secure transaction management",
     descriptionExtended:
-      "Turborepo monorepo • Type-safe database operations • JWT authentication • Real-time updates • Smart transaction categorisation • Financial insights • Budget tracking • PWA support • Dark/Light mode • Responsive design",
+      "Turborepo monorepo architecture • Type-safe API integration • OAuth2/JWT authentication • Real-time WebSocket updates • Machine learning categorisation • Advanced data visualization • Secure payment processing • PWA with offline support • Automated CI/CD via Vercel/Render",
     color: "bg-primary-dark dark:bg-primary",
     imagePath: {
       light: "/images/projects/clarifi/clarifi.png",
       dark: "/images/projects/clarifi/clarifi.png",
     },
     techStack: [
-      // Frontend
-      "Next.js",
+      // Frontend (Modern Framework + State)
+      "Next.js 15",
       "TypeScript",
       "React",
       "Redux",
-      "React Query",
-      "Tailwind",
-      "Radix UI",
-      // Backend
+      "TanStack",
+      // Backend & Infrastructure
       "Express.js",
       "PostgreSQL",
       "Supabase",
-      "Clerk",
-      "Render",
+      // Auth & Security
+      "Clerk Auth",
+      // UI/UX
+      "Tailwind",
+      "Radix UI",
     ],
-    size: "large",
     stackSections: {
       frontend: [
-        "Next.js",
+        "Next.js 15",
         "TypeScript",
         "React",
         "Redux",
-        "React Query",
+        "TanStack",
         "Tailwind",
         "Radix UI",
       ],
-      backend: ["Express.js", "PostgreSQL", "Supabase", "Clerk", "Render"],
+      backend: ["Express.js", "PostgreSQL", "Supabase", "Clerk Auth"],
     },
+    size: "large",
   },
   {
     id: 5,
