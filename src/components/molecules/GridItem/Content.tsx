@@ -37,29 +37,13 @@ export const Content = ({
         <div className="mt-auto flex flex-col justify-end gap-2 @[400px]/card:group-hover:translate-y-2 @[400px]/card:group-hover:opacity-0 transition-transform duration-150">
           {stackSections ? (
             <div className="space-y-4">
-              <div className="space-y-2.5">
-                <div className="flex items-center gap-2">
-                  <h4 className="text-xs uppercase tracking-wider font-semibold text-primary/70 dark:text-primary-dark/70">
-                    Frontend
-                  </h4>
-                </div>
-                <div className="flex flex-wrap gap-1.5">
-                  {stackSections.frontend.map((tech: string, i: number) => (
-                    <TechStackBubble key={i} tech={tech} />
-                  ))}
-                </div>
-              </div>
-              <div className="space-y-2.5">
-                <div className="flex items-center gap-2">
-                  <h4 className="text-xs uppercase tracking-wider font-semibold text-primary/70 dark:text-primary-dark/70">
-                    Backend
-                  </h4>
-                </div>
-                <div className="flex flex-wrap gap-1.5">
-                  {stackSections.backend.map((tech: string, i: number) => (
-                    <TechStackBubble key={i} tech={tech} />
-                  ))}
-                </div>
+              <div className="flex flex-wrap gap-1.5">
+                {stackSections.frontend.map((tech: string, i: number) => (
+                  <TechStackBubble key={i} tech={tech} />
+                ))}
+                {stackSections.backend.map((tech: string, i: number) => (
+                  <TechStackBubble key={i} tech={tech} />
+                ))}
               </div>
             </div>
           ) : (

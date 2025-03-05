@@ -8,26 +8,22 @@ export const GRID_ITEMS: IPortfolioItem[] = [
     descriptionHeading:
       "Enterprise-grade full-stack fintech platform with real-time analytics and secure transaction management",
     descriptionExtended:
-      "Turborepo monorepo architecture • Type-safe API integration • OAuth2/JWT authentication • Real-time WebSocket updates • Machine learning categorisation • Advanced data visualization • Secure payment processing • PWA with offline support • Automated CI/CD via Vercel/Render",
+      "Turborepo monorepo • Type-safe APIs • OAuth2/JWT auth • Real-time updates • Smart categorisation • Data visualization • Secure payments • PWA support • CI/CD pipeline",
     color: "bg-primary-dark dark:bg-primary",
     imagePath: {
-      light: "/images/projects/clarifi/clarifi.png",
-      dark: "/images/projects/clarifi/clarifi.png",
+      light: "/images/projects/clarifi/clarifi-light.png",
+      dark: "/images/projects/clarifi/clarifi-dark.png",
     },
     techStack: [
-      // Frontend (Modern Framework + State)
       "Next.js 15",
       "TypeScript",
       "React",
       "Redux",
       "TanStack",
-      // Backend & Infrastructure
       "Express.js",
       "PostgreSQL",
       "Supabase",
-      // Auth & Security
       "Clerk Auth",
-      // UI/UX
       "Tailwind",
       "Radix UI",
     ],
