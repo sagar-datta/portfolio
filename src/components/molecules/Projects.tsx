@@ -7,19 +7,23 @@ const ProjectsContent = () => {
 
   return (
     <div className="w-full max-w-[1450px] mx-auto px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 place-items-center">
+      <div className="flex flex-wrap justify-center gap-6">
         {sortedItems.map((item) => (
-          <GridItem
+          <div
             key={item.id}
-            title={item.title}
-            descriptionHeading={item.descriptionHeading}
-            descriptionExtended={item.descriptionExtended}
-            url={item.url}
-            imagePath={item.imagePath}
-            techStack={item.techStack}
-            size={item.size}
-            stackSections={item.stackSections}
-          />
+            className="w-full md:w-[calc(50%-12px)] xl:w-[calc(33.333%-16px)]"
+          >
+            <GridItem
+              title={item.title}
+              descriptionHeading={item.descriptionHeading}
+              descriptionExtended={item.descriptionExtended}
+              url={item.url}
+              imagePath={item.imagePath}
+              techStack={item.techStack}
+              size={item.size}
+              stackSections={item.stackSections}
+            />
+          </div>
         ))}
       </div>
     </div>
