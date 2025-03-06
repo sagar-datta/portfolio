@@ -30,7 +30,7 @@ export const Content = ({
         <h3 className="font-semibold tracking-tight text-clamp-title text-primary dark:text-primary-dark leading-none mb-3">
           {title}
         </h3>
-        <p className="font-medium text-clamp-body text-muted-light dark:text-muted-dark leading-snug line-clamp-2 @container/card:line-clamp-1 mb-2">
+        <p className="font-medium text-clamp-body text-muted-light dark:text-muted-dark leading-relaxed line-clamp-2 @container/card:line-clamp-1 mb-3 pb-1">
           {descriptionHeading}
         </p>
 
@@ -63,12 +63,16 @@ export const Content = ({
 
         {/* Hover content - hidden by default, visible on hover */}
         <div className="hidden @[400px]/card:block absolute left-4 right-[50%] bottom-4 h-[60%] rounded-lg overflow-hidden select-none opacity-0 group-hover:opacity-100 transition-opacity duration-150">
-          <ResponsiveImage
-            src={imagePath}
-            alt={title}
-            priority
-            className="opacity-100 scale-[0.99] group-hover:scale-100 transition-transform duration-150"
-          />
+          <div className="relative w-full pb-[71.43%] rounded-lg overflow-hidden">
+            <div className="absolute inset-0">
+              <ResponsiveImage
+                src={imagePath}
+                alt={title}
+                priority
+                className="opacity-100 scale-[0.99] group-hover:scale-100 transition-transform duration-150 rounded-lg"
+              />
+            </div>
+          </div>
         </div>
         <div className="hidden @[400px]/card:flex absolute left-[55%] right-4 bottom-4 h-[60%] flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-150">
           {stackSections ? (

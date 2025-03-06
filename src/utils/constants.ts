@@ -3,12 +3,12 @@ import { IPortfolioItem } from "@/types/Portfolio";
 export const GRID_ITEMS: IPortfolioItem[] = [
   {
     id: 1,
-    title: "ClariFi Finance",
-    url: "https://clarifi-finance.vercel.app/dashboard",
+    title: "ClariFi",
+    url: "https://clarifi-finance.vercel.app",
     descriptionHeading:
-      "Full-stack fintech platform with real-time transaction analytics.",
+      "Full-stack finance manager with real-time transaction analytics",
     descriptionExtended:
-      "Type-safe APIs • Real-time updates • Smart categorisation • Data visualization • Secure payments • PWA support",
+      "Smart categorisation • Spending insights • Transaction management • Interactive visualisations • Secure authentication • Responsive PWA",
     color: "bg-primary-dark dark:bg-primary",
     imagePath: {
       light: "/images/projects/clarifi/clarifi-light.png",
@@ -18,18 +18,18 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       "Next.js 15",
       "TypeScript",
       "React",
-      "Redux",
-      "TanStack",
+      "Redux Toolkit",
+      "TanStack Query",
       "Express.js",
       "PostgreSQL",
       "Supabase",
       "Clerk Auth",
       "Tailwind",
-      "Radix UI",
+      "Turborepo",
     ],
   },
   {
-    id: 5,
+    id: 3,
     title: "Itinerai",
     url: "https://sagar-datta.github.io/travel-itinerary-ai/",
     descriptionHeading:
@@ -51,7 +51,7 @@ export const GRID_ITEMS: IPortfolioItem[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Portfolio",
     url: "https://github.com/sagar-datta/portfolio/",
     descriptionHeading:
@@ -95,7 +95,7 @@ export const GRID_ITEMS: IPortfolioItem[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Galerie de Sagar",
     url: "https://sagar-datta.github.io/galerie/",
     descriptionHeading: "Interactive photo gallery with dynamic city mapping",
