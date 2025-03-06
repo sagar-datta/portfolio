@@ -7,7 +7,7 @@ const ProjectsContent = () => {
 
   return (
     <div className="w-full max-w-[1450px] mx-auto px-4">
-      <div className="flex flex-col md:flex-row md:flex-wrap gap-6 justify-center items-center md:items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 place-items-center">
         {sortedItems.map((item) => (
           <GridItem
             key={item.id}

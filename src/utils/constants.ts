@@ -6,9 +6,9 @@ export const GRID_ITEMS: IPortfolioItem[] = [
     title: "ClariFi Finance",
     url: "https://clarifi-finance.vercel.app/dashboard",
     descriptionHeading:
-      "Enterprise-grade full-stack fintech platform with real-time analytics and secure transaction management",
+      "Full-stack fintech platform with real-time transaction analytics.",
     descriptionExtended:
-      "Turborepo monorepo • Type-safe APIs • OAuth2/JWT auth • Real-time updates • Smart categorisation • Data visualization • Secure payments • PWA support • CI/CD pipeline",
+      "Type-safe APIs • Real-time updates • Smart categorisation • Data visualization • Secure payments • PWA support",
     color: "bg-primary-dark dark:bg-primary",
     imagePath: {
       light: "/images/projects/clarifi/clarifi-light.png",
@@ -27,19 +27,6 @@ export const GRID_ITEMS: IPortfolioItem[] = [
       "Tailwind",
       "Radix UI",
     ],
-    stackSections: {
-      frontend: [
-        "Next.js 15",
-        "TypeScript",
-        "React",
-        "Redux",
-        "TanStack",
-        "Tailwind",
-        "Radix UI",
-      ],
-      backend: ["Express.js", "PostgreSQL", "Supabase", "Clerk Auth"],
-    },
-    size: "large",
   },
   {
     id: 5,
