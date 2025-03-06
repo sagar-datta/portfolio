@@ -2,7 +2,6 @@ import { IPortfolioItem } from "@/types/Portfolio";
 import { ExternalLink } from "lucide-react";
 import { TechStackBubble } from "@/components/atoms/TechStackBubble";
 import { ResponsiveImage } from "@/components/atoms/ResponsiveImage";
-import { motion } from "framer-motion";
 
 type ContentProps = Omit<IPortfolioItem, "id" | "color" | "url"> & {
   isPortfolio?: boolean;
