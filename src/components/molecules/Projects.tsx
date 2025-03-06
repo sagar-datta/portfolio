@@ -11,7 +11,7 @@ const ProjectsContent = () => {
         {sortedItems.map((item) => (
           <div
             key={item.id}
-            className="w-full md:w-[calc(50%-12px)] xl:w-[calc(33.333%-16px)]"
+            className="w-full sm:min-w-[450px] sm:max-w-[450px] md:w-[calc(50%-12px)] xl:w-[calc(33.333%-16px)]"
           >
             <GridItem
               title={item.title}
