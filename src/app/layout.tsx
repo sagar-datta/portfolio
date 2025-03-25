@@ -15,8 +15,11 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: "cover",
   themeColor: [
-    { color: "#F0EEE6", media: "(prefers-color-scheme: light)" },
-    { color: "#222221", media: "(prefers-color-scheme: dark)" },
+    {
+      color: "rgba(240, 238, 230, 0.95)",
+      media: "(prefers-color-scheme: light)",
+    },
+    { color: "rgba(34, 34, 33, 0.95)", media: "(prefers-color-scheme: dark)" },
   ],
 };
 
@@ -67,7 +70,7 @@ export default function RootLayout({
                   }
                   
                   // Set theme color based on dark/light mode
-                  themeColorMeta.setAttribute('content', isDark ? '#222221' : '#F0EEE6');
+                  themeColorMeta.setAttribute('content', isDark ? 'rgba(34, 34, 33, 0.95)' : 'rgba(240, 238, 230, 0.95)');
                 };
                 
                 // Update on theme changes
