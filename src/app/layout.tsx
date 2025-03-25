@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   other: {
     "apple-mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "black",
+    "apple-mobile-web-app-status-bar-style": "default",
   },
 };
 
@@ -37,7 +37,7 @@ export default function RootLayout({
     <html lang="en" className={geist.className} suppressHydrationWarning>
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta
           name="theme-color"
           content="#ffffff"
