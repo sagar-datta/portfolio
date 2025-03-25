@@ -14,6 +14,10 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: [
+    { color: "#F0EEE6", media: "(prefers-color-scheme: light)" },
+    { color: "#222221", media: "(prefers-color-scheme: dark)" },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -50,63 +54,38 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                // Function to update theme color based on current theme
+                // Simple script to update Safari's theme-color when theme changes
                 const updateThemeColor = () => {
-                  // Check if dark mode is active
                   const isDark = document.documentElement.classList.contains('dark');
                   
-                  // Dynamically get the background color from the page
-                  const getActualBackgroundColor = () => {
-                    // Get the computed background color from the body or html element
-                    const bodyBgColor = window.getComputedStyle(document.body).backgroundColor;
-                    
-                    // If it's in rgb format, convert to hex
-                    if (bodyBgColor.startsWith('rgb')) {
-                      const rgb = bodyBgColor.match(/\d+/g);
-                      if (rgb && rgb.length >= 3) {
-                        return '#' + 
-                          parseInt(rgb[0]).toString(16).padStart(2, '0') + 
-                          parseInt(rgb[1]).toString(16).padStart(2, '0') + 
-                          parseInt(rgb[2]).toString(16).padStart(2, '0');
-                      }
-                    }
-                    
-                    // Return the original color or fallback
-                    return bodyBgColor || (isDark ? '#222221' : '#F0EEE6');
-                  };
-                  
-                  // Get the actual background color
-                  const actualBgColor = getActualBackgroundColor();
-                  
-                  // Set or create theme-color meta tag
-                  let metaThemeColor = document.querySelector('meta[name="theme-color"]');
-                  if (!metaThemeColor) {
-                    metaThemeColor = document.createElement('meta');
-                    metaThemeColor.name = 'theme-color';
-                    document.head.appendChild(metaThemeColor);
+                  // Get theme-color meta tag
+                  let themeColorMeta = document.querySelector('meta[name="theme-color"]');
+                  if (!themeColorMeta) {
+                    themeColorMeta = document.createElement('meta');
+                    themeColorMeta.name = 'theme-color';
+                    document.head.appendChild(themeColorMeta);
                   }
                   
-                  // Update theme color with transparency
-                  metaThemeColor.setAttribute('content', actualBgColor);
+                  // Set theme color based on dark/light mode
+                  themeColorMeta.setAttribute('content', isDark ? '#222221' : '#F0EEE6');
                 };
                 
-                // Set up observer to detect theme changes
-                const observer = new MutationObserver((mutations) => {
-                  updateThemeColor();
+                // Update on theme changes
+                const observer = new MutationObserver(() => {
+                  // Small delay to ensure CSS has applied
+                  setTimeout(updateThemeColor, 50);
                 });
                 
-                // Initialize once DOM is loaded
+                // Initialize
                 window.addEventListener('DOMContentLoaded', () => {
                   updateThemeColor();
-                  
-                  // Start observing for theme changes
                   observer.observe(document.documentElement, { 
                     attributes: true, 
                     attributeFilter: ['class'] 
                   });
                 });
               } catch (e) {
-                // Silently fail if localStorage is not available
+                // Silently fail if needed
               }
             `,
           }}
