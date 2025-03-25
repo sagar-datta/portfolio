@@ -14,6 +14,10 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: [
+    { color: "#F0EEE6", media: "(prefers-color-scheme: light)" },
+    { color: "#222221", media: "(prefers-color-scheme: dark)" },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -38,17 +42,11 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta
-          name="theme-color"
-          content="#ffffff"
-          media="(prefers-color-scheme: light)"
-        />
-        <meta
-          name="theme-color"
-          content="#000000"
-          media="(prefers-color-scheme: dark)"
-        />
         <style>{`
+          :root {
+            --theme-color-light: #F0EEE6;
+            --theme-color-dark: #222221;
+          }
           @media all and (display-mode: standalone) {
             body { 
               padding-bottom: calc(env(safe-area-inset-bottom) + 6rem) !important;
@@ -56,6 +54,38 @@ export default function RootLayout({
             }
           }
         `}</style>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const themeFromLS = localStorage.getItem('theme')
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+                const themeToUse = themeFromLS === 'system' ? systemTheme : themeFromLS || systemTheme
+                
+                document.querySelector('meta[name="theme-color"]').setAttribute(
+                  'content',
+                  themeToUse === 'dark' ? '#222221' : '#F0EEE6'
+                )
+                
+                // Setup listener for theme changes
+                const observer = new MutationObserver(function(mutations) {
+                  if (document.documentElement.classList.contains('dark')) {
+                    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#222221')
+                  } else {
+                    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#F0EEE6')
+                  }
+                });
+                
+                // Start observing once DOM is ready
+                window.addEventListener('DOMContentLoaded', () => {
+                  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+                })
+              } catch (e) {
+                // Silently fail if localStorage is not available
+              }
+            `,
+          }}
+        />
       </head>
       <body className="bg-primary dark:bg-primary-dark text-primary dark:text-primary-dark min-h-screen">
         <Providers>
