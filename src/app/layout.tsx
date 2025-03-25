@@ -14,10 +14,6 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: [
-    { color: "#F0EEE6", media: "(prefers-color-scheme: light)" },
-    { color: "#222221", media: "(prefers-color-scheme: dark)" },
-  ],
 };
 
 export const metadata: Metadata = {
@@ -43,10 +39,6 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <style>{`
-          :root {
-            --theme-color-light: #F0EEE6;
-            --theme-color-dark: #222221;
-          }
           @media all and (display-mode: standalone) {
             body { 
               padding-bottom: calc(env(safe-area-inset-bottom) + 6rem) !important;
@@ -58,28 +50,44 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                const themeFromLS = localStorage.getItem('theme')
-                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-                const themeToUse = themeFromLS === 'system' ? systemTheme : themeFromLS || systemTheme
-                
-                document.querySelector('meta[name="theme-color"]').setAttribute(
-                  'content',
-                  themeToUse === 'dark' ? '#222221' : '#F0EEE6'
-                )
-                
-                // Setup listener for theme changes
-                const observer = new MutationObserver(function(mutations) {
-                  if (document.documentElement.classList.contains('dark')) {
-                    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#222221')
-                  } else {
-                    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#F0EEE6')
+                // Function to update theme color based on current theme
+                const updateThemeColor = () => {
+                  // Check if dark mode is active
+                  const isDark = document.documentElement.classList.contains('dark');
+                  
+                  // Use exact hex codes that match the background
+                  const lightBgColor = '#E8E6E2'; // Exact beige hex color from the image
+                  const darkBgColor = '#222221'; // Exact dark mode hex color
+                  
+                  // Set or create theme-color meta tag
+                  let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+                  if (!metaThemeColor) {
+                    metaThemeColor = document.createElement('meta');
+                    metaThemeColor.name = 'theme-color';
+                    document.head.appendChild(metaThemeColor);
                   }
+                  
+                  // Update theme color with transparency
+                  metaThemeColor.setAttribute('content', 
+                    isDark ? darkBgColor : lightBgColor
+                  );
+                };
+                
+                // Set up observer to detect theme changes
+                const observer = new MutationObserver((mutations) => {
+                  updateThemeColor();
                 });
                 
-                // Start observing once DOM is ready
+                // Initialize once DOM is loaded
                 window.addEventListener('DOMContentLoaded', () => {
-                  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
-                })
+                  updateThemeColor();
+                  
+                  // Start observing for theme changes
+                  observer.observe(document.documentElement, { 
+                    attributes: true, 
+                    attributeFilter: ['class'] 
+                  });
+                });
               } catch (e) {
                 // Silently fail if localStorage is not available
               }
