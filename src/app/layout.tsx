@@ -55,9 +55,28 @@ export default function RootLayout({
                   // Check if dark mode is active
                   const isDark = document.documentElement.classList.contains('dark');
                   
-                  // Use exact hex codes that match the background
-                  const lightBgColor = '#E8E6E2'; // Exact beige hex color from the image
-                  const darkBgColor = '#222221'; // Exact dark mode hex color
+                  // Dynamically get the background color from the page
+                  const getActualBackgroundColor = () => {
+                    // Get the computed background color from the body or html element
+                    const bodyBgColor = window.getComputedStyle(document.body).backgroundColor;
+                    
+                    // If it's in rgb format, convert to hex
+                    if (bodyBgColor.startsWith('rgb')) {
+                      const rgb = bodyBgColor.match(/\d+/g);
+                      if (rgb && rgb.length >= 3) {
+                        return '#' + 
+                          parseInt(rgb[0]).toString(16).padStart(2, '0') + 
+                          parseInt(rgb[1]).toString(16).padStart(2, '0') + 
+                          parseInt(rgb[2]).toString(16).padStart(2, '0');
+                      }
+                    }
+                    
+                    // Return the original color or fallback
+                    return bodyBgColor || (isDark ? '#222221' : '#F0EEE6');
+                  };
+                  
+                  // Get the actual background color
+                  const actualBgColor = getActualBackgroundColor();
                   
                   // Set or create theme-color meta tag
                   let metaThemeColor = document.querySelector('meta[name="theme-color"]');
@@ -68,9 +87,7 @@ export default function RootLayout({
                   }
                   
                   // Update theme color with transparency
-                  metaThemeColor.setAttribute('content', 
-                    isDark ? darkBgColor : lightBgColor
-                  );
+                  metaThemeColor.setAttribute('content', actualBgColor);
                 };
                 
                 // Set up observer to detect theme changes
