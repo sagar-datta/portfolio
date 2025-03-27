@@ -38,6 +38,9 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        {/* Safari-specific static favicons */}
+        <link rel="icon" type="image/png" href="/safari-favicon.png" />
+        <link rel="apple-touch-icon" href="/safari-touch-icon.png" />
         <style>{`
           @media all and (display-mode: standalone) {
             body { 
