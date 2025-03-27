@@ -10,6 +10,9 @@ const geist = Geist({
   display: "swap",
 });
 
+// Set base path for production or dev environment
+const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
   title: "Sagar Datta's Portfolio",
   description: "Personal portfolio showcasing my work and skills",
   icons: {
-    icon: "/favicon-light.svg",
+    icon: `${basePath}/favicon-light.svg`,
   },
   other: {
     "apple-mobile-web-app-capable": "yes",
@@ -38,9 +41,20 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        {/* Safari-specific static favicons */}
-        <link rel="icon" type="image/png" href="/safari-favicon.png" />
-        <link rel="apple-touch-icon" href="/safari-touch-icon.png" />
+        {/* Safari-specific static favicons with correct base path */}
+        <link
+          rel="icon"
+          type="image/png"
+          href={`${
+            process.env.NODE_ENV === "production" ? "/portfolio" : ""
+          }/safari-favicon.png`}
+        />
+        <link
+          rel="apple-touch-icon"
+          href={`${
+            process.env.NODE_ENV === "production" ? "/portfolio" : ""
+          }/safari-touch-icon.png`}
+        />
         <style>{`
           @media all and (display-mode: standalone) {
             body { 
